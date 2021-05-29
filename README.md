@@ -6,7 +6,7 @@ Advanced Data Engineering Skills
 
 ## Contents
 
-- [Data Science Platform](03-AdvancedSkills.md#data-science-platform)
+- [Data Science Platform](README.md#data-science-platform)
   - [Why a Good Data Platform Is Important](03-AdvancedSkills.md#why-a-good-data-platform-is-important)
   - [Big Data vs Data Science and Analytics](03-AdvancedSkills.md#Big-Data-vs-Data-Science-and-Analytics)
   - [The 4 Vs of Big Data](03-AdvancedSkills.md#the-4-vs-of-big-data)
