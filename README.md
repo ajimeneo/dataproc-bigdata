@@ -76,6 +76,7 @@ Where to get it.
 		networks: 
 		  nifinet:
 		    name: rmoff_kafka
+		    
 		services:
 		  zookeeper:
 		    image: confluentinc/cp-zookeeper:5.5.0
@@ -84,6 +85,7 @@ Where to get it.
 		      - nifinet
 		    environment:
 		      ZOOKEEPER_CLIENT_PORT: 2181
+		      
 		  broker:
 		    image: confluentinc/cp-kafka:5.5.0
 		    container_name: broker
