@@ -25,22 +25,36 @@ Advanced Data Engineering Skills
 #### Data science platform
 
 Linkado
-ll
-ll
-ll
-ll
-ll
-ll
-llll
-ll
-ll
-ll
-ll
-ll
-ll
-ll
-ll
-ll
-ll
-ll
-ll
+
+Don't learn everything in this book! Focus.
+
+**What types of content are in this book?**
+You are going to find five types of content in this book: Articles
+I wrote, links to my podcast episodes (video & audio), more than 200
+links to helpful websites I like, data engineering interview questions
+and case studies.
+
+**This book is a work in progress!**
+As you can see, this book is not finished. I'm constantly adding new
+stuff and doing videos for the topics. But obviously, because I do this
+as a hobby my time is limited. You can help making this book even
+better.
+
+**Help make this book awesome!**
+If you have some cool links or topics for the cookbook, please become a
+contributor on GitHub: <https://github.com/andkret/Cookbook>. Fork the
+repo, add them and create a pull request. Or join the discussion by
+opening Issues. Tell me your thoughts, what you value,
+what you think should be included, or correct me where I am wrong.
+You can also write me an email any time to
+plumbersofdatascience\@gmail.com anytime.
+
+**This Cookbook is and will always be free!**
+I don't want to sell you this book, but please support what you like and
+join my Patreon: <https://www.patreon.com/plumbersofds>.
+Or send me a message and support through PayPal: <https://paypal.me/feedthestream>
+
+Check out this podcast episode where I talk in detail why I decided to
+share all this information for free: [\#079 Trying to stay true to
+myself and making the cookbook public on
+GitHub](https://youtu.be/k1bS5aSPos8)
