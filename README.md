@@ -68,7 +68,31 @@ Where to get it.
     
       		docker-compose version 1.23.1, build b02f1306
 
-- Provisioning Docker Compose
+- Creating docker-compose-yml
+
+		services:
+		  zookeeper:
+		    image: confluentinc/cp-zookeeper:5.5.0
+		    container_name: zookeeper
+		    networks: 
+		      - nifinet
+		    environment:
+		      ZOOKEEPER_CLIENT_PORT: 2181
+		  broker:
+		    image: confluentinc/cp-kafka:5.5.0
+		    container_name: broker
+		    networks: 
+		      - nifinet
+		    ports:
+		      - "19092:19092"
+		    depends_on:
+		      - zookeeper
+		    environment:
+		      KAFKA_BROKER_ID: 1
+		      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+		      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://broker:9092,CONNECTIONS_FROM_HOST://localhost:19092
+		      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,CONNECTIONS_FROM_HOST:PLAINTEXT
+		      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
 
 #### KAFKA Commands
 
