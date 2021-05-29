@@ -68,8 +68,13 @@ Where to get it.
     
       		docker-compose version 1.23.1, build b02f1306
 
-- Creating docker-compose-yml
+- Creating docker-compose.yml
+		---
+		version: '3.5'
 
+		networks: 
+		  nifinet:
+		    name: rmoff_kafka
 		services:
 		  zookeeper:
 		    image: confluentinc/cp-zookeeper:5.5.0
