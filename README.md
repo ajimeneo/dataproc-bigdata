@@ -41,7 +41,7 @@ Where to get it.
 300 $ to play around
 
 ### Architecture
-- Interaction between master node (provisioned with Docker and Zeppelin) with Dockerized Kafka broker container
+- Interaction between master node (local in the image) with Dockerized Kafka broker container
 
 ![Architecture](/images/10_kafka_configuration.png)
 
