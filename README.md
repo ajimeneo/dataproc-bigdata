@@ -125,7 +125,7 @@ Where to get it.
 	    depends_on:
 	      - nifi
 	    environment:
-	      discovery.type: single-node		    
+	      discovery.type: single-node    
 
 	  kibana:
 	    image: docker.elastic.co/kibana/kibana:7.6.2
