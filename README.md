@@ -68,15 +68,14 @@ Where to get it.
     
       		docker-compose version 1.23.1, build b02f1306
 
+- Creating nifi-tier network
+	docker network create nifi-tier --driver bridge	
+
 - Creating docker-compose.yml
 
 		---
 		version: '3.5'
 
-		networks: 
-		  nifinet:
-		    name: rmoff_kafka
-		    
 		services:
 		  zookeeper:
 		    image: confluentinc/cp-zookeeper:5.5.0
@@ -85,7 +84,7 @@ Where to get it.
 		      - nifinet
 		    environment:
 		      ZOOKEEPER_CLIENT_PORT: 2181
-		      
+
 		  broker:
 		    image: confluentinc/cp-kafka:5.5.0
 		    container_name: broker
@@ -101,6 +100,42 @@ Where to get it.
 		      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://broker:9092,CONNECTIONS_FROM_HOST://localhost:19092
 		      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,CONNECTIONS_FROM_HOST:PLAINTEXT
 		      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+
+		  nifi:
+		    image: apache/nifi
+		    container_name: nifi
+		    networks: 
+		      - nifinet
+		    ports:
+			  - "8060:8080"
+			volumes:
+			  - /etc/hadoop/conf:/hadoop-conf	
+		    depends_on:
+		      - kafka
+
+		  elasticsearch:
+		    image: docker.elastic.co/elasticsearch/elasticsearch:7.6.2
+		    container_name: elasticsearch
+		    networks: 
+		      - nifinet
+		    ports:
+			  - "9200:9200"
+			  - "9300:9300"
+		    depends_on:
+		      - nifi
+		    environment:
+		      discovery.type: single-node		    
+
+		  kibana:
+		    image: docker.elastic.co/kibana/kibana:7.6.2
+		    container_name: kibana
+		    networks: 
+		      - nifinet
+		    ports:
+			  - "5601:5601"
+		    depends_on:
+		      - elasticsearch
+		      
 
 #### KAFKA Commands
 
