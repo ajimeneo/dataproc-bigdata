@@ -42,7 +42,9 @@ Where to get it.
 
 ### First Steps
 
-- Spining up a 2 Worker Cluster Data Node provisioned with Docker and zeppeling notebooks.
+## Spining up a 2 Worker Cluster Data Node provisioned with Docker and zeppeling notebooks.
+
+- Provisioning Docker Compose
   
 	- Download the Docker Compose binary into the /usr/local/bin directory with wget or curl :
     
