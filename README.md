@@ -26,3 +26,21 @@ Advanced Data Engineering Skills
 
 Linkado
 ll
+ll
+ll
+ll
+ll
+ll
+llll
+ll
+ll
+ll
+ll
+ll
+ll
+ll
+ll
+ll
+ll
+ll
+ll
