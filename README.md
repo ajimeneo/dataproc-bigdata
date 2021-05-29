@@ -41,18 +41,23 @@ Where to get it.
 300 $ to play around
 
 ### First Steps
-
-| Podcast Episode: #050 Data Engineer, Scientist or Analyst - Which One Is For You?
-|-----------------------------------------------------------------------------------
-| In this podcast we talk about the diﬀerences between data scientists, analysts and engineers. Which are the three main data science jobs. All three are super important. This makes it easy to decide
-| [Watch on YouTube](https://youtu.be/64TYZETOEdQ) \ [Listen on Anchor](https://anchor.fm/andreaskayy/episodes/050-Data-Engineer-Scientist-or-Analyst-Which-One-Is-For-You-e45ibl)
-
-##
-
-My YouTube video how to set up Kafka at home:
-<https://youtu.be/7F9tBwTUSeY>
-
-My YouTube video how to write to Kafka: <https://youtu.be/RboQBZvZCh0>
+  - Spining up a 2 Worker Cluster Data Node provisioned with Docker and zeppeling notebooks.
+  1.Download the Docker Compose binary into the /usr/local/bin directory with wget or curl :
+  
+    sudo curl -L "https://github.com/docker/compose/releases/download/1.23.1/docker-compose-$(uname -s)-$(uname -m)" \
+    -o /usr/local/bin/docker-compose
+    
+  2.Use chmod to make the Compose binary executable:
+  
+    sudo chmod +x /usr/local/bin/docker-compose
+  
+  3.To verify the installation, use the following command which prints the Compose version:
+  
+    docker-compose --version
+    
+  4.The output will look something like this:  
+    
+    docker-compose version 1.23.1, build b02f1306
 
 #### KAFKA Commands
 
@@ -71,4 +76,19 @@ Start Kafka container:
         -e ALLOW_PLAINTEXT_LISTENER=yes  \
         bitnami/kafka:latest
 
+
+
+| Podcast Episode: #050 Data Engineer, Scientist or Analyst - Which One Is For You?
+|-----------------------------------------------------------------------------------
+| In this podcast we talk about the diﬀerences between data scientists, analysts and engineers. Which are the three main data science jobs. All three are super important. This makes it easy to decide
+| [Watch on YouTube](https://youtu.be/64TYZETOEdQ) \ [Listen on Anchor](https://anchor.fm/andreaskayy/episodes/050-Data-Engineer-Scientist-or-Analyst-Which-One-Is-For-You-e45ibl)
+
+
+My YouTube video how to set up Kafka at home:
+<https://youtu.be/7F9tBwTUSeY>
+
+My YouTube video how to write to Kafka: <https://youtu.be/RboQBZvZCh0>
+
+Acknowledments
+https://linuxize.com/post/how-to-install-and-use-docker-compose-on-debian-10/
 
