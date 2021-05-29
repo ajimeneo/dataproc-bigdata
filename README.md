@@ -69,6 +69,7 @@ Where to get it.
       		docker-compose version 1.23.1, build b02f1306
 
 - Creating docker-compose.yml
+
 		---
 		version: '3.5'
 
