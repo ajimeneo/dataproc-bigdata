@@ -11,33 +11,30 @@ Introduction
 ## Contents
 
 - [What is this Cookbook](README.md#what-is-this-cookbook)
-- [Data Engineer vs Data Scientist](README.md#data-engineer-vs-data-scientist)
-  - [Data Engineer](01-Introduction.md#data-engineer)
+- [Building the Dataproc Cluster](README.md#building-the-dataproc-cluster)
+  - [Dataproc](README.md#what-is-dataproc)
+  - [Dataproc](README.md#what-is-dataproc-cluster)
 - [Why Big Data](03-AdvancedSkills.md#why-big-data)
     - [Planning is Everything](03-AdvancedSkills.md#planning-is-everything)
 
 
 ## What is this Cookbook
 
-I get asked a lot:
-"What do you actually need to learn to become an awesome data engineer?"
+This book is intended to be a proof of concept to spin up a fully bigdata ecosystem cluster from scratch. 
 
-Well, look no further. you'll find it here!
+We will suck data from online real data from the city of Santander, available to us through the Smart City web page, and pour it into our system, enhanced with nifi,kafka and elasticsearch, and doing some visual presentations with kibana.
 
-If you are looking for AI algorithms and such data scientist things,
-this book is not for you.
-
-**How to use this Cookbook:**
-This book is intended to be a proof of concept to spin up a fully bigdata ecosystem cluster from scratch. We will suck data from online real data from the city of Santander, available to us through the Smart City web page, and pour it into our system, enhanced with nifi,kafka and elasticsearch, doing the presentations with kibana and interacting with the system with zeppelin notebooks.
+At the same time we will be able to interact with the system in real time with zeppelin notebooks.
 
 In this cookbook we will cover all Data Engeneering platform key areas (Connect, Buffer, Processing Framework, Store, Visualize)
-
 
 **Help make this book awesome!**
 If you have some cool links or topics for the cookbook, please become a
 contributor on GitHub: <https://github.com/andkret/Cookbook>. Fork the
 
-Data Engineer vs Data Scientist
+## Building the Dataproc Cluster
+
+Building the Dataproc Cluster
 -------------------------------
 
 | Podcast Episode: #050 Data Engineer, Scientist or Analyst - Which One Is For You?
