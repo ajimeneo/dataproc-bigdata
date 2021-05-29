@@ -1,4 +1,5 @@
 # dataproc-nifi-kafka
+How to build up a bigdata ecosystem using nifi, kafka, elasticsearch and kibana with zeppelin notebooks using a google cloud dataproc clusterfrom scratch
 
 ![Cloud Components](/images/00-Dataproc.png)
 
@@ -12,22 +13,9 @@ Introduction
 - [What is this Cookbook](README.md#what-is-this-cookbook)
 - [Data Engineer vs Data Scientist](README.md#data-engineer-vs-data-scientist)
   - [Data Engineer](01-Introduction.md#data-engineer)
-  - [Data Scientist](01-Introduction.md#data-scientist)
-  - [Machine Learning Workflow](01-Introduction.md#machine-learning-workflow)
-  - [Machine Learning Model and Data](01-Introduction.md#machine-learning-model-and-data)
-- [My Data Science Platform Blueprint](01-Introduction.md#my-data-science-platform-blueprint)
-  - [Connect](01-Introduction.md#connect)
-  - [Buffer](01-Introduction.md#buffer)
-  - [Processing Framework](01-Introduction.md#processing-framework)
-  - [Store](01-Introduction.md#store)
-  - [Visualize](01-Introduction.md#visualize)
-- [Who Companies Need](01-Introduction.md#who-companies-need)
 - [Why Big Data](03-AdvancedSkills.md#why-big-data)
     - [Planning is Everything](03-AdvancedSkills.md#planning-is-everything)
-    - [The Problem with ETL](03-AdvancedSkills.md#the-problem-with-etl)
-    - [Scaling Up](03-AdvancedSkills.md#scaling-up)
-    - [Scaling Out](03-AdvancedSkills.md#scaling-out)
-    - [When not to Do Big Data](03-AdvancedSkills.md#please-dont-go-big-data)
+
 
 ## What is this Cookbook
 
