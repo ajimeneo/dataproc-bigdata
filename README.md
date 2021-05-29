@@ -72,69 +72,69 @@ Where to get it.
 	docker network create nifi-tier --driver bridge	
 
 - Creating docker-compose.yml
+	---
+version: '3.5'
 
+services:
+  zookeeper:
+    image: confluentinc/cp-zookeeper:5.5.0
+    container_name: zookeeper
+    networks: 
+      - nifinet
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
 
-        ---
-        version: '3.5'
-        services:
-	  zookeeper:
-	    image: confluentinc/cp-zookeeper:5.5.0
-	    container_name: zookeeper
-	    networks: 
-	      - nifinet
-	    environment:
-	      ZOOKEEPER_CLIENT_PORT: 2181
+  broker:
+    image: confluentinc/cp-kafka:5.5.0
+    container_name: broker
+    networks: 
+      - nifinet
+    ports:
+      - "19092:19092"
+    depends_on:
+      - zookeeper
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://broker:9092,CONNECTIONS_FROM_HOST://localhost:19092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,CONNECTIONS_FROM_HOST:PLAINTEXT
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
 
-	  broker:
-	    image: confluentinc/cp-kafka:5.5.0
-	    container_name: broker
-	    networks: 
-	      - nifinet
-	    ports:
-	      - "19092:19092"
-	    depends_on:
-	      - zookeeper
-	    environment:
-	      KAFKA_BROKER_ID: 1
-	      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
-	      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://broker:9092,CONNECTIONS_FROM_HOST://localhost:19092
-	      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,CONNECTIONS_FROM_HOST:PLAINTEXT
-	      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+  nifi:
+    image: apache/nifi
+    container_name: nifi
+    networks: 
+      - nifinet
+    ports:
+     - "8060:8080"
+    volumes:
+     - /etc/hadoop/conf:/hadoop-conf
+    depends_on:
+      - broker
 
-	  nifi:
-	    image: apache/nifi
-	    container_name: nifi
-	    networks: 
-	      - nifinet
-	    ports:
-	     - "8060:8080"
-	    volumes:
-	     - /etc/hadoop/conf:/hadoop-conf
-	    depends_on:
-	      - broker
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.6.2
+    container_name: elasticsearch
+    networks: 
+      - nifinet
+    ports:
+     - "9200:9200"
+     - "9300:9300"
+    depends_on:
+      - nifi
+    environment:
+      discovery.type: single-node    
 
-	  elasticsearch:
-	    image: docker.elastic.co/elasticsearch/elasticsearch:7.6.2
-	    container_name: elasticsearch
-	    networks: 
-	      - nifinet
-	    ports:
-	     - "9200:9200"
-	     - "9300:9300"
-	    depends_on:
-	      - nifi
-	    environment:
-	      discovery.type: single-node    
-
-	  kibana:
-	    image: docker.elastic.co/kibana/kibana:7.6.2
-	    container_name: kibana
-	    networks: 
-	      - nifinet
-	    ports:
-	     - "5601:5601"
-	    depends_on:
-	      - elasticsearch
+  kibana:
+    image: docker.elastic.co/kibana/kibana:7.6.2
+    container_name: kibana
+    networks: 
+      - nifinet
+    ports:
+     - "5601:5601"
+    depends_on:
+      - elasticsearch
+      
 #### KAFKA Commands
 
 Start Zookeeper container for Kafka:
