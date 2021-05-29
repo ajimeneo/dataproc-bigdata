@@ -48,15 +48,15 @@ Where to get it.
     sudo curl -L "https://github.com/docker/compose/releases/download/1.23.1/docker-compose-$(uname -s)-$(uname -m)" \
     -o /usr/local/bin/docker-compose
     
-  2. Use chmod to make the Compose binary executable:
+    2. Use chmod to make the Compose binary executable:
   
     sudo chmod +x /usr/local/bin/docker-compose
   
-  3. To verify the installation, use the following command which prints the Compose version:
+    3. To verify the installation, use the following command which prints the Compose version:
   
     docker-compose --version
     
-  4. The output will look something like this:  
+    4. The output will look something like this:  
     
     docker-compose version 1.23.1, build b02f1306
 
