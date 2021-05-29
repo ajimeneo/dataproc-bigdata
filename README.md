@@ -76,7 +76,6 @@ Where to get it.
 
 	---
 	version: '3.5'
-
 	services:
 	  zookeeper:
 	    image: confluentinc/cp-zookeeper:5.5.0
