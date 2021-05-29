@@ -108,9 +108,9 @@ Where to get it.
 	    networks: 
 	      - nifinet
 	    ports:
-		  - "8060:8080"
-		volumes:
-		  - /etc/hadoop/conf:/hadoop-conf	
+	     - "8060:8080"
+	    volumes:
+	     - /etc/hadoop/conf:/hadoop-conf
 	    depends_on:
 	      - kafka
 
@@ -120,8 +120,8 @@ Where to get it.
 	    networks: 
 	      - nifinet
 	    ports:
-		  - "9200:9200"
-		  - "9300:9300"
+	     - "9200:9200"
+	     - "9300:9300"
 	    depends_on:
 	      - nifi
 	    environment:
@@ -133,9 +133,9 @@ Where to get it.
 	    networks: 
 	      - nifinet
 	    ports:
-		  - "5601:5601"
+	     - "5601:5601"
 	    depends_on:
-	      - elasticsearch  
+	      - elasticsearch
 
 #### KAFKA Commands
 
