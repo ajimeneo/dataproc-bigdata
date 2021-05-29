@@ -46,20 +46,20 @@ Where to get it.
   
     1. Download the Docker Compose binary into the /usr/local/bin directory with wget or curl :
   
-     sudo curl -L "https://github.com/docker/compose/releases/download/1.23.1/docker-compose-$(uname -s)-$(uname -m)" \
-     -o /usr/local/bin/docker-compose
+      sudo curl -L "https://github.com/docker/compose/releases/download/1.23.1/docker-compose-$(uname -s)-$(uname -m)" \
+      -o /usr/local/bin/docker-compose
     
     2. Use chmod to make the Compose binary executable:
   
-     sudo chmod +x /usr/local/bin/docker-compose
+      sudo chmod +x /usr/local/bin/docker-compose
   
     3. To verify the installation, use the following command which prints the Compose version:
   
-     docker-compose --version
+      docker-compose --version
     
     4. The output will look something like this:  
     
-     docker-compose version 1.23.1, build b02f1306
+      docker-compose version 1.23.1, build b02f1306
 
 #### KAFKA Commands
 
