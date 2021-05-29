@@ -73,7 +73,6 @@ Where to get it.
 
 - Creating docker-compose.yml
 
-
 	---
 	version: '3.5'
 
@@ -112,7 +111,7 @@ Where to get it.
 	    volumes:
 	     - /etc/hadoop/conf:/hadoop-conf
 	    depends_on:
-	      - kafka
+	      - broker
 
 	  elasticsearch:
 	    image: docker.elastic.co/elasticsearch/elasticsearch:7.6.2
@@ -136,7 +135,6 @@ Where to get it.
 	     - "5601:5601"
 	    depends_on:
 	      - elasticsearch
-
 #### KAFKA Commands
 
 Start Zookeeper container for Kafka:
