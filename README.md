@@ -1,4 +1,4 @@
-# dataproc-nifi-kafka
+# The Google Cloud Dataproc Bigdata Ecosystem Cookbook
 How to build up a bigdata ecosystem using nifi, kafka, elasticsearch and kibana with zeppelin notebooks using a google cloud dataproc clusterfrom scratch
 
 ![Cloud Components](/images/00-Dataproc.png)
