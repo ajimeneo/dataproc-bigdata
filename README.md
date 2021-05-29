@@ -40,9 +40,13 @@ Datapro is bla bla bla
 Where to get it.
 300 $ to play around
 
+### Architecture
+- Interaction between master node (provisioned with Docker and Zeppelin) with Dockerized Kafka broker container
+![Architecture](/images/00-Dataproc.png)
+
 ### First Steps
 
-## Spining up a 2 Worker Cluster Data Node provisioned with Docker and zeppeling notebooks.
+#### Spining up a 2 Worker Cluster Data Node provisioned with Docker and zeppeling notebooks.
 
 - Provisioning Docker Compose
   
@@ -62,6 +66,8 @@ Where to get it.
 	- The output will look something like this:  
     
       		docker-compose version 1.23.1, build b02f1306
+
+- Provisioning Docker Compose
 
 #### KAFKA Commands
 
