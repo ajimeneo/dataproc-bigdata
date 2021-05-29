@@ -70,7 +70,7 @@ Where to get it.
 
 - Creating nifi-tier network
 
-	docker network create nifi-tier --driver bridge	
+		docker network create nifi-tier --driver bridge	
 
 - Creating docker-compose.yml
 
