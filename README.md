@@ -19,3 +19,10 @@ Advanced Data Engineering Skills
 
 
 ![Cloud Components](/images/00-Dataproc.png)
+
+
+
+#### Data science platform
+
+Linkado
+ll
