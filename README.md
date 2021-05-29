@@ -74,8 +74,7 @@ Where to get it.
 - Creating docker-compose.yml
 
 
-    version: '3.5'
-    
+version: '3.5'   
     services:
       zookeeper:
         image: confluentinc/cp-zookeeper:5.5.0
