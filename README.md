@@ -72,3 +72,40 @@ Data Engineer vs Data Scientist
 | In this podcast we talk about the diﬀerences between data scientists, analysts and engineers. Which are the three main data science jobs. All three are super important. This makes it easy to decide
 | [Watch on YouTube](https://youtu.be/64TYZETOEdQ) \ [Listen on Anchor](https://anchor.fm/andreaskayy/episodes/050-Data-Engineer-Scientist-or-Analyst-Which-One-Is-For-You-e45ibl)
 
+
+
+### Apache Kafka
+
+#### Why a message queue tool?
+
+#### Kafka architecture
+
+#### What are topics
+
+#### What does Zookeeper have to do with Kafka
+
+#### How to produce and consume messages
+
+My YouTube video how to set up Kafka at home:
+<https://youtu.be/7F9tBwTUSeY>
+
+My YouTube video how to write to Kafka: <https://youtu.be/RboQBZvZCh0>
+
+#### KAFKA Commands
+
+Start Zookeeper container for Kafka:
+
+    docker run -d --name zookeeper-server   \
+        --network app-tier   \
+        -e ALLOW_ANONYMOUS_LOGIN=yes    \
+        bitnami/zookeeper:latest
+
+Start Kafka container:
+
+    docker run -d --name kafka-server  \
+        --network app-tier  \
+        -e KAFKA_CFG_ZOOKEEPER_CONNECT=zookeeper-server:2181  \
+        -e ALLOW_PLAINTEXT_LISTENER=yes  \
+        bitnami/kafka:latest
+
+
