@@ -28,25 +28,10 @@ If you are looking for AI algorithms and such data scientist things,
 this book is not for you.
 
 **How to use this Cookbook:**
-This book is intended to be a starting point for you. It is not a training! I want to help you to identify the topics to look into and becoming an awesome data engineer in the process.
+This book is intended to be a proof of concept to spin up a fully bigdata ecosystem cluster from scratch. We will suck data from online real data from the city of Santander, available to us through the Smart City web page, and pour it into our system, enhanced with nifi,kafka and elasticsearch, doing the presentations with kibana and interacting with the system with zeppelin notebooks.
 
-It hinges on my Data Science Platform Blueprint, check it out below. Once you understand it, you can find in the book tools that fit into each key area of a Data Science platform (Connect, Buffer, Processing Framework, Store, Visualize).
+In this cookbook we will cover all Data Engeneering platform key areas (Connect, Buffer, Processing Framework, Store, Visualize)
 
-Select a few tools you are interested in, research and work with them.
-
-Don't learn everything in this book! Focus.
-
-**What types of content are in this book?**
-You are going to find five types of content in this book: Articles
-I wrote, links to my podcast episodes (video & audio), more than 200
-links to helpful websites I like, data engineering interview questions
-and case studies.
-
-**This book is a work in progress!**
-As you can see, this book is not finished. I'm constantly adding new
-stuff and doing videos for the topics. But obviously, because I do this
-as a hobby my time is limited. You can help making this book even
-better.
 
 **Help make this book awesome!**
 If you have some cool links or topics for the cookbook, please become a
