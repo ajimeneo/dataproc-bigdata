@@ -39,3 +39,38 @@ Check out this podcast episode where I talk in detail why I decided to
 share all this information for free: [\#079 Trying to stay true to
 myself and making the cookbook public on
 GitHub](https://youtu.be/k1bS5aSPos8)
+
+
+Data Engineer vs Data Scientist
+-------------------------------
+
+
+| Podcast Episode: #050 Data Engineer, Scientist or Analyst - Which One Is For You?
+|-----------------------------------------------------------------------------------
+| In this podcast we talk about the diﬀerences between data scientists, analysts and engineers. Which are the three main data science jobs. All three are super important. This makes it easy to decide
+| [Watch on YouTube](https://youtu.be/64TYZETOEdQ) \ [Listen on Anchor](https://anchor.fm/andreaskayy/episodes/050-Data-Engineer-Scientist-or-Analyst-Which-One-Is-For-You-e45ibl)
+
+
+### Data Engineer
+
+Data Engineers are the link between the management's data strategy
+and the data scientists that need to work with data.
+
+What they do is building the platforms that enable data scientists to do
+their magic.
+
+These platforms are usually used in five different ways:
+
+-   Data ingestion and storage of large amounts of data
+
+-   Algorithm creation by data scientists
+
+-   Automation of the data scientist's machine learning models and
+    algorithms for production use
+
+-   Data visualization for employees and customers
+
+-   Most of the time these guys start as traditional solution architects
+    for systems that involve SQL databases, web servers, SAP
+    installations and other "standard" systems.
+
