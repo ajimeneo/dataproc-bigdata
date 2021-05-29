@@ -42,7 +42,8 @@ Where to get it.
 
 ### Architecture
 - Interaction between master node (provisioned with Docker and Zeppelin) with Dockerized Kafka broker container
-![Architecture](/images/00-Dataproc.png)
+
+![Architecture](/images/10_kafka_configuration.png)
 
 ### First Steps
 
