@@ -34,7 +34,7 @@ contributor on GitHub: <https://github.com/andkret/Cookbook>. Fork the
 
 ## Building the Dataproc Cluster
 
-Building the Dataproc Cluster
+LL
 -------------------------------
 
 | Podcast Episode: #050 Data Engineer, Scientist or Analyst - Which One Is For You?
