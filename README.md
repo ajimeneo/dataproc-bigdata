@@ -73,8 +73,7 @@ Where to get it.
 
 - Creating docker-compose.yml
 
-
-	---
+        ---
 	version: '3.5'
 	services:
 	  zookeeper:
