@@ -12,8 +12,8 @@ Introduction
 
 - [What is this Cookbook](README.md#what-is-this-cookbook)
 - [Building the Dataproc Cluster](README.md#building-the-dataproc-cluster)
-  - [Dataproc](README.md#what-is-dataproc)
-  - [Dataproc](README.md#what-is-dataproc-cluster)
+  - [What is Google Cloud Dataproc](README.md#what-is-google-cloud-dataproc)
+  - [Firs Steps](README.md#first-steps)
 - [Why Big Data](03-AdvancedSkills.md#why-big-data)
     - [Planning is Everything](03-AdvancedSkills.md#planning-is-everything)
 
@@ -22,7 +22,7 @@ Introduction
 
 This book is intended to be a proof of concept to spin up a fully bigdata ecosystem cluster from scratch. 
 
-We will suck data from online real data from the city of Santander, available to us through the Smart City web page, and pour it into our system, enhanced with nifi,kafka and elasticsearch, and doing some visual presentations with kibana.
+We will suck data from online real data from the city of Santander, available to us through the Smart City web page, and pour it into our system, which will be a Google Cloud Dataproc cluster, provisioned with nifi,kafka and elasticsearch Docker containers. The visual presentation will be done using kibana.
 
 At the same time we will be able to interact with the system in real time with zeppelin notebooks.
 
@@ -34,27 +34,20 @@ contributor on GitHub: <https://github.com/andkret/Cookbook>. Fork the
 
 ## Building the Dataproc Cluster
 
+### What is Google Cloud Dataproc 
 
+Datapro is bla bla bla
+Where to get it.
+300 $ to play around
+
+### First Steps
 
 | Podcast Episode: #050 Data Engineer, Scientist or Analyst - Which One Is For You?
 |-----------------------------------------------------------------------------------
 | In this podcast we talk about the diﬀerences between data scientists, analysts and engineers. Which are the three main data science jobs. All three are super important. This makes it easy to decide
 | [Watch on YouTube](https://youtu.be/64TYZETOEdQ) \ [Listen on Anchor](https://anchor.fm/andreaskayy/episodes/050-Data-Engineer-Scientist-or-Analyst-Which-One-Is-For-You-e45ibl)
 
-LL
--------------------------------
-
-### Apache Kafka
-
-#### Why a message queue tool?
-
-#### Kafka architecture
-
-#### What are topics
-
-#### What does Zookeeper have to do with Kafka
-
-#### How to produce and consume messages
+##
 
 My YouTube video how to set up Kafka at home:
 <https://youtu.be/7F9tBwTUSeY>
