@@ -18,13 +18,13 @@ Advanced Data Engineering Skills
     - [When not to Do Big Data](03-AdvancedSkills.md#please-dont-go-big-data)
 
 
-![Cloud Components](/images/00-Dataproc.png)
 
 
 
 ## Data Science Platform
 
-Linkado
+![Cloud Components](/images/00-Dataproc.png)
+
 
 Don't learn everything in this book! Focus.
 
@@ -41,14 +41,7 @@ myself and making the cookbook public on
 GitHub](https://youtu.be/k1bS5aSPos8)
 
 
-Data Engineer vs Data Scientist
--------------------------------
 
-
-| Podcast Episode: #050 Data Engineer, Scientist or Analyst - Which One Is For You?
-|-----------------------------------------------------------------------------------
-| In this podcast we talk about the diﬀerences between data scientists, analysts and engineers. Which are the three main data science jobs. All three are super important. This makes it easy to decide
-| [Watch on YouTube](https://youtu.be/64TYZETOEdQ) \ [Listen on Anchor](https://anchor.fm/andreaskayy/episodes/050-Data-Engineer-Scientist-or-Analyst-Which-One-Is-For-You-e45ibl)
 
 
 ### Data Engineer
@@ -59,7 +52,7 @@ Introduction
 ## Contents
 
 - [What is this Cookbook](README.md#what-is-this-cookbook)
-- [Data Engineer vs Data Scientist](01-Introduction.md#data-engineer-vs-data-scientist)
+- [Data Engineer vs Data Scientist](README.md#data-engineer-vs-data-scientist)
   - [Data Engineer](01-Introduction.md#data-engineer)
   - [Data Scientist](01-Introduction.md#data-scientist)
   - [Machine Learning Workflow](01-Introduction.md#machine-learning-workflow)
@@ -71,6 +64,12 @@ Introduction
   - [Store](01-Introduction.md#store)
   - [Visualize](01-Introduction.md#visualize)
 - [Who Companies Need](01-Introduction.md#who-companies-need)
+- [Why Big Data](03-AdvancedSkills.md#why-big-data)
+    - [Planning is Everything](03-AdvancedSkills.md#planning-is-everything)
+    - [The Problem with ETL](03-AdvancedSkills.md#the-problem-with-etl)
+    - [Scaling Up](03-AdvancedSkills.md#scaling-up)
+    - [Scaling Out](03-AdvancedSkills.md#scaling-out)
+    - [When not to Do Big Data](03-AdvancedSkills.md#please-dont-go-big-data)
 
 ## What is this Cookbook
 
@@ -106,4 +105,12 @@ better.
 **Help make this book awesome!**
 If you have some cool links or topics for the cookbook, please become a
 contributor on GitHub: <https://github.com/andkret/Cookbook>. Fork the
+
+Data Engineer vs Data Scientist
+-------------------------------
+
+| Podcast Episode: #050 Data Engineer, Scientist or Analyst - Which One Is For You?
+|-----------------------------------------------------------------------------------
+| In this podcast we talk about the diﬀerences between data scientists, analysts and engineers. Which are the three main data science jobs. All three are super important. This makes it easy to decide
+| [Watch on YouTube](https://youtu.be/64TYZETOEdQ) \ [Listen on Anchor](https://anchor.fm/andreaskayy/episodes/050-Data-Engineer-Scientist-or-Analyst-Which-One-Is-For-You-e45ibl)
 
