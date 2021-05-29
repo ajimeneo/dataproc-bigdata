@@ -58,7 +58,7 @@ Introduction
 
 ## Contents
 
-- [What is this Cookbook](01-Introduction.md#what-is-this-cookbook)
+- [What is this Cookbook](README.md#what-is-this-cookbook)
 - [Data Engineer vs Data Scientist](01-Introduction.md#data-engineer-vs-data-scientist)
   - [Data Engineer](01-Introduction.md#data-engineer)
   - [Data Scientist](01-Introduction.md#data-scientist)
