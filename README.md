@@ -38,7 +38,7 @@ Where to get it.
 ### Architecture
 - Interaction between master node (local in the image) with Dockerized Kafka broker container
 
-![Architecture](/images/10_kafka_configuration.png)
+
 
 ### First Steps
 
@@ -134,6 +134,21 @@ Nifi is ready to go!
 
 
 ![Apache nifi](/images/00_nifi.png)
+
+
+## Connecting to Kafka
+
+Let's go and try creating a topic in kafka broker container.
+
+To prove that is up and listenging properly we will prove that:
+1. There is connectivity among any containers from the same network (Spin up a docker container with some python code that interacts with kafka) 
+2. There is connectivity from local to Kafka. (Launch spark-shell from the VM an run some scala code to produce/consume to kafka broker) 
+
+All of the ideas and code are from retrieved from this amazing page written by .... All the merit goes to him!
+
+As mention before we will use this arquitechture to connect to kafka broker. This diagram from ... to 
+![Architecture](/images/10_kafka_configuration.png)
+
 
 
 
