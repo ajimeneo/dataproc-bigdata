@@ -146,21 +146,21 @@ Nifi is ready to go!
 
 As kafka is up and running let's go and try create a topic within kafka broker container to check everything is fine. In order to do so let's have a look to the kafka arquitecture that we have built up through [docker-compose.yml](/scripts/docker-compose.yml) 
 
-    broker:
-    image: confluentinc/cp-kafka:5.5.0
-    container_name: broker
-    networks: 
-      - nifinet
-    ports:
-      - "19092:19092"
-    depends_on:
-      - zookeeper
-    environment:
-      KAFKA_BROKER_ID: 1
-      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
-      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://broker:9092,CONNECTIONS_FROM_HOST://localhost:19092
-      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,CONNECTIONS_FROM_HOST:PLAINTEXT
-      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+	    broker:
+	    image: confluentinc/cp-kafka:5.5.0
+	    container_name: broker
+	    networks: 
+	      - nifinet
+	    ports:
+	      - "19092:19092"
+	    depends_on:
+	      - zookeeper
+	    environment:
+	      KAFKA_BROKER_ID: 1
+	      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+	      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://broker:9092,CONNECTIONS_FROM_HOST://localhost:19092
+	      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,CONNECTIONS_FROM_HOST:PLAINTEXT
+	      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
 
 Check out that there are two advertised listerners on broker:9092 and localhost:19092. The whole thing of kafka connection boils down to these two listeners.
 Why using two instead of the default one? The reason being that in order to establish a successful connection to kafka two things must succeed:
