@@ -13,8 +13,6 @@ Introduction
 - [Building the Dataproc Cluster](README.md#building-the-dataproc-cluster)
   - [What is Google Cloud Dataproc](README.md#what-is-google-cloud-dataproc)
   - [Firs Steps](README.md#first-steps)
-- [Why Big Data](03-AdvancedSkills.md#why-big-data)
-    - [Planning is Everything](03-AdvancedSkills.md#planning-is-everything)
 
 
 ## What is this Cookbook
