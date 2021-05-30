@@ -91,7 +91,7 @@ Where to get it.
  docker.elastic.co/kibana/kibana:7.6.2
       
 
-        docker-compose up -d 
+        	docker-compose up -d 
 
 The first time we issue this command will download nifi, zookeeper, kafka, elasticsearch an kibana images from Docker Hub, as we don't have it yet.
 We can use the detached mode to avoid the logs printed out to the screen.
