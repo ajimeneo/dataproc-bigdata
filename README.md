@@ -49,7 +49,7 @@ Where to get it.
 
 #### Spining up a 2 Worker Cluster Data Node provisioned with Docker and zeppeling notebooks.
 
-- Provisioning Docker Compose
+- Provision the master node with Docker Compose
   
 	- Download the Docker Compose binary into the /usr/local/bin directory with wget or curl :
     
@@ -73,7 +73,8 @@ Where to get it.
 		docker network create nifinet --driver bridge	
 
 - Creating docker-compose.yml
-
+- 
+[Listen on Anchor](https://anchor.fm/andreaskayy/episodes/050-Data-Engineer-Scientist-or-Analyst-Which-One-Is-For-You-e45ibl)
 
 
       
