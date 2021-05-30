@@ -105,7 +105,7 @@ Verify all 5 containers are up and none of them exited:
 
 - Create a SSH tunnel to connect to nifi and kibana.
 
-Through docker-compose.yml we have exposed port 8080 (from nifi container) to 8060 in localhost ( our vm instance which acts as master node). So we have to tunnel from our local machine ( laptop ) to the VM port 8060 to get access to Nifi Web UI. One way of doing it is by manually using PuttY ,generating ssh-keys and installing them in the VM, connecting to the VM and specifying tunnel port in Putty. One easier way is through Google Cloud Standard Development Kit.
+Through docker-compose.yml we have exposed port 8080 (from nifi container) to 8060 in localhost ( our vm instance which acts as master node). So we have to tunnel from our local machine ( laptop ) to the VM port 8060 to get access to Nifi Web UI. One way of doing it is by manually using PuttY ,generating ssh-keys and installing them in the VM, connecting to the VM and specifying tunnel port in Putty. One easier way is through Google Cloud Standard Development Kit keeping in mind that you have to have Web browser Chrome already installed.
 
 In my case, as is a Windows, I downloaded [Google Cloud Client](https://dl.google.com/dl/cloudsdk/channels/rapid/GoogleCloudSDKInstaller.exe)  
 Once installed our their features are embedded within cmd or powershell commands and you can use gcloud extensions as if they belong to Windows cmd.
@@ -115,13 +115,17 @@ In Google Cloud there is a cheat sheet for Windows, Mac and Linux Systems.
 ![SSH tunnel](/images/00_gcloud.png)
 
 
-
-- Open a ssh tunnel
+- Open a ssh tunnel through port 1080
 
      	gcloud compute ssh cluster-uoc-m ^
        	 --project=data-lakes-313014 ^
        	 --zone=europe-west6-b -- -D 1080 -N
 
+- Launch chrome through ssh tunnel to access desired port (In our case Nifi stands for localhost:8060)
+
+		%ProgramFiles(x86)%\Google\Chrome\Application\chrome.exe ^
+  		--proxy-server="socks5://localhost:1080" ^
+  		--user-data-dir="%Temp%\cluster-uoc-m" http://cluster-uoc-m:8088
 
 
 
