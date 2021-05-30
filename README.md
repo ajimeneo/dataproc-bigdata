@@ -234,12 +234,12 @@ List images to check out that python_kafka_test_client image has been created
 		docker run --network=nifinet --rm --name python_kafka_test_client \
         	--tty python_kafka_test_client broker:9092
 
-The program expects a host as a first param. As you can see from the image broker:9092 is the expected path.
+The program expects a host as a first param. We supply "broker:9092" as the container spun up is within the same network.
 
 
  ![Success](/images/00_connection_successful.png)
 
-- Launch a spark-shell and run a scala program that connects to kafka broker	
+- Launch the python python_kafka_test_client.py program from the VM shell to connect to kafka broker	
 
 # Putting all agents working together
 
