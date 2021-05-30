@@ -19,7 +19,8 @@ Introduction
   - [What is Google Cloud Dataproc](README.md#what-is-google-cloud-dataproc)
   - [Firs Steps](README.md#first-steps)
 - [Putting all agents working together](README.md#putting-all-agents-working-together)
-
+  - [Apache nifi](README.md#nifi)
+  - [Apache kafka](README.md#kafka)
 ## What is this Cookbook
 
 This book is intended to be a proof of concept to spin up a fully bigdata ecosystem cluster from scratch using GCP.
