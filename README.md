@@ -154,7 +154,14 @@ All of the ideas and code are from retrieved from this amazing page written by .
 As mention before we will use this arquitechture to connect to kafka broker. This diagram from ... to 
 ![Architecture](/images/10_kafka_configuration.png)
 
-(Source: https://www.confluent.io/blog/kafka-client-cannot-connect-to-broker-on-aws-on-docker-etc/)
+Source: https://www.confluent.io/blog/kafka-client-cannot-connect-to-broker-on-aws-on-docker-etc/
+
+
+The behaviour to connect to a Dockerized kafka broker is this:
+
+
+![Can't resolve host](/images/listeners1.017-768x546.png)
+
 
 ### Prove there is connection to kafka broker container from another container
 
@@ -182,7 +189,11 @@ List images to check out that python_kafka_test_client image has been created
 
 		docker run --network=nifinet --rm --name python_kafka_test_client \
         	--tty python_kafka_test_client broker:9092
-- 
+
+The program expects a host as a first param. As you can see from the image broker:9092 is the expected path.
+
+
+
 		
 		
 | Podcast Episode: #050 Data Engineer, Scientist or Analyst - Which One Is For You?
