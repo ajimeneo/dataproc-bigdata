@@ -156,7 +156,9 @@ As mention before we will use this arquitechture to connect to kafka broker. Thi
 
 (Source: https://www.confluent.io/blog/kafka-client-cannot-connect-to-broker-on-aws-on-docker-etc/)
 
+### Create DockerFile with python3 
 
+![Dockerfile](https://github.com/ajimeneo/dataproc-bigdata/blob/main/scripts/python_kafka_test_client.py)
 
 
 | Podcast Episode: #050 Data Engineer, Scientist or Analyst - Which One Is For You?
