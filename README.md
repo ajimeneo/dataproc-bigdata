@@ -68,15 +68,19 @@ Where to get it.
     
       		docker-compose version 1.23.1, build b02f1306
 
-- Creating nifinet network
+- Create nifinet network
 
 		docker network create nifinet --driver bridge	
 
-- Creating docker-compose.yml
-- 
-[Listen on Anchor](https://anchor.fm/andreaskayy/episodes/050-Data-Engineer-Scientist-or-Analyst-Which-One-Is-For-You-e45ibl)
+- Create docker-compose.yml
 
-
+ This docker-compose file spins up 5 different containers:
+ - **Nifi container**
+	It contains the [Apache Nifi](http://http://nifi.apache.org/download.html) project, which is a a powerful and reliable system to process and distribute data. It will be used as a single point of data entrace into the system, allowing us to ingest and transform data. After that, data will be sinked to different destinations sucha as hdfs distributed file system, mysql database and kafka brokers.
+ - **Zookeeper container**
+ - **Kafka broker container**
+ - **Elasticsearch container**
+ - **Kibana container**
       
 #### KAFKA Commands
 
