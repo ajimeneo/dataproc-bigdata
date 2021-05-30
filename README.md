@@ -188,11 +188,11 @@ If you expose port 9092 as you normally do, and uses ad advertised listener the 
 	    KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1 
 	…
 
-What often happens is described in the graph below:
+What happens is described in the graph below:
 
 ![Can't resolve host](/images/20_kafka_configuration.png)
 
-The client (for example a Zeppelin notebook which is running on the master node of the VM ) cannot resolve  the advertised listener broker:9092 as it has no means to resolve the address.
+The client (for example a Zeppelin notebook which is running on the master node of the VM ) cannot resolve  the advertised listener "broker:9092" as it has no means to resolve who "broker" is.
 
 Once you use more than one, you are bound to procure the security protocol as well. Hence why we write down PLAINTEXT security protocol twice.
 
