@@ -77,27 +77,22 @@ Where to get it.
  This docker-compose file spins up 5 different containers:
  - **Nifi container**
 	It contains the [Apache Nifi](http://http://nifi.apache.org/download.html) project, which is a a powerful and reliable system to process and distribute data. It will be used as a single point of data entrace into the system, allowing us to ingest and transform data. After that, data will be sinked to different destinations sucha as hdfs distributed file system, mysql database and kafka brokers.
+	The image we use within docker-compose.yml is **apache/nifi:latest**
  - **Zookeeper container**
+ confluentinc/cp-zookeeper:5.5.0
  - **Kafka broker container**
+ confluentinc/cp-kafka:5.5.0
  - **Elasticsearch container**
+ docker.elastic.co/elasticsearch/elasticsearch:7.6.2
  - **Kibana container**
+ docker.elastic.co/kibana/kibana:7.6.2
       
-#### KAFKA Commands
+Start all 5 containers:
 
-Start Zookeeper container for Kafka:
+    docker-compose up -d 
 
-    docker run -d --name zookeeper-server   \
-        --network app-tier   \
-        -e ALLOW_ANONYMOUS_LOGIN=yes    \
-        bitnami/zookeeper:latest
-
-Start Kafka container:
-
-    docker run -d --name kafka-server  \
-        --network app-tier  \
-        -e KAFKA_CFG_ZOOKEEPER_CONNECT=zookeeper-server:2181  \
-        -e ALLOW_PLAINTEXT_LISTENER=yes  \
-        bitnami/kafka:latest
+The first time we issue this command will download nifi, zookeeper, kafka, elasticsearch an kibana images from Docker Hub, as we don't have it yet.
+We can use the detached mode 
 
 
 
