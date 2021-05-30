@@ -54,8 +54,6 @@ Where to get it.
 
 ### First Steps
 
-#### Spining up a 2 Worker Cluster Data Node provisioned with Docker and zeppeling notebooks.
-
 - Provision the master node with Docker Compose
   
 	- Download the Docker Compose binary into the /usr/local/bin directory with wget or curl :
@@ -79,7 +77,7 @@ Where to get it.
 
 		docker network create nifinet --driver bridge	
 
-- Create docker-compose.yml
+- Create [docker-compose.yml](/scripts/docker-compose.yml) 
 
  This docker-compose file spins up 5 different containers:
  - **Nifi container**
