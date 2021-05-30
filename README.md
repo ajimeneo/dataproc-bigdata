@@ -172,6 +172,23 @@ What usually happens is that you often only care for the first connection. Once 
 
 ![Can't resolve host](/images/20_kafka_configuration.png)
 
+If you expose port 9092 as you normally do, the first connection against kafka (the one that gets the metadata) should succeed, but the second one should fail.
+	…
+	  broker:
+	    image: confluentinc/cp-kafka:5.5.0
+	    container_name: broker
+	    networks: 
+	      - rmoff_kafka
+	    ports:
+	      - "9092:9092"
+	    environment:
+	    KAFKA_BROKER_ID: 1
+	    KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+	    KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://broker:9092
+	    KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1 
+	…
+
+The client (for example a Zeppelin notebook which is running on the master node of the VM ) cannot resolve  the advertised listener broker:9092 as it has no means to resolve the address.
 
 Once you use more than one, you are bound to procure the security protocol as well. Hence why we write down PLAINTEXT security protocol twice.
 
