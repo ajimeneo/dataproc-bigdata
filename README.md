@@ -15,7 +15,7 @@ Introduction
 ## Contents
 
 - [What is this Cookbook](README.md#what-is-this-cookbook)
-- [Building the Dataproc Cluster](README.md#building-the-dataproc-cluster)
+- [Building the Dataproc Cluster](README.md#building-up-the-arquitechture:-the-dataproc-cluster)
   - [What is Google Cloud Dataproc](README.md#what-is-google-cloud-dataproc)
   - [Firs Steps](README.md#first-steps)
 
@@ -30,7 +30,11 @@ At the same time we will be able to interact with the system in real time with z
 
 In this cookbook we will cover all Data Engeneering platform key areas (Connect, Buffer, Processing Framework, Store, Visualize)
 
-## Building the Dataproc Cluster
+We will split the cookbook into two main parts:
+**First**: Building up the arquitechture
+**Second**: Putting all main agents ( nifi, elasticsearch, kibana, zeppelin) working together to ingest and extract meaning from the data
+
+## Building up the arquitechture: The Dataproc Cluster
 
 ### What is Google Cloud Dataproc 
 
@@ -143,11 +147,11 @@ Nifi is ready to go!
 
 ## Connecting to Kafka
 
-Let's go and try creating a topic in kafka broker container.
+Let's go and try create a topic within kafka broker container.
 
-To prove that is up and listenging properly we will prove that:
+To prove that is up and listenging properly we will check that:
 1. There is connectivity among any containers from the same network (Spin up a docker container with some python code that interacts with kafka) 
-2. There is connectivity from local to Kafka. (Launch spark-shell from the VM an run some scala code to produce/consume to kafka broker) 
+2. There is connectivity from local (master node within VM) to Kafka. (Launch spark-shell from the VM an run some scala code to produce/consume to kafka broker) 
 
 All of the ideas and code are from retrieved from this amazing page written by .... All the merit goes to him!
 
@@ -198,7 +202,7 @@ The program expects a host as a first param. As you can see from the image broke
 
  ![Success](/images/00_connection_successful.png)
 
-		
+- Launch a spark-shell and run a scala program that connects to kafka broker		
 		
 | Podcast Episode: #050 Data Engineer, Scientist or Analyst - Which One Is For You?
 |-----------------------------------------------------------------------------------
