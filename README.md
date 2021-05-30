@@ -160,15 +160,22 @@ As mention before we will use this arquitechture to connect to kafka broker. Thi
 
 To do that we will spin up a container based on an image named python_kafka_test_client from a Dockerfile. This file has a python3 base image. We will add a python program python_kafka_test_client.py that tries to connect to kafka and produce and consume some test messages from and to the topic "topic_test".
 
-#### Create DockerFile 
-
-![Dockerfile](https://github.com/ajimeneo/dataproc-bigdata/blob/main/scripts/Dockerfile)
-
-#### Python test connection program
+- Python test connection program python_kafka_test_client.py
 
 ![python_kafka_test_client.py](https://github.com/ajimeneo/dataproc-bigdata/blob/main/scripts/python_kafka_test_client.py)
 
+- Create a DockerFile 
 
+![Dockerfile](https://github.com/ajimeneo/dataproc-bigdata/blob/main/scripts/Dockerfile)
+
+	docker build -t python_kafka_test_client .
+	
+- Spin up a Docker container with python_kafka_test_client image
+
+		docker run --network=nifinet --rm --name python_kafka_test_client \
+        	--tty python_kafka_test_client broker:9092
+		
+		
 | Podcast Episode: #050 Data Engineer, Scientist or Analyst - Which One Is For You?
 |-----------------------------------------------------------------------------------
 | In this podcast we talk about the diﬀerences between data scientists, analysts and engineers. Which are the three main data science jobs. All three are super important. This makes it easy to decide
