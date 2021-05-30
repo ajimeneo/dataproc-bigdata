@@ -169,12 +169,9 @@ Why using two instead of the default one? The reason being that in order to esta
 1. The initial connection to a broker (the bootstrap) which returns metadata to the client, including a list of all the brokers in the cluster and their connection endpoints.
 2. The client then connects to one (or more) of the brokers returned in the first step as required. If the broker has not been configured correctly, the connections will fail.
 
-What usually happens is that you often only care for the first connection. Once it is succesful you say Aha! I'm connected! But you're not. What often happens is described in the graph below:
+What usually happens is that you often only care for the first connection. Once it is succesful you say Aha! I'm connected! But you're not. 
 
-![Can't resolve host](/images/20_kafka_configuration.png)
-
-
-If you expose port 9092 as you normally do, the first connection against kafka (the one that gets the metadata) should succeed, but the second one should fail.
+If you expose port 9092 as you normally do, and uses ad advertised listener the name of the broker and its port (broker:9092) then the first connection against kafka (the one that gets the metadata) should succeed, but the second one should fail.
 
 	…
 	  broker:
@@ -190,6 +187,10 @@ If you expose port 9092 as you normally do, the first connection against kafka (
 	    KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://broker:9092
 	    KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1 
 	…
+
+What often happens is described in the graph below:
+
+![Can't resolve host](/images/20_kafka_configuration.png)
 
 The client (for example a Zeppelin notebook which is running on the master node of the VM ) cannot resolve  the advertised listener broker:9092 as it has no means to resolve the address.
 
