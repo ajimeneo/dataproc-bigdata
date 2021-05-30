@@ -17,10 +17,12 @@ Introduction
 - [What is this Cookbook](README.md#what-is-this-cookbook)
 - [Building up the Dataproc Cluster](README.md#building-up-the-architecture-the-dataproc-cluster)
   - [What is Google Cloud Dataproc](README.md#what-is-google-cloud-dataproc)
-  - [Firs Steps](README.md#first-steps)
+  - [First Steps](README.md#first-steps)
+  - [Connecting to Apache Kafka](README.md#Connecting-to-kafka)
 - [Putting all agents working together](README.md#putting-all-agents-working-together)
-  - [Apache nifi](README.md#nifi)
-  - [Apache kafka](README.md#kafka)
+  - [Using Apache nifi](README.md#nifi)
+  - [Using Apache kafka](README.md#kafka)
+ 
 ## What is this Cookbook
 
 This book is intended to be a proof of concept to spin up a fully bigdata ecosystem cluster from scratch using GCP.
@@ -37,7 +39,7 @@ We will split the cookbook into two main parts:
 
 **Second**: Putting all main agents ( nifi, elasticsearch, kibana, zeppelin) working together to ingest and extract meaning from the data
 
-## Building up the architecture: The Dataproc Cluster
+# Building up the architecture: The Dataproc Cluster
 
 ### What is Google Cloud Dataproc 
 
@@ -143,7 +145,6 @@ Nifi is ready to go!
 
 ![Apache nifi](/images/00_nifi.png)
 
-
 ## Connecting to Kafka
 
 Let's go and try create a topic within kafka broker container.
@@ -203,7 +204,9 @@ The program expects a host as a first param. As you can see from the image broke
 
 - Launch a spark-shell and run a scala program that connects to kafka broker	
 
-## Putting all agents working together
+# Putting all agents working together
+
+## Using Apache Nifi
 		
 | Podcast Episode: #050 Data Engineer, Scientist or Analyst - Which One Is For You?
 |-----------------------------------------------------------------------------------
