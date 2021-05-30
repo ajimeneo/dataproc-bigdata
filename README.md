@@ -154,7 +154,7 @@ All of the ideas and code are from retrieved from this amazing page written by .
 As mention before we will use this arquitechture to connect to kafka broker. This diagram from ... to 
 ![Architecture](/images/10_kafka_configuration.png)
 
-
+(Source: https://www.confluent.io/blog/kafka-client-cannot-connect-to-broker-on-aws-on-docker-etc/)
 
 
 
