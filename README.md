@@ -127,6 +127,9 @@ In Google Cloud there is a cheat sheet for Windows, Mac and Linux Systems.
   		--proxy-server="socks5://localhost:1080" ^
   		--user-data-dir="%Temp%\cluster-uoc-m" http://cluster-uoc-m:8088
 
+If you don't have the environment variable %ProgramFiles(x86)% set up to the actual path you can navigate to where chrome is an execute just the bit from chrome.exe onwards.
+
+
 
 
 | Podcast Episode: #050 Data Engineer, Scientist or Analyst - Which One Is For You?
