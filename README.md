@@ -15,7 +15,7 @@ Introduction
 ## Contents
 
 - [What is this Cookbook](README.md#what-is-this-cookbook)
-- [Building the Dataproc Cluster](README.md#building-up-the-arquitechture-the-dataproc-cluster)
+- [Building the Dataproc Cluster](README.md#building-up-the-architecture-the-dataproc-cluster)
   - [What is Google Cloud Dataproc](README.md#what-is-google-cloud-dataproc)
   - [Firs Steps](README.md#first-steps)
 
@@ -31,10 +31,10 @@ At the same time we will be able to interact with the system in real time with z
 In this cookbook we will cover all Data Engeneering platform key areas (Connect, Buffer, Processing Framework, Store, Visualize)
 
 We will split the cookbook into two main parts:
-**First**: Building up the arquitechture
+**First**: Building up the architecture
 **Second**: Putting all main agents ( nifi, elasticsearch, kibana, zeppelin) working together to ingest and extract meaning from the data
 
-## Building up the arquitechture: The Dataproc Cluster
+## Building up the architecture: The Dataproc Cluster
 
 ### What is Google Cloud Dataproc 
 
