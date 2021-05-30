@@ -115,6 +115,7 @@ In Google Cloud there is a cheat sheet for Windows, Mac and Linux Systems.
 ![SSH tunnel](/images/00_gcloud.png)
 
 
+
 - Open a ssh tunnel
    gcloud compute ssh cluster-uoc-m ^
      --project=data-lakes-313014 ^
