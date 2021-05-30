@@ -15,7 +15,7 @@ Introduction
 ## Contents
 
 - [What is this Cookbook](README.md#what-is-this-cookbook)
-- [Building the Dataproc Cluster](README.md#building-up-the-arquitechture:-the-dataproc-cluster)
+- [Building the Dataproc Cluster](README.md#building-up-the-arquitechture-the-dataproc-cluster)
   - [What is Google Cloud Dataproc](README.md#what-is-google-cloud-dataproc)
   - [Firs Steps](README.md#first-steps)
 
