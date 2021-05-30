@@ -167,13 +167,22 @@ To do that we will spin up a container based on an image named python_kafka_test
 - Create a DockerFile 
 
  ![Dockerfile](https://github.com/ajimeneo/dataproc-bigdata/blob/main/scripts/Dockerfile)
+ 
+ We will use this Dockerfile to create an image and spin up a container from it.
 
 	docker build -t python_kafka_test_client .
 	
+List images to see that our image is created
+
+	docker images 
+
+ ![Images list](https://github.com/ajimeneo/dataproc-bigdata/blob/main/images/10_docker_build)
+ 
 - Spin up a Docker container with python_kafka_test_client image
 
 		docker run --network=nifinet --rm --name python_kafka_test_client \
         	--tty python_kafka_test_client broker:9092
+- 
 		
 		
 | Podcast Episode: #050 Data Engineer, Scientist or Analyst - Which One Is For You?
