@@ -80,16 +80,16 @@ Where to get it.
 - Create [docker-compose.yml](/scripts/docker-compose.yml) 
 
 - Spin up all containers defined within docker-compose.yml: nifi, elasticsearch, zookeeper, kafka and kibana.
- - **Nifi container**
+   - **Nifi container**
 	It contains the [Apache Nifi](http://http://nifi.apache.org/download.html) project, which is a a powerful and reliable system to process and distribute data. It will be used as a single point of data entrace into the system, allowing us to ingest and transform data. After that, data will be sinked to different destinations sucha as hdfs distributed file system, mysql database and kafka brokers.
 	The image we use within docker-compose.yml is **apache/nifi:latest**
- - **Zookeeper container**
+   - **Zookeeper container**
  confluentinc/cp-zookeeper:5.5.0
- - **Kafka broker container**
+   - **Kafka broker container**
  confluentinc/cp-kafka:5.5.0
- - **Elasticsearch container**
+   - **Elasticsearch container**
  docker.elastic.co/elasticsearch/elasticsearch:7.6.2
- - **Kibana container**
+   - **Kibana container**
  docker.elastic.co/kibana/kibana:7.6.2
       
 Start all 5 containers:
