@@ -34,6 +34,7 @@ In this cookbook we will cover all Data Engeneering platform key areas (Connect,
 We will split the cookbook into two main parts:
 
 **First**: Building up the architecture
+
 **Second**: Putting all main agents ( nifi, elasticsearch, kibana, zeppelin) working together to ingest and extract meaning from the data
 
 ## Building up the architecture: The Dataproc Cluster
