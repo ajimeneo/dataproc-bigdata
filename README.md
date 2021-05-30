@@ -92,7 +92,9 @@ Start all 5 containers:
     docker-compose up -d 
 
 The first time we issue this command will download nifi, zookeeper, kafka, elasticsearch an kibana images from Docker Hub, as we don't have it yet.
-We can use the detached mode 
+We can use the detached mode to avoid the logs printed out to the screen.
+
+![docker-compose up -d  exit](/images/00_docker-compose-up.png)
 
 
 
