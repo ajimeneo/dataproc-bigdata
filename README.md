@@ -156,9 +156,17 @@ As mention before we will use this arquitechture to connect to kafka broker. Thi
 
 (Source: https://www.confluent.io/blog/kafka-client-cannot-connect-to-broker-on-aws-on-docker-etc/)
 
-### Create DockerFile with python3 
+### Prove there is connection to kafka from another container
 
-![Dockerfile](https://github.com/ajimeneo/dataproc-bigdata/blob/main/scripts/python_kafka_test_client.py)
+To do that we will spin up a container based on an image named python_kafka_test_client from a Dockerfile. This file has a python3 base image. We will add a python program python_kafka_test_client.py that tries to connect to kafka and produce and consume some test messages from and to the topic "topic_test".
+
+#### Create DockerFile 
+
+![Dockerfile](https://github.com/ajimeneo/dataproc-bigdata/blob/main/scripts/Dockerfile)
+
+#### Python test connection program
+
+![python_kafka_test_client.py](https://github.com/rmoff/kafka-listeners/blob/master/python/python_kafka_test_client.py)
 
 
 | Podcast Episode: #050 Data Engineer, Scientist or Analyst - Which One Is For You?
