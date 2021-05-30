@@ -90,7 +90,6 @@ Where to get it.
    - **Kibana container**
  docker.elastic.co/kibana/kibana:7.6.2
       
-Start all 5 containers:
 
     docker-compose up -d 
 
