@@ -130,7 +130,10 @@ This command will open a ssh tunnel through Putty generating ssh keys for you. T
 
 If you don't have the environment variable %ProgramFiles(x86)% set up to the actual path you can navigate to where chrome is an execute just the bit from chrome.exe onwards.
 
-Then, a chrome window will pop up with the call made before (http://cluster-uoc-m:8060) and a nifi welcome page will show up redirecting to the main page after a while. Nifi is ready to go!
+Then, a chrome window will pop up with the call made before (http://cluster-uoc-m:8060) and a nifi welcome page will show up redirecting to the main page after a while. 
+
+Nifi is ready to go!
+
 
 ![Apache nifi](/images/00_nifi.png)
 
