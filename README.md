@@ -1,9 +1,8 @@
 # The Google Cloud Dataproc Bigdata Ecosystem Cookbook
-How to build up a bigdata ecosystem using nifi, kafka, elasticsearch and kibana with zeppelin notebooks using a google cloud dataproc clusterfrom scratch
 
-![Cloud Components](/images/00-Dataproc.png)
+How to build up from scratch a Bigdata Ecosystem using Dataproc Clusters supplied by Google Cloud Platform (GCP). Through Docker and Zeppelin we will build up a system with nifi, kafka, elasticsearch,kibana and zeppelin notebooks.
 
-### Data Engineer
+We will use Santander Smart City data to ingest into our system and play around
 
 Introduction
 ============
@@ -20,17 +19,13 @@ Introduction
 
 ## What is this Cookbook
 
-This book is intended to be a proof of concept to spin up a fully bigdata ecosystem cluster from scratch. 
+This book is intended to be a proof of concept to spin up a fully bigdata ecosystem cluster from scratch using GCP.
 
 We will suck data from online real data from the city of Santander, available to us through the Smart City web page, and pour it into our system, which will be a Google Cloud Dataproc cluster, provisioned with nifi,kafka and elasticsearch Docker containers. The visual presentation will be done using kibana.
 
 At the same time we will be able to interact with the system in real time with zeppelin notebooks.
 
 In this cookbook we will cover all Data Engeneering platform key areas (Connect, Buffer, Processing Framework, Store, Visualize)
-
-**Help make this book awesome!**
-If you have some cool links or topics for the cookbook, please become a
-contributor on GitHub: <https://github.com/andkret/Cookbook>. Fork the
 
 ## Building the Dataproc Cluster
 
@@ -39,6 +34,8 @@ contributor on GitHub: <https://github.com/andkret/Cookbook>. Fork the
 Datapro is bla bla bla
 Where to get it.
 300 $ to play around
+
+![Cloud Components](/images/00-Dataproc.png)
 
 ### Architecture
 - Interaction between master node (local in the image) with Dockerized Kafka broker container
