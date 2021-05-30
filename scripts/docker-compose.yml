@@ -1,6 +1,10 @@
 ---
 version: '3.5'
 
+networks: 
+  nifinet:
+    name: nifinet
+
 services:
   zookeeper:
     image: confluentinc/cp-zookeeper:5.5.0
