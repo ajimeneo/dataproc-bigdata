@@ -15,10 +15,10 @@ Introduction
 ## Contents
 
 - [What is this Cookbook](README.md#what-is-this-cookbook)
-- [Building the Dataproc Cluster](README.md#building-up-the-architecture-the-dataproc-cluster)
+- [Building up the Dataproc Cluster](README.md#building-up-the-architecture-the-dataproc-cluster)
   - [What is Google Cloud Dataproc](README.md#what-is-google-cloud-dataproc)
   - [Firs Steps](README.md#first-steps)
-
+- [Putting all agents working together](README.md#putting-all-agents-working-together)
 
 ## What is this Cookbook
 
@@ -202,7 +202,9 @@ The program expects a host as a first param. As you can see from the image broke
 
  ![Success](/images/00_connection_successful.png)
 
-- Launch a spark-shell and run a scala program that connects to kafka broker		
+- Launch a spark-shell and run a scala program that connects to kafka broker	
+
+## Putting all agents working together
 		
 | Podcast Episode: #050 Data Engineer, Scientist or Analyst - Which One Is For You?
 |-----------------------------------------------------------------------------------
