@@ -171,6 +171,9 @@ To do that we will spin up a container based on an image named python_kafka_test
 
  ![python_kafka_test_client.py](https://github.com/ajimeneo/dataproc-bigdata/blob/main/scripts/python_kafka_test_client.py)
 
+Use nano or other suitable text editors to create python_kafka_test_client.py using the available source.
+
+
 - Create a DockerFile 
 
  ![Dockerfile](https://github.com/ajimeneo/dataproc-bigdata/blob/main/scripts/Dockerfile)
@@ -193,6 +196,7 @@ List images to check out that python_kafka_test_client image has been created
 The program expects a host as a first param. As you can see from the image broker:9092 is the expected path.
 
 
+ ![Success](/images/00_connection_successful.png)
 
 		
 		
