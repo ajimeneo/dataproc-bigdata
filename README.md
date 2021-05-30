@@ -176,7 +176,7 @@ List images to check out that python_kafka_test_client image has been created
 
 	docker images 
 
- ![Images list](https://github.com/ajimeneo/dataproc-bigdata/blob/main/images/10_docker_build)
+ ![Images list](/images/10_docker_build)
  
 - Spin up a Docker container with python_kafka_test_client image
 
