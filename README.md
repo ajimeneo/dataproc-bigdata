@@ -35,7 +35,7 @@ We will split the cookbook into two main parts:
 
 **First**: Building up the architecture
 
-**Second**: Putting all main agents ( nifi, elasticsearch, kibana, zeppelin) working together to ingest and extract meaning from the data
+**Second**: Putting all main agents ( nifi, elasticsearch, kibana, zeppelin) working together to ingest and extract meaning from the traffic data of the city of Santander
 
 # Building up the architecture: The Dataproc Cluster
 
