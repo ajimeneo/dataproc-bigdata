@@ -168,9 +168,12 @@ Why using two instead of the default one? The reason being that in order to esta
 1. The initial connection to a broker (the bootstrap) which returns metadata to the client, including a list of all the brokers in the cluster and their connection endpoints.
 2. The client then connects to one (or more) of the brokers returned in the first step as required. If the broker has not been configured correctly, the connections will fail.
 
+What usually happens is that you often only care for the first connection. Once it is succesful you say Aha! I'm connected! But you're not. What often happens is described in the graph below:
 
 Once you use more than one, you are bound to procure the security protocol as well. Hence why we write down PLAINTEXT security protocol twice.
 
+
+![Can't resolve host](/images/listeners1.017-768x546.png)
 
 To prove that is up and listenging properly we will check that:
 1. There is connectivity among any containers from the same network (Spin up a docker container with some python code that interacts with kafka) 
@@ -186,8 +189,6 @@ Source: https://www.confluent.io/blog/kafka-client-cannot-connect-to-broker-on-a
 
 The behaviour to connect to a Dockerized kafka broker is this:
 
-
-![Can't resolve host](/images/listeners1.017-768x546.png)
 
 
 ### Prove there is connection to kafka broker container from another container
