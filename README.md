@@ -172,6 +172,7 @@ What usually happens is that you often only care for the first connection. Once 
 
 ![Can't resolve host](/images/20_kafka_configuration.png)
 
+
 If you expose port 9092 as you normally do, the first connection against kafka (the one that gets the metadata) should succeed, but the second one should fail.
 	…
 	  broker:
