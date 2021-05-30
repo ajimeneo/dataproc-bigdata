@@ -117,9 +117,10 @@ In Google Cloud there is a cheat sheet for Windows, Mac and Linux Systems.
 
 
 - Open a ssh tunnel
-   gcloud compute ssh cluster-uoc-m ^
-     --project=data-lakes-313014 ^
-     --zone=europe-west6-b -- -D 1080 -N
+
+     	gcloud compute ssh cluster-uoc-m ^
+       	 --project=data-lakes-313014 ^
+       	 --zone=europe-west6-b -- -D 1080 -N
 
 
 
