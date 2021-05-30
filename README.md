@@ -32,6 +32,7 @@ At the same time we will be able to interact with the system in real time with z
 In this cookbook we will cover all Data Engeneering platform key areas (Connect, Buffer, Processing Framework, Store, Visualize)
 
 We will split the cookbook into two main parts:
+
 **First**: Building up the architecture
 **Second**: Putting all main agents ( nifi, elasticsearch, kibana, zeppelin) working together to ingest and extract meaning from the data
 
