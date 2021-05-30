@@ -4,7 +4,7 @@ How to build up from scratch a Bigdata Ecosystem using Dataproc Clusters supplie
 
 We will use Santander Smart City data to ingest into our system and play around
 
-Some of the contents related to kafka ( specially connectivity with conteinerized-kafka are taken from this web page [Why Can´t I Connect to Kafka](https://www.confluent.io/blog/kafka-client-cannot-connect-to-broker-on-aws-on-docker-etc/). written by Robin Moffat. I take his very same example, code and diagram in order to explain how to make a connection to kafka and what can possibly go wrong.
+Some of the contents related to kafka ( specially connectivity with conteinerized-kafka are taken from this web page [Why Can´t I Connect to Kafka](https://www.confluent.io/blog/kafka-client-cannot-connect-to-broker-on-aws-on-docker-etc/) written by Robin Moffat). I take his very same example, code and diagram in order to explain how to make a connection to kafka and what can possibly go wrong.
 
 I believe his article is a remarkable explanation about how to connect to kafka and cannot be further improved by any means.
 
