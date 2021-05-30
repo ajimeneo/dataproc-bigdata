@@ -121,6 +121,8 @@ In Google Cloud there is a cheat sheet for Windows, Mac and Linux Systems.
        	 --project=data-lakes-313014 ^
        	 --zone=europe-west6-b -- -D 1080 -N
 
+![SSH tunnel](/images/10_gcloud.png)
+
 - Launch chrome through ssh tunnel to access desired port (In our case Nifi stands for localhost:8060)
 
 		%ProgramFiles(x86)%\Google\Chrome\Application\chrome.exe ^
