@@ -170,10 +170,10 @@ Why using two instead of the default one? The reason being that in order to esta
 
 What usually happens is that you often only care for the first connection. Once it is succesful you say Aha! I'm connected! But you're not. What often happens is described in the graph below:
 
+![Can't resolve host](/images/20_kafka_configuration.png)
+
+
 Once you use more than one, you are bound to procure the security protocol as well. Hence why we write down PLAINTEXT security protocol twice.
-
-
-![Can't resolve host](/images/listeners1.017-768x546.png)
 
 To prove that is up and listenging properly we will check that:
 1. There is connectivity among any containers from the same network (Spin up a docker container with some python code that interacts with kafka) 
@@ -183,8 +183,8 @@ All of the ideas and code are from retrieved from this amazing page written by .
 
 As mention before we will use this arquitechture to connect to kafka broker. This diagram from ... to 
 ![Architecture](/images/10_kafka_configuration.png)
-
 Source: https://www.confluent.io/blog/kafka-client-cannot-connect-to-broker-on-aws-on-docker-etc/
+
 
 
 The behaviour to connect to a Dockerized kafka broker is this:
