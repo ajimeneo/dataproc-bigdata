@@ -122,13 +122,18 @@ This command will open a ssh tunnel through Putty generating ssh keys for you. T
 
 ![SSH tunnel](/images/10_gcloud.png)
 
-- Launch chrome through ssh tunnel to access desired port (In our case Nifi stands for localhost:8060)
+- Launch chrome through ssh tunnel to access desired port (In our case Nifi stands for localhost:8060 which is the port exposed to the VM)
 
-		%ProgramFiles(x86)%\Google\Chrome\Application\chrome.exe ^
+		C:\%ProgramFiles(x86)%\Google\Chrome\Application\chrome.exe ^
   		--proxy-server="socks5://localhost:1080" ^
-  		--user-data-dir="%Temp%\cluster-uoc-m" http://cluster-uoc-m:8088
+  		--user-data-dir="%Temp%\cluster-uoc-m" http://cluster-uoc-m:8060
 
 If you don't have the environment variable %ProgramFiles(x86)% set up to the actual path you can navigate to where chrome is an execute just the bit from chrome.exe onwards.
+
+Then, a chrome window will pop up with the call made before (http://cluster-uoc-m:8060) and a nifi welcome page will show up redirecting to the main page after a while. Nifi is ready to go!
+
+![Apache nifi](/images/00_nifi.png)
+
 
 
 
