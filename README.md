@@ -25,7 +25,7 @@ Introduction
 
 This book is intended to be a proof of concept to spin up a fully bigdata ecosystem cluster from scratch using GCP.
 
-We will suck data from online real data from the city of Santander, available to us through the Smart City web page, and pour it into our system, which will be a Google Cloud Dataproc cluster, provisioned with nifi,kafka and elasticsearch Docker containers. The visual presentation will be done using kibana.
+We will suck data from online real data from the city of Santander, available to us through the Smart City web page, and ingest it into our system, which will be a Google Cloud Dataproc cluster, provisioned with nifi, kafka and elasticsearch Docker containers. The visual presentation will be done using kibana.
 
 At the same time we will be able to interact with the system in real time with zeppelin notebooks.
 
