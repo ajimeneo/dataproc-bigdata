@@ -109,8 +109,8 @@ Verify all 5 containers are up and none of them exited:
 
 Through docker-compose.yml we have exposed port 8080 (from nifi container) to 8060 in localhost ( our vm instance which acts as master node). So we have to tunnel from our local machine ( laptop ) to the VM port 8060 to get access to Nifi Web UI. One way of doing it is by manually using PuttY ,generating ssh-keys and installing them in the VM, connecting to the VM and specifying tunnel port in Putty. One easier way is through Google Cloud Standard Development Kit keeping in mind that you have to have Web browser Chrome already installed.
 
-In my case, as is a Windows, I downloaded [Google Cloud Client](https://dl.google.com/dl/cloudsdk/channels/rapid/GoogleCloudSDKInstaller.exe)  
-Once installed our their features are embedded within cmd or powershell commands and you can use gcloud extensions as if they belong to Windows cmd.
+Windows as I have, I downloaded [Google Cloud Client](https://dl.google.com/dl/cloudsdk/channels/rapid/GoogleCloudSDKInstaller.exe)  and installed it.
+Once installed their features are embedded within cmd or powershell commands and you can use gcloud extensions as if they belong to Windows cmd itself.
 
 In Google Cloud there is a cheat sheet for Windows, Mac and Linux Systems.
 
