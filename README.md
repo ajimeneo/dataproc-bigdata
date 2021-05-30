@@ -166,7 +166,7 @@ To do that we will spin up a container based on an image named python_kafka_test
 
 #### Python test connection program
 
-![python_kafka_test_client.py](https://github.com/rmoff/kafka-listeners/blob/master/python/python_kafka_test_client.py)
+![python_kafka_test_client.py](https://github.com/ajimeneo/dataproc-bigdata/blob/main/scripts/python_kafka_test_client.py)
 
 
 | Podcast Episode: #050 Data Engineer, Scientist or Analyst - Which One Is For You?
