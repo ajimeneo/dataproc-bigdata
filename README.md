@@ -244,6 +244,24 @@ The program expects a host as a first param. We supply "broker:9092" as the cont
 # Putting all agents working together
 
 ## Using Apache Nifi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		
 | Podcast Episode: #050 Data Engineer, Scientist or Analyst - Which One Is For You?
 |-----------------------------------------------------------------------------------
