@@ -17,15 +17,12 @@ Why using GPC? Because you can build a BigData cluster right now without paying 
 
 Thorugh Google Cloud Dataproc enhanced with Docker and Zeppelin notebooks we will be able to spin up a fully functional cluster in no time.
 
-
-### Architecture
+### First Steps
 
 Once you set up the account, create a new Project, and search de Dataproc section.
 
 ![Cloud Components](/images/00-Dataproc.png)
 
-
-### First Steps
 
 - Provision the master node with Docker Compose
   
