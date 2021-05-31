@@ -13,7 +13,7 @@ The **Google Cloud Dataproc** is a fully managed and highly scalable service for
 
 You may use Dataproc for data lake modernization, ETL, and secure data science, at planet scale. 
 
-Why using GPC? Because you can build a BigData cluster right now without paying any money. Sign up to its [free trial](https://cloud.google.com/free/docs/gcp-free-tier/#free-trial) at use its **300$** free credit for 90 days in order to do that. 
+Why using GPC? Because you can build a BigData cluster right now without paying any money. I Signed up to its [free trial](https://cloud.google.com/free/docs/gcp-free-tier/#free-trial) at use its **300$** free credit for 90 days in order to do that. 
 
 Thorugh Google Cloud Dataproc enhanced with Docker and Zeppelin notebooks we will be able to spin up a fully functional cluster in no time.
 
