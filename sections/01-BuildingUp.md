@@ -9,9 +9,11 @@
 
 ### What is Google Cloud Dataproc 
 
-Datapro is bla bla bla
-Where to get it.
-300 $ to play around
+The Google Cloud Dataproc is a fully managed and highly scalable service for running Apache Spark, Apache Flink, Presto, and 30+ open source tools and frameworks for for batch processing, querying, streaming, and machine learning available through Google Cloud Platform (GCP). 
+
+You may use Dataproc for data lake modernization, ETL, and secure data science, at planet scale. 
+
+Why using GPC Dataproc? Because you can build a BigData cluster right now without paying any money. Sign up to its [free trial](https://cloud.google.com/free/docs/gcp-free-tier/#free-trial) at use its 300$ free credit in order to do that. 
 
 ![Cloud Components](/images/00-Dataproc.png)
 
