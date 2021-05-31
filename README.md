@@ -11,11 +11,11 @@ Contents
 ============
 
 - [What is this Cookbook](README.md#what-is-this-cookbook)
-- [Building up the Dataproc Cluster](sections/01-BuildingUp.md#building-up-the-architecture-the-dataproc-cluster)
+- [01-Building up the Dataproc Cluster](sections/01-BuildingUp.md#building-up-the-architecture-the-dataproc-cluster)
   - [What is Google Cloud Dataproc](sections/01-BuildingUp.md#what-is-google-cloud-dataproc)
   - [First Steps](sections/01-BuildingUp.md#first-steps)
   - [Connecting to Apache Kafka](sections/01-BuildingUp.md#Connecting-to-kafka)
-- [Putting all agents working together](sections/02-PuttingAllTogether.md#putting-all-agents-working-together)
+- [02-Putting all agents working together](sections/02-PuttingAllTogether.md#putting-all-agents-working-together)
   - [Using Apache nifi](sections/02-PuttingAllTogether.md#nifi)
   - [Using Apache kafka](sections/02-PuttingAllTogether.md#kafka)
  
