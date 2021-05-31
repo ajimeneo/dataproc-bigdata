@@ -19,7 +19,9 @@ Thorugh Google Cloud Dataproc enhanced with Docker and Zeppelin notebooks we wil
 
 
 ### Architecture
-- Interaction between master node (local in the image) with Dockerized Kafka broker container
+
+Once you set up the account, create a new Project, and search de Dataproc section.
+
 ![Cloud Components](/images/00-Dataproc.png)
 
 
