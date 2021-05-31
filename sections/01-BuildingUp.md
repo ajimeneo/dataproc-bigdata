@@ -4,6 +4,8 @@
   - [First Steps](01-BuildingUp.md#first-steps)
   - [Connecting to Apache Kafka](01-BuildingUp.md#Connecting-to-kafka)
 
+## Contents
+
 ### What is Google Cloud Dataproc 
 
 Datapro is bla bla bla
