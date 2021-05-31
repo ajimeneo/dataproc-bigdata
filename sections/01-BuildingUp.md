@@ -9,17 +9,18 @@
 
 ### What is Google Cloud Dataproc 
 
-The Google Cloud Dataproc is a fully managed and highly scalable service for running Apache Spark, Apache Flink, Presto, and 30+ open source tools and frameworks for for batch processing, querying, streaming, and machine learning available through Google Cloud Platform (GCP). 
+The **Google Cloud Dataproc** is a fully managed and highly scalable service for running Apache Spark, Apache Flink, Presto, and 30+ open source tools and frameworks for for batch processing, querying, streaming, and machine learning available through Google Cloud Platform (GCP). 
 
 You may use Dataproc for data lake modernization, ETL, and secure data science, at planet scale. 
 
-Why using GPC Dataproc? Because you can build a BigData cluster right now without paying any money. Sign up to its [free trial](https://cloud.google.com/free/docs/gcp-free-tier/#free-trial) at use its 300$ free credit in order to do that. 
+Why using GPC? Because you can build a BigData cluster right now without paying any money. Sign up to its [free trial](https://cloud.google.com/free/docs/gcp-free-tier/#free-trial) at use its **300$** free credit for 90 days in order to do that. 
 
-![Cloud Components](/images/00-Dataproc.png)
+Thorugh Google Cloud Dataproc enhanced with Docker and Zeppelin notebooks we will be able to spin up a fully functional cluster in no time.
+
 
 ### Architecture
 - Interaction between master node (local in the image) with Dockerized Kafka broker container
-
+![Cloud Components](/images/00-Dataproc.png)
 
 
 ### First Steps
