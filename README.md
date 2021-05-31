@@ -7,13 +7,11 @@ We will use Santander Smart City data to ingest into our system and play around
 Some of the contents related to kafka ( specially connectivity with conteinerized-kafka are taken from this web page [Why Can´t I Connect to Kafka](https://www.confluent.io/blog/kafka-client-cannot-connect-to-broker-on-aws-on-docker-etc/) written by Robin Moffat). I believe his article is a remarkable explanation about how to connect to kafka and cannot be further improved so I borrowed his own code and diagrams in order to explain how to make a connection to kafka and what could possibly go wrong.
 
 
-Introduction
+Contents
 ============
 
-## Contents
-
 - [What is this Cookbook](README.md#what-is-this-cookbook)
-- [Building up the Dataproc Cluster](README.md#building-up-the-architecture-the-dataproc-cluster)
+- [Building up the Dataproc Cluster](.md#building-up-the-architecture-the-dataproc-cluster)
   - [What is Google Cloud Dataproc](README.md#what-is-google-cloud-dataproc)
   - [First Steps](README.md#first-steps)
   - [Connecting to Apache Kafka](README.md#Connecting-to-kafka)
