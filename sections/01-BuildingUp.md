@@ -1,10 +1,11 @@
 # Building up the architecture: The Dataproc Cluster
 
+## Contents
+
   - [What is Google Cloud Dataproc](01-BuildingUp.md#what-is-google-cloud-dataproc)
   - [First Steps](01-BuildingUp.md#first-steps)
   - [Connecting to Apache Kafka](01-BuildingUp.md#Connecting-to-kafka)
 
-## Contents
 
 ### What is Google Cloud Dataproc 
 
