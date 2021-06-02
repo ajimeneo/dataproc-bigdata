@@ -263,6 +263,7 @@ Once we choose the option of the interpreter
  After scrolling down, there is an option to include some maven artifacts. This is the way that Zeppelin allows us to include any features that are not present by default.
  In our scenario, as we want kafka integration, we should include
  
+	 org.apache.spark:spark-streaming-kafka-0-10_2.12:3.1.1
  
  ![Spark Interpreter](/images/20_interpreter.png)
  
