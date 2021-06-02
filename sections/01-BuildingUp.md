@@ -228,3 +228,6 @@ The program expects a host as a first param. We supply "broker:9092" as the cont
 		
  ![Launching Test local to 19092](/images/10_launching_test_19092.png)
  
+ 		docker run -it --rm --network nifinet \
+		--name testKafkaTopicsList confluentinc/cp-kafka:5.5.0 \
+		kafka-topics --list --bootstrap-server broker:9092
