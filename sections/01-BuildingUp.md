@@ -245,3 +245,16 @@ The program expects a host as a first param. We supply "broker:9092" as the cont
  ![Launching Test local to 19092](/images/10_launching_test_19092.png)
  
 ## Setting up Zeppelin
+
+Zeppelin is provided to us from "WEB INTERFACES" option in Dataproc. Once clicked Zeppelin, Zeppelin welcome page will pop up.
+
+It's crucial setting up Zeppelin interpreter for things to work. Otherwise we'll get endless error messages about not finding a specific class or interpreter.
+We are setting two interpreters: spark and hive. Spark is given by default and we only have to set up a couple of properties. On the other hand, Hive interpreter is not provided so we'll create one.
+
+### Spark Interpreter
+
+
+
+
+
+
