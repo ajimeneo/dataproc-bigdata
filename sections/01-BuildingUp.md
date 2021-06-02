@@ -266,11 +266,13 @@ Once we choose the option of the interpreter
 	 org.apache.spark:spark-streaming-kafka-0-10_2.12:3.1.1
  
  ![Spark Interpreter](/images/20_interpreter.png)
+ And save it.
  
  You may look it up in [Spark-kafka integration](https://spark.apache.org/docs/latest/structured-streaming-kafka-integration.html)
  
  ![Spark Interpreter](/images/30_interpreter.png)
 
+It's always good politics to restart the interpreter any time you make a change or when things got weird about the interpreter and you cannot come up with a solution. Before you get nuts, try and restart the interpreter. One more thing, the bluish color of the interpreter points out that is enable. If you want to disable it, click it and it´ll became disable, showing it up with a greeish color.
 
 
 
