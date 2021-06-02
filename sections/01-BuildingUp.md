@@ -253,6 +253,11 @@ We are setting two interpreters: spark and hive. Spark is given by default and w
 
 ### Spark Interpreter
 
+ ![Spark Interpreter](/images/00_interpreter.png)
+ ![Spark Interpreter](/images/10_interpreter.png)
+ ![Spark Interpreter](/images/20_interpreter.png)
+ ![Spark Interpreter](/images/30_interpreter.png)
+
 
 
 
