@@ -253,9 +253,21 @@ We are setting two interpreters: spark and hive. Spark is given by default and w
 
 ### Spark Interpreter
 
+Once we choose the option of the interpreter
  ![Spark Interpreter](/images/00_interpreter.png)
+ 
+ and search for Spark
+ 
  ![Spark Interpreter](/images/10_interpreter.png)
+ 
+ After scrolling down, there is an option to include some maven artifacts. This is the way that Zeppelin allows us to include any features that are not present by default.
+ In our scenario, as we want kafka integration, we should include
+ 
+ 
  ![Spark Interpreter](/images/20_interpreter.png)
+ 
+ You may look it up in https://spark.apache.org/docs/latest/structured-streaming-kafka-integration.html
+ 
  ![Spark Interpreter](/images/30_interpreter.png)
 
 
