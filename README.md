@@ -15,6 +15,7 @@ Contents
   - [What is Google Cloud Dataproc](sections/01-BuildingUp.md#what-is-google-cloud-dataproc)
   - [First Steps](sections/01-BuildingUp.md#first-steps)
   - [Connecting to Apache Kafka](sections/01-BuildingUp.md#Connecting-to-kafka)
+  - [Setting Up Zeppelin](sections/01-BuildingUp.md#setting-up-Zeppelin)
 - [Putting all agents working together](sections/02-PuttingAllTogether.md#putting-all-agents-working-together)
   - [Using Apache nifi](sections/02-PuttingAllTogether.md#nifi)
   - [Using Apache kafka](sections/02-PuttingAllTogether.md#kafka)
