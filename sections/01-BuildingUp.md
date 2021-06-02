@@ -5,6 +5,7 @@
   - [What is Google Cloud Dataproc](01-BuildingUp.md#what-is-google-cloud-dataproc)
   - [First Steps](01-BuildingUp.md#first-steps)
   - [Connecting to Apache Kafka](01-BuildingUp.md#Connecting-to-kafka)
+  - [Setting Up Zeppelin](01-BuildingUp.md#setting-up-Zeppelin)
 
 
 ### What is Google Cloud Dataproc 
@@ -243,4 +244,4 @@ The program expects a host as a first param. We supply "broker:9092" as the cont
 		
  ![Launching Test local to 19092](/images/10_launching_test_19092.png)
  
-
+## Setting up Zeppelin
