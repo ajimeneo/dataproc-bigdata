@@ -229,7 +229,8 @@ The program expects a host as a first param. We supply "broker:9092" as the cont
 		--name testKafkaTopicsList confluentinc/cp-kafka:5.5.0 \
 		kafka-console-consumer --topic mediciones --from-beginning --bootstrap-server broker:9092
 
-
+ ![Launching Test local to 19092](/images/20_launching_test_9092.png)
+ 
 - Install confluent_kafka python package
 
 		pip install confluent-kafka
