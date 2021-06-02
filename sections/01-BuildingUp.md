@@ -216,9 +216,9 @@ The program expects a host as a first param. We supply "broker:9092" as the cont
 
  ![Success](/images/00_connection_successful.png)
 
-- Install confluent_kafka python package locally
+- Install confluent_kafka python package once inside python3 shell
 
-		sudo pip install confluent-kafka
+		pip install confluent-kafka
 
  ![From localhost python to kafka](/images/00_install_confluent_kafka.png)
  
