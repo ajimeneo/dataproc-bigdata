@@ -222,6 +222,12 @@ The program expects a host as a first param. We supply "broker:9092" as the cont
 		kafka-topics --list --bootstrap-server broker:9092
 
  ![Launching Test local to 9092](/images/10_launching_test_9092.png)
+ 
+ Once some messages are produced to kafka broker ( via nifi, or kafka-console-producer for example ) we can check these messages out from topic mediciones:
+ 
+ 		docker run -it --rm --network nifinet \
+		--name testKafkaTopicsList confluentinc/cp-kafka:5.5.0 \
+		kafka-console-consumer --topic mediciones --from-beginning --bootstrap-server broker:9092
 
 
 - Install confluent_kafka python package
