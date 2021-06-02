@@ -213,6 +213,12 @@ List images to check out that python_kafka_test_client image has been created
 
 The program expects a host as a first param. We supply "broker:9092" as the container spun up is within the same network.
 
+- Once tested the connection, whe can list the topics using an ephemereus Docker container
+
+		 docker run -it --rm --network nifinet \
+		--name testKafkaTopicsList confluentinc/cp-kafka:5.5.0 \
+		kafka-topics --list --bootstrap-server broker:9092
+
 
  ![Success](/images/00_connection_successful.png)
 
@@ -228,6 +234,4 @@ The program expects a host as a first param. We supply "broker:9092" as the cont
 		
  ![Launching Test local to 19092](/images/10_launching_test_19092.png)
  
- 		docker run -it --rm --network nifinet \
-		--name testKafkaTopicsList confluentinc/cp-kafka:5.5.0 \
-		kafka-topics --list --bootstrap-server broker:9092
+
