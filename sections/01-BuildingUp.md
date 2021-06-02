@@ -226,5 +226,5 @@ The program expects a host as a first param. We supply "broker:9092" as the cont
 	
 	 	python python_kafka_test_client.py localhost:19092
 		
-
+ ![Launching Test local to 19092](/images/10_launching_test_19092.png)
  
