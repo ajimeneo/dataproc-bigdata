@@ -266,7 +266,7 @@ Once we choose the option of the interpreter
  
  ![Spark Interpreter](/images/20_interpreter.png)
  
- You may look it up in https://spark.apache.org/docs/latest/structured-streaming-kafka-integration.html
+ You may look it up in [Spark-kafka integration](https://spark.apache.org/docs/latest/structured-streaming-kafka-integration.html)
  
  ![Spark Interpreter](/images/30_interpreter.png)
 
