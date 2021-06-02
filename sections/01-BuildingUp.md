@@ -218,4 +218,7 @@ The program expects a host as a first param. We supply "broker:9092" as the cont
 
 - Launch the python python_kafka_test_client.py program from the VM shell to connect to kafka broker
 	
-	 python python_kafka_test_client.py localhost:19092
+	 	python python_kafka_test_client.py localhost:19092
+		
+ ![From localhost python to kafka](/images/00_install_confluent_kafka.png)
+ 
