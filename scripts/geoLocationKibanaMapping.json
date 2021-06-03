@@ -1,0 +1,16 @@
+PUT _template/geotemplate
+{
+  "index_patterns": [
+    "mediciones"
+    ],
+    "settings": {},
+    "mappings": {
+      "properties": {
+        "location" :{
+          "type": "geo_point"
+        }
+      }
+    }
+  ,
+  "aliases": {}
+}
