@@ -3,7 +3,7 @@
 ## Contents
 
   - [What is Google Cloud Dataproc](01-BuildingUp.md#what-is-google-cloud-dataproc)
-  - [First Steps](01-1-FirstSteps.md#first-steps)
+  - [Setting up the cluster](01-1-FirstSteps.md#Setting-up-the-cluster)
   - [Connecting to Apache Kafka](01-BuildingUp.md#Connecting-to-kafka)
   - [Setting Up Zeppelin](01-BuildingUp.md#setting-up-Zeppelin)
 
@@ -18,7 +18,7 @@ Why using GPC? Because you can build a BigData cluster right now without paying 
 
 Thorugh Google Cloud Dataproc enhanced with Docker and Zeppelin notebooks we will be able to spin up a fully functional cluster in no time.
 
-## First Steps
+## Setting up the cluster
 
 Once you set up the account, create a new Project, and search de Dataproc section.
 
