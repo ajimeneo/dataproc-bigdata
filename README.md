@@ -11,8 +11,8 @@ Contents
 ============
 
 - [What is this Cookbook](README.md#what-is-this-cookbook)
+- [What is Google Cloud Dataproc](sections/README.md#what-is-google-cloud-dataproc)
 - [Building up the Dataproc Cluster](sections/01-BuildingUp.md#building-up-the-architecture-the-dataproc-cluster)
-  - [What is Google Cloud Dataproc](sections/01-BuildingUp.md#what-is-google-cloud-dataproc)
   - [First Steps](sections/01-BuildingUp.md#first-steps)
   - [Connecting to Apache Kafka](sections/01-BuildingUp.md#Connecting-to-kafka)
   - [Setting Up Zeppelin](sections/01-BuildingUp.md#setting-up-Zeppelin)
