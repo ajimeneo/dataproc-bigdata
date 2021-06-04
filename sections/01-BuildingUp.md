@@ -22,7 +22,7 @@ Thorugh Google Cloud Dataproc enhanced with Docker and Zeppelin notebooks we wil
 
 Once you set up the account, create a new Project, and search de Dataproc section.
 
-![Cloud Components](/images/00-dataproc.png)
+![Cloud Components](/images/00-Dataproc.png)
 
 Then hit Create a Cluster and a window will pop up. Fill in the blanks with an appropriate cluster name. Choose a region close to your location ( in my case [europe-west6](https://cloud.google.com/compute/docs/regions-zones)) and a cluster type. If you want to save as much credit as you can, choose single node, buy if you want to recreate a real cluster then choose a standard one. Image type and version should be ok with the default ( 2.0-debian10 ), enable component gateaway to allows us access to the web Interfaces and select Docker and Zeppelin as Optional components.
 
