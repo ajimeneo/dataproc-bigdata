@@ -18,8 +18,8 @@ Contents
   - [Setting Up Zeppelin](sections/01-BuildingUp.md#setting-up-Zeppelin)
 - [Putting all agents working together](sections/02-PuttingAllTogether.md#putting-all-agents-working-together)
   - [Creating a flow with nifi](sections/02-PuttingAllTogether.md#nifi)
-  - [Using Apache kafka](sections/02-PuttingAllTogether.md#kafka)
-  - [Using Kibana](sections/02-PuttingAllTogether.md#kafka)
+  - [Create a Map Visualization using Kibana](sections/02-PuttingAllTogether.md#kibana)
+  - [Issue alerts and other useful queries with Zeppelin](sections/02-PuttingAllTogether.md#zeppelin)
  
 ## What is this Cookbook
 
