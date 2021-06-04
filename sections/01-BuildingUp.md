@@ -194,7 +194,7 @@ The behaviour to connect to a Dockerized kafka broker is this:
 
 To do that we will spin up a container based on an image named python_kafka_test_client from a Dockerfile. This file has a python3 base image. We will add a python program python_kafka_test_client.py that tries to connect to kafka and produce and consume some test messages from and to the topic "topic_test".
 
-- Python test connection program ![python_kafka_test_client.py](https://github.com/ajimeneo/dataproc-bigdata/blob/main/scripts/python_kafka_test_client.py). Use nano or other suitable text editor to create the python_kafka_test_client.py file using the available source.
+- Python test connection program [python_kafka_test_client.py](https://github.com/ajimeneo/dataproc-bigdata/blob/main/scripts/python_kafka_test_client.py). Use nano or other suitable text editor to create the python_kafka_test_client.py file using the available source.
 
 
 - Create a [Dockerfile](https://github.com/ajimeneo/dataproc-bigdata/blob/main/scripts/Dockerfile). We will use this Dockerfile to create an image and spin up a container from it.
