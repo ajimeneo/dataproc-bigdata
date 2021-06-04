@@ -17,8 +17,9 @@ Contents
   - [Connecting to Apache Kafka](sections/01-BuildingUp.md#Connecting-to-kafka)
   - [Setting Up Zeppelin](sections/01-BuildingUp.md#setting-up-Zeppelin)
 - [Putting all agents working together](sections/02-PuttingAllTogether.md#putting-all-agents-working-together)
-  - [Using Apache nifi](sections/02-PuttingAllTogether.md#nifi)
+  - [Creating a flow with nifi](sections/02-PuttingAllTogether.md#nifi)
   - [Using Apache kafka](sections/02-PuttingAllTogether.md#kafka)
+  - [Using Kibana](sections/02-PuttingAllTogether.md#kafka)
  
 ## What is this Cookbook
 
