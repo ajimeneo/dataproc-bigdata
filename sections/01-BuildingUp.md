@@ -201,9 +201,9 @@ To do that we will spin up a container based on an image named python_kafka_test
 
 		docker build -t python_kafka_test_client .
 	
-List images to check out that python_kafka_test_client image has been created
+- List images to check out that python_kafka_test_client image has been created
 
-	docker images 
+		docker images 
 
  ![Images list](/images/10_docker_build.png)
  
