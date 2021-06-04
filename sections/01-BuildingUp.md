@@ -8,7 +8,7 @@
   - [Setting Up Zeppelin](01-BuildingUp.md#setting-up-Zeppelin)
 
 
-### What is Google Cloud Dataproc 
+## What is Google Cloud Dataproc 
 
 The **Google Cloud Dataproc** is a fully managed and highly scalable service for running Apache Spark, Apache Flink, Presto, and 30+ open source tools and frameworks for for batch processing, querying, streaming, and machine learning available through Google Cloud Platform (GCP). 
 
@@ -18,7 +18,7 @@ Why using GPC? Because you can build a BigData cluster right now without paying 
 
 Thorugh Google Cloud Dataproc enhanced with Docker and Zeppelin notebooks we will be able to spin up a fully functional cluster in no time.
 
-### First Steps
+## First Steps
 
 Once you set up the account, create a new Project, and search de Dataproc section.
 
