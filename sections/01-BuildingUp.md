@@ -141,7 +141,7 @@ Nifi is ready to go!
 
 ## Troubleshooting Common Issues with Kafka
 
-As commented on the README introductory file, all of the ideas and code are from retrieved from this amazing page written by .... All the merit goes to him!
+As commented on the README introductory file, all of the ideas and code are from retrieved from this amazing page written by Robin Moffat. All the merit goes to him!
 
 Having said that, let's try explain the final architecture ([docker-compose.yml](/scripts/docker-compose.yml)).
 
