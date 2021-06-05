@@ -12,11 +12,11 @@ Once you set up the account, create a new Project, and search for the Dataproc s
 
 ![Cloud Components](/images/00-Dataproc.png)
 
-Then hit Create a Cluster and a window will pop up. Fill in the blanks with an appropriate cluster name, location (in my case [europe-west6](https://cloud.google.com/compute/docs/regions-zones)) and cluster type.
+Then hit Create a Cluster and a window will pop up. Fill in the blanks with an appropriate cluster name, location (in my case [europe-west6](https://cloud.google.com/compute/docs/regions-zones)) and cluster type. If you want to save as much credit as you can, choose **Single Node**, buy if you want to recreate a real cluster then choose a **Standard One**.
 
 ![Cloud Components](/images/01-Dataproc.png)
 
-If you want to save as much credit as you can, choose **Single Node**, buy if you want to recreate a real cluster then choose a **Standard One**. Image type and version should be ok with the default ( 2.0-debian10 ). Enable component gateaway to get access to the web Interfaces and select Docker and Zeppelin as Optional components as all the Big Data tools we're going to use are Dockerized containers.
+ Image type and version should be ok with the default ( 2.0-debian10 ). Enable component gateaway to get access to the web Interfaces and select Docker and Zeppelin as Optional components as all the Big Data tools we're going to use are Dockerized containers.
 
 ![Cloud Components](/images/02-Dataproc.png)
 ![Cloud Components](/images/03-Dataproc.png)
