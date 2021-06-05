@@ -63,24 +63,24 @@ Click on SSH and then an interactive shell will pop up on your browser.
     
 ![Docker-Compose](/images/09_docker_compose.png)	
 
-### Create a Docker network
+### Create docker-compose.yml file
 
-Let's create a network named "nifinet" 
-
-	docker network create nifinet --driver bridge	
-
-### Create a Docker-compose.yml file
-
-Have a look to the Docker-compose.yml file. Check that all needed containers are present there: nifi,kafka,zookeeper,elastichsearch and kibana.
+This is a crucial step with all the settings. Check out that all needed iamges are present there: nifi,kafka,zookeeper,elastichsearch and kibana, environment variables, spinning up ordering, volumes, exposed ports,...
 
 [docker-compose.yml](/scripts/docker-compose.yml) 
+
+
+### Create a Docker network
+
+Let's create a network named "nifinet" which have been set within docker-compose.yml file.
+
+	docker network create nifinet --driver bridge	
 
 ### Spin up all containers
 
         docker-compose up -d 
 
-The first time we issue this command will download nifi, zookeeper, kafka, elasticsearch an kibana images from Docker Hub, as we don't have it yet.
-We can use the detached mode to avoid the logs printed out to the screen.
+The first time we issue this command will download nifi, zookeeper, kafka, elasticsearch an kibana images from Docker Hub, as we don't have it yet. You'll need to have signed up to a Docker account in order to use this service.
 
 ![docker-compose up -d  exit](/images/00_docker-compose-up.png)
 
@@ -92,10 +92,10 @@ Verify all 5 containers are up and none of them exited:
 
 
    - **Nifi container** spins up the apache/nifi:latest image, which allows us to use a powerful and reliable system to process and distribute data, the  [Apache Nifi project](http://http://nifi.apache.org/download.html). It will be used as a single point of data entrace into the system, allowing us to ingest and transform data in a visual way. After that, data will be sinked to different locations such as hdfs, kafka brokers and mysql database.
-   - **Zookeeper container**
- confluentinc/cp-zookeeper:5.5.0
-   - **Kafka broker container**
- confluentinc/cp-kafka:5.5.0
+   - **Zookeeper container** spins up the  confluentinc/cp-zookeeper:5.5.0 image. ZooKeeper is a centralized service for maintaining configuration information, naming, providing distributed synchronization, and providing group services. We'll use it for managing kafka brokers.
+
+   - **Kafka broker container** spins up the confluentinc/cp-kafka:5.5.0 image. Apache Kafka is a community distributed event streaming platform capable of handling trillions of events a day. Initially conceived as a messaging queue, Kafka is based on an abstraction of a distributed commit log. We'll use the image provided by [Confluence](https://www.confluent.io/what-is-apache-kafka/)
+
    - **Elasticsearch container**
  docker.elastic.co/elasticsearch/elasticsearch:7.6.2
    - **Kibana container**
