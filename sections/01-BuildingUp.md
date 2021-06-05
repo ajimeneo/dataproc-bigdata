@@ -36,28 +36,35 @@ You can do all the steps done before in a programmatically way using Google SDF 
 
 ![Cloud Components](/images/04-Dataproc.png)
 
-Click on save and the cluster will be up and running in less than two minutes!
+Click on save and the cluster will be up and running in less than two minutes! 
+
+Now it's time to do some provisioning. Remember we have selected Docker to be provisioned in a previous step, so we won't have to install it. But as we're going to have all needed containers ( nifi, elasticsearch, kibana, and so on ) orchestrated through a docker-compose.yml file ( always a neat and clear solution other than CLI ) let's install docker-compose to the master node ( all the magic happens here).
+
+Click on SSH and then an interactive shell will pop up on your browser.
 
 ![Cloud Components](/images/08-Dataproc.png)
 
-- Provision the master node with Docker Compose
+### Provision the master node with Docker Compose
   
-	- Download the Docker Compose binary into the /usr/local/bin directory with wget or curl :
+- Download the Docker Compose binary into the /usr/local/bin directory with wget or curl :
     
-            sudo curl -L "https://github.com/docker/compose/releases/download/1.23.1/docker-compose-$(uname -s)-$(uname -m)" \
-    		-o /usr/local/bin/docker-compose
-    
-	- Use chmod to make the Compose binary executable:
+        sudo curl -L "https://github.com/docker/compose/releases/download/1.23.1/docker-compose-$(uname -s)-$(uname -m)" \
+    	-o /usr/local/bin/docker-compose
+
+![Cloud Components](/images/09_docker_compose.png)
   
-      		sudo chmod +x /usr/local/bin/docker-compose
   
-	- To verify the installation, use the following command which prints the Compose version:
+- Use chmod to make the Compose binary executable:
   
-      		docker-compose --version
+      	sudo chmod +x /usr/local/bin/docker-compose
+  
+- To verify the installation, use the following command which prints the Compose version:
+  
+      	docker-compose --version
     
-	- The output will look something like this:  
+- The output will look something like this:  
     
-      		docker-compose version 1.23.1, build b02f1306
+      	docker-compose version 1.23.1, build b02f1306
 
 - Create nifinet network
 
