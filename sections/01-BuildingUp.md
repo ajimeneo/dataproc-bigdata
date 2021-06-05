@@ -50,9 +50,6 @@ Click on SSH and then an interactive shell will pop up on your browser.
     
         sudo curl -L "https://github.com/docker/compose/releases/download/1.23.1/docker-compose-$(uname -s)-$(uname -m)" \
     	-o /usr/local/bin/docker-compose
-
-![Cloud Components](/images/09_docker_compose.png)
-  
   
 - Use chmod to make the Compose binary executable:
   
@@ -65,14 +62,26 @@ Click on SSH and then an interactive shell will pop up on your browser.
 - The output will look something like this:  
     
       	docker-compose version 1.23.1, build b02f1306
+	
 
-- Create nifinet network
+![Docker-Compose](/images/09_docker_compose.png)	
 
-		docker network create nifinet --driver bridge	
+### Create a Docker network
 
-- Create [docker-compose.yml](/scripts/docker-compose.yml) 
+Let's create a network named "nifinet" 
 
-- Spin up all containers defined within docker-compose.yml: nifi, elasticsearch, zookeeper, kafka and kibana.
+	docker network create nifinet --driver bridge	
+
+### Create a Docker-compose.yml file
+
+Have a look to the Docker-compose.yml file. Check that all needed containers are present there: nifi,kafka,zookeeper,elastichsearch and kibana.
+
+[docker-compose.yml](/scripts/docker-compose.yml) 
+
+### Spin up all containers
+
+        docker-compose up -d 
+
    - **Nifi container** spins up the apache/nifi:latest image, which allows us to use a powerful and reliable system to process and distribute data, the  [Apache Nifi project](http://http://nifi.apache.org/download.html). It will be used as a single point of data entrace into the system, allowing us to ingest and transform data in a visual way. After that, data will be sinked to different locations such as hdfs, kafka brokers and mysql database.
    - **Zookeeper container**
  confluentinc/cp-zookeeper:5.5.0
@@ -84,7 +93,7 @@ Click on SSH and then an interactive shell will pop up on your browser.
  docker.elastic.co/kibana/kibana:7.6.2
       
 
-        	docker-compose up -d 
+
 
 The first time we issue this command will download nifi, zookeeper, kafka, elasticsearch an kibana images from Docker Hub, as we don't have it yet.
 We can use the detached mode to avoid the logs printed out to the screen.
