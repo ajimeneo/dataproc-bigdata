@@ -96,11 +96,11 @@ Verify all 5 containers are up and none of them exited:
 
    - **Kafka broker container** spins up the confluentinc/cp-kafka:5.5.0 image. Apache Kafka is a community distributed event streaming platform capable of handling trillions of events a day. Initially conceived as a messaging queue, Kafka is based on an abstraction of a distributed commit log. We'll use the image provided by [Confluence](https://www.confluent.io/what-is-apache-kafka/)
 
-   - **Elasticsearch container**
- docker.elastic.co/elasticsearch/elasticsearch:7.6.2
-   - **Kibana container**
- docker.elastic.co/kibana/kibana:7.6.2
+   - **Elasticsearch container** spins up the docker.elastic.co/elasticsearch/elasticsearch:7.6.2 image. Elasticsearch is a distributed, RESTful search and analytics engine capable of addressing a growing number of use cases. As the heart of the Elastic Stack, it centrally stores your data for lightning fast search, fine‑tuned relevancy, and powerful analytics that scale with ease.
+   
+   - **Kibana container** spins up the docker.elastic.co/kibana/kibana:7.6.2 image. Kibana is an free and open frontend application that sits on top of the Elastic Stack, providing search and data visualization capabilities for data indexed in Elasticsearch.
       
+So, as you can see, we'll build up a bigdata ecosystem capable not only of ingesting all kinds of data but to extrac meaning in a visual way.
 
 ### Create a SSH tunnel to the VM instance (master node).
 
