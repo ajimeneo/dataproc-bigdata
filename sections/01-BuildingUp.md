@@ -3,7 +3,7 @@
 ## Contents
 
   - [Setting up the cluster](01-BuildingUp.md#Setting-up-the-cluster)
-  - [Connecting to Apache Kafka](01-BuildingUp.md#Connecting-to-kafka)
+  - [Troubleshooting Common Issues with Kafka](01-BuildingUp.md#Troubleshooting-common-issues-with-kafka)
   - [Setting Up Zeppelin](01-BuildingUp.md#setting-up-Zeppelin)
 
 ## Setting up the cluster
@@ -120,7 +120,7 @@ In Google Cloud there is a cheat sheet for Windows, Mac and Linux Systems.
        	 --project=data-lakes-313014 ^
        	 --zone=europe-west6-b -- -D 1080 -N
 
-This command will open a ssh tunnel through Putty generating ssh keys for you. That's why PuTTY UI opens and waits for you to add VMs' public key to PuTTY's cache and carry on connecting. 
+This command will open a ssh tunnel through PuTTY generating ssh keys for you. That's why PuTTY UI opens and waits for you to add VMs' public key to PuTTY's cache and carry on connecting. 
 
 ![SSH tunnel](/images/10_gcloud.png)
 
@@ -139,7 +139,7 @@ Nifi is ready to go!
 
 ![Apache nifi](/images/00_nifi.png)
 
-## Connecting to Kafka
+## Troubleshooting Common Issues with Kafka
 
 As kafka is up and running let's go and try create a topic within kafka broker container to check everything is fine. In order to do so let's have a look to the kafka arquitecture that we have built up through [docker-compose.yml](/scripts/docker-compose.yml)
 
