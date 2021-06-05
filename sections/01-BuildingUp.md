@@ -61,9 +61,6 @@ Click on SSH and then an interactive shell will pop up on your browser.
     
 - The output will look something like this:  
     
-      	docker-compose version 1.23.1, build b02f1306
-	
-
 ![Docker-Compose](/images/09_docker_compose.png)	
 
 ### Create a Docker network
