@@ -141,8 +141,9 @@ Nifi is ready to go!
 
 ## Troubleshooting Common Issues with Kafka
 
-As kafka is up and running let's go and try create a topic within kafka broker container to check everything is fine. In order to do so let's have a look to the kafka arquitecture that we have built up through [docker-compose.yml](/scripts/docker-compose.yml)
+First of all, let's have a look to the kafka arquitecture already set up through [docker-compose.yml](/scripts/docker-compose.yml)
 
+Below is the extract related to kafka broker:
 
     broker:
     image: confluentinc/cp-kafka:5.5.0
@@ -160,15 +161,19 @@ As kafka is up and running let's go and try create a topic within kafka broker c
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,CONNECTIONS_FROM_HOST:PLAINTEXT
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
 
-Check out that there are two advertised listerners on broker:9092 and localhost:19092. The whole thing of kafka connection boils down to these two listeners.
-Why using two instead of the default one? The reason being that in order to establish a successful connection to kafka two things must succeed:
 
-1. The initial connection to a broker (the bootstrap) which returns metadata to the client, including a list of all the brokers in the cluster and their connection endpoints.
-2. The client then connects to one (or more) of the brokers returned in the first step as required. If the broker has not been configured correctly, the connections will fail.
+Check out that there are **two advertised listerners** on broker:9092 and localhost:19092. The whole thing of kafka connection (in our architecture) boils down to these two listeners.
+
+Why two instead of the default one? 
+
+The answer is that in order to establish a successful connection to kafka **two connections** must succeed:
+
+1. The initial connection to a kafka broker (the bootstrap), which returns metadata to the client, including a list of all the brokers in the cluster and their connection endpoints.
+2. The final connection, when the client connects to one (or more) of the brokers returned in the first step as required. If the broker has not been configured correctly, the connections will fail.
 
 What usually happens is that you often only care for the first connection. Once it is succesful you say Aha! I'm connected! But you're not. 
 
-If you expose port 9092 as you normally do, and uses ad advertised listener the name of the broker and its port (broker:9092) then the first connection against kafka (the one that gets the metadata) should succeed, but the second one should fail.
+If you expose port 9092 as you normally do, using the name of the broker and its port **(broker:9092)** as the advertised listener, the first connection against kafka (the one that gets the metadata) should succeed, but eventually, the second one should fail.
 
 	…
 	  broker:
