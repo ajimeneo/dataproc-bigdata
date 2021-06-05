@@ -104,7 +104,7 @@ Verify all 5 containers are up and none of them exited:
 
 ### Create a SSH tunnel to the VM instance (master node).
 
-Through docker-compose.yml we have exposed port 8080 (from nifi container) to 8060 in localhost ( our vm instance which acts as master node). So we have to tunnel from our local machine ( laptop ) to the VM port 8060 to get access to Nifi Web UI. One way of doing it is by manually using PuttY ,generating ssh-keys and installing them in the VM, connecting to the VM and specifying tunnel port in Putty. One easier way is through Google Cloud Standard Development Kit keeping in mind that you have to have Web browser Chrome already installed.
+Through docker-compose.yml we have exposed port 8080 (from nifi container) to 8060 in localhost ( our vm instance which acts as master node). So we have to tunnel from our local machine ( laptop ) to the VM port 8060 to get access to Nifi Web UI. One way of doing it is by manually using PuTTY ,generating ssh-keys and installing them in the VM, connecting to the VM and specifying tunnel port in PuTTY. One easier way is through Google Cloud Standard Development Kit keeping in mind that you have to have Web browser Chrome already installed.
 
 Windows as I have, I downloaded [Google Cloud Client](https://dl.google.com/dl/cloudsdk/channels/rapid/GoogleCloudSDKInstaller.exe)  and installed it.
 Once installed their features are embedded within cmd or powershell commands and you can use gcloud extensions as if they belong to **Windows cmd** itself.
@@ -120,11 +120,11 @@ In Google Cloud there is a cheat sheet for Windows, Mac and Linux Systems.
        	 --project=data-lakes-313014 ^
        	 --zone=europe-west6-b -- -D 1080 -N
 
-This command will open a ssh tunnel through Putty generating ssh keys for you. That's why PuttY opens and is waiting for you to add VMs public key to Puttys cache and carry on connecting. 
+This command will open a ssh tunnel through Putty generating ssh keys for you. That's why PuTTY UI opens and waits for you to add VMs' public key to PuTTY's cache and carry on connecting. 
 
 [SSH tunnel](/images/10_gcloud.png)
 
-- Launch chrome through ssh tunnel to access desired port (In our case Nifi stands for localhost:8060 which is the port exposed to the VM)
+- Launch chrome through ssh tunnel to access desired port. For this demo I've choosen Nifi UI which has port 8060 listening.
 
 		C:\%ProgramFiles(x86)%\Google\Chrome\Application\chrome.exe ^
   		--proxy-server="socks5://localhost:1080" ^
