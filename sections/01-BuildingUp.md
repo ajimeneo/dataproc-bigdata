@@ -2,7 +2,7 @@
 
 ## Contents
 
-  - [Setting up the cluster](01-1-FirstSteps.md#Setting-up-the-cluster)
+  - [Setting up the cluster](01-BuildingUp.md#Setting-up-the-cluster)
   - [Connecting to Apache Kafka](01-BuildingUp.md#Connecting-to-kafka)
   - [Setting Up Zeppelin](01-BuildingUp.md#setting-up-Zeppelin)
 
