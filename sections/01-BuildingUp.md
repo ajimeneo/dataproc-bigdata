@@ -196,7 +196,7 @@ What happens is described in the graph below:
 
 The client (for example a Zeppelin notebook which is running on the master node of the VM ) cannot resolve  the advertised listener "broker:9092" as it has no means to resolve who "broker" is. If you should change the advertised listener to localhost:9092 should work, but any other Docker container trying to connect should fail, as to Docker containers point of view, kafka container remains in a different network an localhost would resolve to de Docker container itself.
 
-![Can't resolve host](/images/listeners_kafk_localhost.png)
+![Can't resolve host](/images/listeners_kafka_localhost.png)
 
 Once you use more than one, you are bound to procure the security protocol as well. Hence why we write down PLAINTEXT security protocol twice.
 
