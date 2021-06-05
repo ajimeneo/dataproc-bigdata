@@ -33,6 +33,7 @@ And the workers (2 nodes which is the minimum default. You cannot choose less th
 ![Cloud Components](/images/06-Dataproc.png)
 
 You can do all the steps done before in a programmatically way using Google SDF as follows:
+
 ![Cloud Components](/images/04-Dataproc.png)
 
 Click on save and the cluster will be up and running in less than two minutes!
