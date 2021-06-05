@@ -111,7 +111,7 @@ Once installed their features are embedded within cmd or powershell commands and
 
 In Google Cloud there is a cheat sheet for Windows, Mac and Linux Systems.
 
-[SSH tunnel](/images/00_gcloud.png)
+![SSH tunnel](/images/00_gcloud.png)
 
 
 - Open a Windows cmd console (choose your own case situation) and open a ssh tunnel through port 1080
@@ -122,7 +122,7 @@ In Google Cloud there is a cheat sheet for Windows, Mac and Linux Systems.
 
 This command will open a ssh tunnel through Putty generating ssh keys for you. That's why PuTTY UI opens and waits for you to add VMs' public key to PuTTY's cache and carry on connecting. 
 
-[SSH tunnel](/images/10_gcloud.png)
+![SSH tunnel](/images/10_gcloud.png)
 
 - Launch chrome through ssh tunnel to access desired port. For this demo I've choosen Nifi UI which has port 8060 listening.
 
