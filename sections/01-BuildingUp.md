@@ -12,17 +12,29 @@ Once you set up the account, create a new Project, and search for the Dataproc s
 
 ![Cloud Components](/images/00-Dataproc.png)
 
-Then hit Create a Cluster and a window will pop up. Fill in the blanks with an appropriate cluster name. 
+Then hit Create a Cluster and a window will pop up. Fill in the blanks with an appropriate cluster name, location (in my case [europe-west6](https://cloud.google.com/compute/docs/regions-zones)) and cluster type.
 
 ![Cloud Components](/images/01-Dataproc.png)
 
-Choose a region close to your location ( in my case [europe-west6](https://cloud.google.com/compute/docs/regions-zones)) and a cluster type. If you want to save as much credit as you can, choose single node, buy if you want to recreate a real cluster then choose a standard one. Image type and version should be ok with the default ( 2.0-debian10 ), enable component gateaway to allows us access to the web Interfaces and select Docker and Zeppelin as Optional components.
+If you want to save as much credit as you can, choose single node, buy if you want to recreate a real cluster then choose a standard one. Image type and version should be ok with the default ( 2.0-debian10 ). Enable component gateaway to get access to the web Interfaces and select Docker and Zeppelin as Optional components as all the Big Data tools we're going to use are Dockerized containers.
 
+![Cloud Components](/images/02-Dataproc.png)
+![Cloud Components](/images/03-Dataproc.png)
 
+Then choose a VM instance of your liking for the Master node:
 
+![Cloud Components](/images/05-Dataproc.png)
 
+And the workers (2 nodes which is the minimum default. You cannot choose less than that):
 
+![Cloud Components](/images/06-Dataproc.png)
 
+You can do all the steps done before in a programmatically way using Google SDF as follows:
+![Cloud Components](/images/04-Dataproc.png)
+
+Click on save and the cluster will be up and running in less than two minutes!
+
+![Cloud Components](/images/08-Dataproc.png)
 
 - Provision the master node with Docker Compose
   
