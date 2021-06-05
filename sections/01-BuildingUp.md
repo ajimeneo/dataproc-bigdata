@@ -141,7 +141,9 @@ Nifi is ready to go!
 
 ## Troubleshooting Common Issues with Kafka
 
-First of all, let's have a look to the kafka arquitecture already set up through [docker-compose.yml](/scripts/docker-compose.yml)
+As commented on the README introductory file, all of the ideas and code are from retrieved from this amazing page written by .... All the merit goes to him!
+
+Having said that, let's try explain the final architecture ([docker-compose.yml](/scripts/docker-compose.yml)).
 
 Below is the extract related to kafka broker:
 
@@ -198,13 +200,13 @@ The client (for example a Zeppelin notebook which is running on the master node 
 
 ![Can't resolve host](/images/listeners_kafka_localhost.png)
 
-Once you use more than one, you are bound to procure the security protocol as well. Hence why we write down PLAINTEXT security protocol twice.
+So either way, the Docker connection or the client connection, is bound to failure. How to work this out? **The answer is adding a second listener**.
 
-To prove that is up and listenging properly we will check that:
+And once you use more than one, you are bound to procure the security protocol as well. Hence why we write down PLAINTEXT security protocol twice.
+
+To prove kafka is listenging properly we will check that:
 1. There is connectivity among any containers from the same network (Spin up a docker container with some python code that interacts with kafka) 
 2. There is connectivity from local (master node within VM) to Kafka. (Launch spark-shell from the VM an run some scala code to produce/consume to kafka broker) 
-
-All of the ideas and code are from retrieved from this amazing page written by .... All the merit goes to him!
 
 As mention before we will use this arquitechture to connect to kafka broker. This diagram from ... to 
 ![Architecture](/images/10_kafka_configuration.png)
