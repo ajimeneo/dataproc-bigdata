@@ -16,7 +16,7 @@ Then hit Create a Cluster and a window will pop up. Fill in the blanks with an a
 
 ![Cloud Components](/images/01-Dataproc.png)
 
-If you want to save as much credit as you can, choose single node, buy if you want to recreate a real cluster then choose a standard one. Image type and version should be ok with the default ( 2.0-debian10 ). Enable component gateaway to get access to the web Interfaces and select Docker and Zeppelin as Optional components as all the Big Data tools we're going to use are Dockerized containers.
+If you want to save as much credit as you can, choose **Single Node**, buy if you want to recreate a real cluster then choose a **Standard One**. Image type and version should be ok with the default ( 2.0-debian10 ). Enable component gateaway to get access to the web Interfaces and select Docker and Zeppelin as Optional components as all the Big Data tools we're going to use are Dockerized containers.
 
 ![Cloud Components](/images/02-Dataproc.png)
 ![Cloud Components](/images/03-Dataproc.png)
