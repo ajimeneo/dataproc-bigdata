@@ -8,7 +8,7 @@
 
 ## Setting up the cluster
 
-Once you set up the account, create a new Project, and search de Dataproc section.
+Once you set up the account, create a new Project, and search for the Dataproc section.
 
 ![Cloud Components](/images/00-Dataproc.png)
 
