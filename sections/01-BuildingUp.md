@@ -16,9 +16,12 @@ Then hit Create a Cluster and a window will pop up. Fill in the blanks with an a
 
 ![Cloud Components](/images/01-Dataproc.png)
 
- Image type and version should be ok with the default ( 2.0-debian10 ). Enable component gateaway to get access to the web Interfaces and select Docker and Zeppelin as Optional components as all the Big Data tools we're going to use are Dockerized containers.
+ Image type and version should be ok with the default **2.0-debian10**. 
 
 ![Cloud Components](/images/02-Dataproc.png)
+
+Enable component gateaway to get access to the web Interfaces and select Docker and Zeppelin as Optional components as all the Big Data tools we're going to use are Dockerized containers.
+
 ![Cloud Components](/images/03-Dataproc.png)
 
 Then choose a VM instance of your liking for the Master node:
