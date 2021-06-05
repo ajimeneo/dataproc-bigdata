@@ -79,19 +79,6 @@ Have a look to the Docker-compose.yml file. Check that all needed containers are
 
         docker-compose up -d 
 
-   - **Nifi container** spins up the apache/nifi:latest image, which allows us to use a powerful and reliable system to process and distribute data, the  [Apache Nifi project](http://http://nifi.apache.org/download.html). It will be used as a single point of data entrace into the system, allowing us to ingest and transform data in a visual way. After that, data will be sinked to different locations such as hdfs, kafka brokers and mysql database.
-   - **Zookeeper container**
- confluentinc/cp-zookeeper:5.5.0
-   - **Kafka broker container**
- confluentinc/cp-kafka:5.5.0
-   - **Elasticsearch container**
- docker.elastic.co/elasticsearch/elasticsearch:7.6.2
-   - **Kibana container**
- docker.elastic.co/kibana/kibana:7.6.2
-      
-
-
-
 The first time we issue this command will download nifi, zookeeper, kafka, elasticsearch an kibana images from Docker Hub, as we don't have it yet.
 We can use the detached mode to avoid the logs printed out to the screen.
 
@@ -104,7 +91,18 @@ Verify all 5 containers are up and none of them exited:
 ![docker-compose up -d  exit](/images/10_docker-compose-up.png)
 
 
-- Create a SSH tunnel to connect to nifi and kibana.
+   - **Nifi container** spins up the apache/nifi:latest image, which allows us to use a powerful and reliable system to process and distribute data, the  [Apache Nifi project](http://http://nifi.apache.org/download.html). It will be used as a single point of data entrace into the system, allowing us to ingest and transform data in a visual way. After that, data will be sinked to different locations such as hdfs, kafka brokers and mysql database.
+   - **Zookeeper container**
+ confluentinc/cp-zookeeper:5.5.0
+   - **Kafka broker container**
+ confluentinc/cp-kafka:5.5.0
+   - **Elasticsearch container**
+ docker.elastic.co/elasticsearch/elasticsearch:7.6.2
+   - **Kibana container**
+ docker.elastic.co/kibana/kibana:7.6.2
+      
+
+### Create a SSH tunnel to the VM instance (master node).
 
 Through docker-compose.yml we have exposed port 8080 (from nifi container) to 8060 in localhost ( our vm instance which acts as master node). So we have to tunnel from our local machine ( laptop ) to the VM port 8060 to get access to Nifi Web UI. One way of doing it is by manually using PuttY ,generating ssh-keys and installing them in the VM, connecting to the VM and specifying tunnel port in Putty. One easier way is through Google Cloud Standard Development Kit keeping in mind that you have to have Web browser Chrome already installed.
 
