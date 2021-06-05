@@ -142,6 +142,7 @@ Nifi is ready to go!
 ## Troubleshooting Common Issues with Kafka
 
 As commented on the README introductory file, all of the ideas and code are from retrieved from this amazing page written by Robin Moffat. All the merit goes to him!
+Source: https://www.confluent.io/blog/kafka-client-cannot-connect-to-broker-on-aws-on-docker-etc/
 
 Having said that, let's try explain the final architecture ([docker-compose.yml](/scripts/docker-compose.yml)).
 
@@ -208,15 +209,7 @@ To prove kafka is listenging properly we will check that:
 1. There is connectivity among any containers from the same network (Spin up a docker container with some python code that interacts with kafka) 
 2. There is connectivity from local (master node within VM) to Kafka. (Launch spark-shell from the VM an run some scala code to produce/consume to kafka broker) 
 
-As mention before we will use this arquitechture to connect to kafka broker. This diagram from ... to 
 ![Architecture](/images/10_kafka_configuration.png)
-Source: https://www.confluent.io/blog/kafka-client-cannot-connect-to-broker-on-aws-on-docker-etc/
-
-
-
-The behaviour to connect to a Dockerized kafka broker is this:
-
-
 
 ### Prove there is connection to kafka broker container from another container
 
@@ -271,6 +264,8 @@ The program expects a host as a first param. We supply "broker:9092" as the cont
 	 	python python_kafka_test_client.py localhost:19092
 		
  ![Launching Test local to 19092](/images/10_launching_test_19092.png)
+ 
+ There! We've already proven that we can connect to kafka from the cliente perspective ( master node ) and a Docker Container perspective ( nifi, elasticsearch, etc)
  
 ## Setting up Zeppelin
 
