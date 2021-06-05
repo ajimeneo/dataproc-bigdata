@@ -14,7 +14,7 @@ Contents
 - [What is Google Cloud Dataproc](README.md#what-is-google-cloud-dataproc)
 - [Building up the Dataproc Cluster](sections/01-BuildingUp.md#building-up-the-architecture-the-dataproc-cluster)
   - [Setting up the cluster](sections/01-BuildingUp.md#setting-up-the-cluster)
-  - [Connecting to Apache Kafka](sections/01-BuildingUp.md#Connecting-to-kafka)
+  - [Troubleshooting Common Issues with Kafka](01-BuildingUp.md#Troubleshooting-common-issues-with-kafka)
   - [Setting Up Zeppelin](sections/01-BuildingUp.md#setting-up-Zeppelin)
 - [Putting all agents working together](sections/02-PuttingAllTogether.md#putting-all-agents-working-together)
   - [Creating a flow with nifi](sections/02-PuttingAllTogether.md#nifi)
