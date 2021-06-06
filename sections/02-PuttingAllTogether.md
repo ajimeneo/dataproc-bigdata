@@ -24,7 +24,7 @@ Let's jump into it!
 
 ### Create a Process Group
 
-Drag and drop a Process Group into the canvas.
+Drag and drop a Process Group into the canvas and type a name for it. I've choosen Santander traffic. 
 
 ![Process Group](/images/10_nifi.png)
 
