@@ -22,15 +22,21 @@ So processes are the pieces we are going to define once we drag them into the ca
 
 Let's jump into it!
 
+One more thing before we go. 
+All the data we're playing around is from a RestFul service https:// and the data is provided to us every 60 seconds in a JSON format. It's time to see this data by ourselves.
+
 ### Create a Process Group
 
 Drag and drop a Process Group into the canvas and type a name for it. I've choosen Santander traffic. 
 
 ![Process Group](/images/10_nifi.png)
 
+All the processes we're going to create will exist within this group process. Double click it. Then, every process we may add will fall into this group.
 
+Search for **InvokeHTTP** process and drag it into the canvas.
 
-
+![Process Group](/images/240_nifi.png)
+![Process Group](/images/20_nifi.png)
 
 
 
