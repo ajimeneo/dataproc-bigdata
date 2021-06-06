@@ -84,9 +84,7 @@ Let's schedule the call to be issued every 60 seconds. Then, every 60 seconds we
 	
 ![Process Group](/images/60-nifi.png)	
 
-We'll need SplitJson processor to do the task of transforming our individual flowfile into 482 flowfiles.
-
-Drag a **SplitJson** processor and link it with **InvokeHTTP**. As nifi is concerned, the flow is a pipeline with a beginning and a ending. So, every time we add a processor to the flow it is mandatory to set every the destination and origin (called relationship) for every possible flow.
+As nifi is concerned, the flow is a pipeline with a beginning and a ending. So, every time we add a processor to the flow it is mandatory to set every the destination and origin (called relationship) for every possible flow.
 That's why some warnings pops up if we haven't properly set the processor:
 
 ![Process Group](/images/30-nifi.png)	
@@ -94,13 +92,24 @@ That's why some warnings pops up if we haven't properly set the processor:
 We're going to handle only "Response" flowfile because if everything's fine we'll get the json flowfile through this relationship. We terminate all the other relationships.	
 
 ![Process Group](/images/250-nifi.png)
-	
+
+We'll need **SplitJson** processor to do the task of transforming our individual flowfile into 482 flowfiles.
+
+Drag a **SplitJson** processor. 
+
+![Process Group](/images/280-nifi.png)	
+
+Link it with **InvokeHTTP**. In order to do that, drag the arrow that appears at the center of the processor and drop it to another processor. Then a Queue appers between the two processors. This is the queue where messages will pile up.
+
+![Process Group](/images/270-nifi.png)	
+
 Set JsonPathExpression property from the tab properties of the **SplitJson** to $.resources. This way the original json will split into individual json using the field provided (**resources**)
 	
-![Process Group](/images/250-nifi.png)	
+![Process Group](/images/260-nifi.png)	
+
+Terminate the relationships you won't be needing. We'll terminate failure relationship. We'll use original to redirect the original json to another flow, and the split relationship down the pipeline.
 	
-	
-Let's check that we have received data. Start the InvokeHTTP processor. Stop it. And from the canvas, right click and Refresh. Data will be added to the queue.	
+But let's check that we have received data. Start the InvokeHTTP processor. Stop it. And from the canvas, right click and Refresh. Data will be added to the queue.	
 Right click and "List queue".
 
 ![Process Group](/images/80-nifi.png)	
