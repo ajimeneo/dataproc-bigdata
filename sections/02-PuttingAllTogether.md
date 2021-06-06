@@ -112,19 +112,21 @@ Terminate the relationships you won't be needing. We'll terminate failure relati
 But let's check that we have received data. Start the InvokeHTTP processor. Stop it. And from the canvas, right click and Refresh. Data will be added to the queue.	
 ![Process Group](/images/290-nifi.png)	
 
-Check that 1 message is queued as expected. So it has to be flowfile with json format waiting for ys
+Check that 1 message is queued as expected. So it has to be flowfile with json format waiting for us
 
 Right click and "List queue".
 
-![Process Group](/images/80-nifi.png)	
+![Process Group](/images/300-nifi.png)	
 
 Then you can see all the available data waiting to be ingested into the pipeline. 
 
-![Process Group](/images/90-nifi.png)	
+![Process Group](/images/310-nifi.png)	
 
-Check that our json is there
+Check that our json is there clicking view content. Press the eye icon.
 	
 ![Process Group](/images/100-nifi.png)	
+
+
 
 | Podcast Episode: #050 Data Engineer, Scientist or Analyst - Which One Is For You?
 |-----------------------------------------------------------------------------------
