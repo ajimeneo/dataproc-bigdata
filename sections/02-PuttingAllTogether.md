@@ -50,7 +50,7 @@ http://datos.santander.es/api/rest/datasets/mediciones.json?items=482
 
 This URL is serving, every 60 seconds a traffic measure of every sensor. As items suggests, we will get 482 measurements each call.
 
-This is a extract from the whole call. ![Process Group](/files/measurements.json)
+This is a extract from the whole call. ![measurements.json](/files/measurements.json)
 		
 	{"summary":{"items":482,"items_per_page":50,"pages":10,"current_page":1},
 	 "resources":[{
