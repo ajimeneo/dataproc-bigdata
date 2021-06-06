@@ -5,8 +5,16 @@
   - [Create a Map Visualization using Kibana](sections/02-PuttingAllTogether.md#kibana)
   - [Issue alerts and other useful queries with Zeppelin](sections/02-PuttingAllTogether.md#zeppelin)
 
+
+Once we have set up the datproc cluster and all containers are up and running ( nifi, zookeeper, kafka, elasticsearch and kibana) it's time to have a hands-on approach.
+
+This is the architecture we have built up:
+
+-- photo
+
 ## Creating a flow with nifi
 
+Nifi web page is listening on port 8060 and we have to access it through a SSH tunnel. As we have explained on the dataproc section, let's 
 
 
 
