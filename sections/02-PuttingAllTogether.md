@@ -140,7 +140,7 @@ And there we have our json splitted
 
 Next step is tidying up the json a little bit, getting rid of some fields we don't need ( uri and dc:identifier ) and changing names from Spanish to English to make it more readable. In order to do that we'll use Jolt transformations. Everything you need about it is on this web page <https://jolt-demo.appspot.com>
 
-To configure **JoltTransformJSON** processor go to properties tab and click ADVANCED bottom. Use the Jolt specification provided, insert a JSON input (take one of the json messages) and click on transform. This way you will be able to see the output. Once you get the correct one, click on validate. Every time a json enters this transformation, the jolt transformation is applied and a new JSON will come out.
+To configure **JoltTransformJSON** processor go to properties tab and click ADVANCED bottom. Use the [Jolt specification provided](/files/JoltTransformationJSON.json), insert a JSON input (take one of the json messages) and click on transform. This way you will be able to see the output. Once you get the correct one, click on validate. Every time a json enters this transformation, the jolt transformation is applied and a new JSON will come out.
 
 
 
