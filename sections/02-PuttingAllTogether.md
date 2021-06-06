@@ -1,7 +1,11 @@
 
 # Putting all agents working together
 
-## Using Apache Nifi
+  - [Creating a flow with nifi](02-PuttingAllTogether.md#creating-a-flow-with-nifi)
+  - [Create a Map Visualization using Kibana](sections/02-PuttingAllTogether.md#kibana)
+  - [Issue alerts and other useful queries with Zeppelin](sections/02-PuttingAllTogether.md#zeppelin)
+
+## Creating a flow with nifi
 
 
 
