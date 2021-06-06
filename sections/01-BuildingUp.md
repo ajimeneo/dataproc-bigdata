@@ -315,7 +315,7 @@ On properties
 		
  ![hive Interpreter](/images/00_interpreter_hive.png)
  
- No it's time to add the maven dependencies where the Interpreter will look for the Class jdbc driver we have selected before.
+ Now it's time to add the maven dependencies where the Interpreter will look for the jdbc driver java Class we have selected before.
  There are two dependencies we need:
  
  		org.apache.hive:hive-jdbc:0.14.0
@@ -323,7 +323,7 @@ On properties
  
   ![hive Interpreter](/images/10_interpreter_hive.png)
   
-  Then if everything has been set correctly, we have just created a new Interpreter named hive!
+  Save it and then, if everything has been set correctly, we have just created a new Interpreter named hive!
   
   ![hive Interpreter](/images/20_interpreter_hive.png)
  
