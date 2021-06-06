@@ -132,9 +132,11 @@ So far we have succeed in ingesting some traffic data down the pipeline and lear
 
 Right click and "List queue".
 
+![Process Group](/images/360-nifi.png)	
 
-![Process Group](/images/330-nifi.png)	
+And there we have our json splitted
 
+![Process Group](/images/370-nifi.png)	
 
 | Podcast Episode: #050 Data Engineer, Scientist or Analyst - Which One Is For You?
 |-----------------------------------------------------------------------------------
