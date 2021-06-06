@@ -16,9 +16,9 @@ This is the architecture we have built up:
 
 Nifi web page is listening on port 8060 and we have to access it through a SSH tunnel. As we have explained on the previous section [Setting up the cluster](01-BuildingUp.md#Create-a-SSH-tunnel-to-the-VM-instance-(master-node)), let's dive into nifi.
 
-Nifi is very powerful ETL tool that allows as to ingest massive data from any endpoint in a visual fashion. Everything is designed from a process-flow perspective. Data ingested into the pipeline is convert into Flowfiles which are the piece of data we are manipulating. Processes define actions over these Flowfiles.
+Nifi is very powerful ETL tool that allows as to ingest massive data from any endpoint in a visual fashion. Everything is designed from a process-flow perspective. Data ingested into the pipeline is convert into Flowfiles which are the piece of data we are manipulating. Processors define actions over these Flowfiles.
 
-So processes are the pieces we are going to define once we drag them into the canvas.
+So processors are the pieces we are going to define once we drag them into the canvas.
 
 Let's jump into it!
 
@@ -27,13 +27,13 @@ All the data we're playing around is from a RestFul service https:// and the dat
 
 ### Create a Process Group
 
-Drag and drop a Process Group into the canvas and type a name for it. I've choosen Santander traffic. 
+Drag and drop a Processor Group into the canvas and type a name for it. I've choosen Santander traffic. 
 
 ![Process Group](/images/10_nifi.png)
 
-All the processes we're going to create will exist within this group process. Double click it. Then, every process we may add will fall into this group.
+All the processors we're going to create will exist within this group processor. Double click it. Then, every processor we may add will fall into this group.
 
-Drag and drop a process into the canvas.
+Drag and drop a processor into the canvas.
 
 ![Process Group](/images/240-nifi.png)
 
