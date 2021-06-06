@@ -45,7 +45,7 @@ Click right bottom and hit Configure
 
 ![Process Group](/images/40-nifi.png)
 
-
+This processor allows us to ingest data into the pipeline from a supplied URL. So, as we said, fill in the HTTPMethod with the URL
 
 
 
