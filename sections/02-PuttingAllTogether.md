@@ -101,13 +101,13 @@ Drag a **SplitJson** processor.
 
 Link it with **InvokeHTTP**. In order to do that, drag the arrow that appears at the center of the processor and drop it to another processor. Then a Queue appers between the two processors. This is the queue where messages will pile up.
 
-![Process Group](/images/270-nifi.png)	
-
 Set JsonPathExpression property from the tab properties of the **SplitJson** to $.resources. This way the original json will split into individual json using the field provided (**resources**)
 	
 ![Process Group](/images/260-nifi.png)	
 
 Terminate the relationships you won't be needing. We'll terminate failure relationship. We'll use original to redirect the original json to another flow, and the split relationship down the pipeline.
+
+![Process Group](/images/270-nifi.png)	
 	
 But let's check that we have received data. Start the InvokeHTTP processor. Stop it. And from the canvas, right click and Refresh. Data will be added to the queue.
 Check that 1 message is queued as expected. So it has to be flowfile with json format waiting for us
