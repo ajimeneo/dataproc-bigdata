@@ -75,9 +75,9 @@ This is a extract from the whole call. ![measurements.json](/files/measurements.
 		      ]
         }
 
+![Process Group](/images/50-nifi.png)
 
-
-
+And schedule the call to be issued every 60 seconds. Then, every 60 seconds we will get fresh data of how the traffic is in the city of Santander.
 		
 | Podcast Episode: #050 Data Engineer, Scientist or Analyst - Which One Is For You?
 |-----------------------------------------------------------------------------------
