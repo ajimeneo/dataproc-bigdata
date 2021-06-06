@@ -46,7 +46,34 @@ Click right bottom and hit Configure
 ![Process Group](/images/40-nifi.png)
 
 This processor allows us to ingest data into the pipeline from a supplied URL. So, as we said, fill in the HTTPMethod with the URL
+http://datos.santander.es/api/rest/datasets/mediciones.json?items=482
 
+This URL is serving, every 60 seconds a traffic measure of every sensor. As items suggests, we will get 482 measurements each call.
+
+This is a extract
+		
+	{"summary":{"items":482,"items_per_page":50,"pages":10,"current_page":1},
+	 "resources":[{
+		      "ayto:ocupacion":"2",
+		      "ayto:medida":"1001",
+		      "ayto:idSensor":"1001",
+		      "ayto:intensidad":"240",
+		      "dc:modified":"2021-06-06T11:08:00Z",
+		      "dc:identifier":"1001-e311e9c0-c6b7-11eb-9137-005056a43242",
+		      "ayto:carga":"10",
+		      "uri":"http://datos.santander.es/api/datos/mediciones/1001-e311e9c0-c6b7-11eb-9137-005056a43242.json"},
+	 	      {
+		      "ayto:ocupacion":"0",
+		      "ayto:medida":"1002",
+		      "ayto:idSensor":"1002",
+		      "ayto:intensidad":"0",
+		      "dc:modified":"2021-06-06T11:08:00Z",
+		      "dc:identifier":"1002-e312c8e8-c6b7-11eb-9137-005056a43242",
+		      "ayto:carga":"0",
+		      "uri":"http://datos.santander.es/api/datos/mediciones/1002-e312c8e8-c6b7-11eb-9137-005056a43242.json"},
+		      ...
+		      ]
+        }
 
 
 
