@@ -110,6 +110,10 @@ Set JsonPathExpression property from the tab properties of the **SplitJson** to 
 Terminate the relationships you won't be needing. We'll terminate failure relationship. We'll use original to redirect the original json to another flow, and the split relationship down the pipeline.
 	
 But let's check that we have received data. Start the InvokeHTTP processor. Stop it. And from the canvas, right click and Refresh. Data will be added to the queue.	
+![Process Group](/images/290-nifi.png)	
+
+Check that 1 message is queued as expected. So it has to be flowfile with json format waiting for ys
+
 Right click and "List queue".
 
 ![Process Group](/images/80-nifi.png)	
