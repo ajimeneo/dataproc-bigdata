@@ -265,7 +265,7 @@ The program expects a host as a first param. We supply "broker:9092" as the cont
 		
  ![Launching Test local to 19092](/images/10_launching_test_19092.png)
  
- There! We've already proven that we can connect to kafka from the cliente perspective ( master node ) and a Docker Container perspective ( nifi, elasticsearch, etc)
+ There! We've already proven that we can connect to a kafka container from a client perspective ( master node VM instance ) and a Docker Container perspective ( nifi, elasticsearch, kibana,...)
  
 ## Setting up Zeppelin
 
@@ -295,9 +295,35 @@ Once we choose the option of the interpreter
  
  ![Spark Interpreter](/images/30_interpreter.png)
 
-It's always good politics to restart the interpreter any time you make a change or when things got weird about the interpreter and you cannot come up with a solution. Before you get nuts, try and restart the interpreter. One more thing, the bluish color of the interpreter points out that is enable. If you want to disable it, click it and it´ll became disable, showing it up with a greeish color.
+It's always good politics to restart the interpreter any time you make a change or when things get weird about the interpreter and you cannot come up with a solution. Before you get nuts, try and restart the interpreter. One more thing, the blueish color of the interpreter points out that is enabled. If you want to disable it, click it and it´ll become disable, showing it up with a greenish color.
 
+### Hive Interpreter
 
+Go to the right hand corner and select Interpreter as we did before. Then click on Create. Fill in Interpreter Name with a suitable one. I think **hive** will do the job ;). Then choose jdbc for the Interpreter group.
+On properties
+- default.url
 
+		jdbc:hive2://localhost:10000/
 
+- default.user
 
+		gpadmin
+
+- default.driver
+
+		org.apache.hive.jdbc.HiveDriver	
+		
+ ![hive Interpreter](/images/00_interpreter_hive.png)
+ 
+ No it's time to add the maven dependencies where the Interpreter will look for the Class jdbc driver we have selected before.
+ There are two dependencies we need:
+ 
+ 		org.apache.hive:hive-jdbc:0.14.0
+		org.apache.hadoop:hadoop-common:2.6.0
+ 
+  ![hive Interpreter](/images/10_interpreter_hive.png)
+  
+  Then if everything has been set correctly, we have just created a new Interpreter named hive!
+  
+  ![hive Interpreter](/images/20_interpreter_hive.png)
+ 
