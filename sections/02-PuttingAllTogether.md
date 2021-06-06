@@ -14,7 +14,7 @@ This is the architecture we have built up:
 
 ## Creating a flow with nifi
 
-Nifi web page is listening on port 8060 and we have to access it through a SSH tunnel. As we have explained on the previous section [Setting up the cluster](01-BuildingUp.md#Setting-up-the-cluster), let's dive into nifi.
+Nifi web page is listening on port 8060 and we have to access it through a SSH tunnel. As we have explained on the previous section [Setting up the cluster](01-BuildingUp.md#Create-a-SSH-tunnel-to-the-VM-instance-(master-node)), let's dive into nifi.
 
 
 
