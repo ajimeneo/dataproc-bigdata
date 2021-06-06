@@ -33,14 +33,17 @@ Drag and drop a Process Group into the canvas and type a name for it. I've choos
 
 All the processes we're going to create will exist within this group process. Double click it. Then, every process we may add will fall into this group.
 
-Search for **InvokeHTTP** process and drag it into the canvas.
+Drag and drop a process into the canvas.
 
 ![Process Group](/images/240_nifi.png)
+
+Search for **InvokeHTTP**
+
 ![Process Group](/images/20_nifi.png)
 
+Click right bottom and hit Configure
 
-
-
+![Process Group](/images/40_nifi.png)
 
 
 
