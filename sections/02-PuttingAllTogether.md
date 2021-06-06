@@ -22,31 +22,9 @@ So processors are the pieces we are going to define once we drag them into the c
 
 Let's jump into it!
 
-One more thing before we go. 
-All the data we're playing around is from a RestFul service https:// and the data is provided to us every 60 seconds in a JSON format. It's time to see this data by ourselves.
+One more thing before we go.
 
-### Create a Process Group
-
-Drag and drop a Process Group into the canvas and type a name for it. I've choosen Santander traffic. 
-
-![Process Group](/images/10_nifi.png)
-
-All the processors we're going to create will exist within this group processor. Double click it. Then, every processor we may add will fall into this group.
-
-Drag and drop a processor into the canvas.
-
-![Process Group](/images/240-nifi.png)
-
-Search for **InvokeHTTP**
-
-![Process Group](/images/20_nifi.png)
-
-Click right bottom and hit Configure
-
-![Process Group](/images/40-nifi.png)
-
-This processor allows us to ingest data into the pipeline from a supplied URL. So, as we said, fill in the HTTPMethod with the URL
-http://datos.santander.es/api/rest/datasets/mediciones.json?items=482
+All the data we're playing around is from a RestFul service http://datos.santander.es/api/rest/datasets/mediciones.json?items=482.
 
 This URL is serving, every 60 seconds a traffic measure of every sensor. As items suggests, we will get 482 measurements each call.
 
@@ -75,17 +53,41 @@ This is a extract from the whole call. ![measurements.json](/files/measurements.
 		      ]
         }
 
-![Process Group](/images/50-nifi.png)
 
-So, in the end, we'll need 482 individual json, one json each measurement instead of the whole pack. This will transform our individual flowfile into 482 flowfiles.
-For that to happen we will use SplitJson processor.
+So keep in mind that we have to transform this json into 482 individual json.
+
+### Create a Process Group
+
+Drag and drop a Process Group into the canvas and type a name for it. I've choosen Santander traffic. 
+
+![Process Group](/images/10_nifi.png)
+
+All the processors we're going to create will exist within this group processor. Double click it. Then, every processor we may add will fall into this group.
+
+Drag and drop a processor into the canvas.
+
+![Process Group](/images/240-nifi.png)
+
+Search for **InvokeHTTP**
+
+![Process Group](/images/20_nifi.png)
+
+Click right bottom and hit Configure
+
+![Process Group](/images/40-nifi.png)
+
+This processor allows us to ingest data into the pipeline from a supplied URL. So, fill in with http://datos.santander.es/api/rest/datasets/mediciones.json?items=482
 
 Let's schedule the call to be issued every 60 seconds. Then, every 60 seconds we will get fresh data of how the traffic is in the city of Santander.
 	
 ![Process Group](/images/60-nifi.png)	
 
 
-Then to check we have received data lets drag a **SplitJson** processor and link it with **InvokeHTTP**. As nifi is concerned, the flow is a pipeline with a beginning and a ending. So, every time we add a processor to the flow it is mandatory to set every the destination and origin (called relationship) for every possible flow.
+![Process Group](/images/50-nifi.png)
+
+We'll need SplitJson processor to do the task of transforming our individual flowfile into 482 flowfiles.
+
+Drag a **SplitJson** processor and link it with **InvokeHTTP**. As nifi is concerned, the flow is a pipeline with a beginning and a ending. So, every time we add a processor to the flow it is mandatory to set every the destination and origin (called relationship) for every possible flow.
 That's why some warnings pops up if we haven't properly set the processor:
 
 ![Process Group](/images/30-nifi.png)	
@@ -99,10 +101,19 @@ Set JsonPathExpression property from the tab properties of the **SplitJson** to 
 ![Process Group](/images/250-nifi.png)	
 	
 	
+Let's check that we have received data. Start the InvokeHTTP processor. Stop it. And from the canvas, right click and Refresh. Data will be added to the queue.	
+Right click and "List queue".
+
+![Process Group](/images/80-nifi.png)	
+
+Then you can see all the available data waiting to be ingested into the pipeline. 
+
+![Process Group](/images/90-nifi.png)	
+
+Check that our json is there
 	
-	
-	
-	
+![Process Group](/images/100-nifi.png)	
+
 | Podcast Episode: #050 Data Engineer, Scientist or Analyst - Which One Is For You?
 |-----------------------------------------------------------------------------------
 | In this podcast we talk about the diﬀerences between data scientists, analysts and engineers. Which are the three main data science jobs. All three are super important. This makes it easy to decide
