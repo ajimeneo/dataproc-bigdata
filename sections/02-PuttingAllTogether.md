@@ -26,7 +26,7 @@ Let's jump into it!
 
 Drag and drop a Process Group into the canvas.
 
-[Process Group](images/10_nifi.png)
+![Process Group](images/10_nifi.png)
 
 
 
