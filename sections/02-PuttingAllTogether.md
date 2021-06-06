@@ -78,12 +78,11 @@ Click right bottom and hit Configure
 
 This processor allows us to ingest data into the pipeline from a supplied URL. So, fill in with http://datos.santander.es/api/rest/datasets/mediciones.json?items=482
 
+![Process Group](/images/50-nifi.png)
+
 Let's schedule the call to be issued every 60 seconds. Then, every 60 seconds we will get fresh data of how the traffic is in the city of Santander.
 	
 ![Process Group](/images/60-nifi.png)	
-
-
-![Process Group](/images/50-nifi.png)
 
 We'll need SplitJson processor to do the task of transforming our individual flowfile into 482 flowfiles.
 
