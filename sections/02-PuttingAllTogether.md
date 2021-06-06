@@ -126,6 +126,14 @@ Check that our json is there clicking view content. Press the eye icon.
 	
 ![Process Group](/images/100-nifi.png)	
 
+So far we have succeed in ingesting some traffic data down the pipeline and learnt how to display the data ingested. Let's see how the json is splitted. The process is always the same. Start and stop the processor. Refresh from the canvas and check the messages that have been queued up. To do that keep in mind that you always have to be one step ahead ( you need a processor to sink the data in). As we want to rearrange the json a little bit ( modify names and dispose of some fields we won't be needing) then we'll use processor **JoltTransformJSON**. The data queued before entering JoltTransformation is the split relationship. As you can see we have now 482 messages which is the expected output. We have split 1 json with an array of 482 resources in 482 json messages
+
+![Process Group](/images/350-nifi.png)	
+
+Right click and "List queue".
+
+
+![Process Group](/images/330-nifi.png)	
 
 
 | Podcast Episode: #050 Data Engineer, Scientist or Analyst - Which One Is For You?
