@@ -142,6 +142,40 @@ Next step is tidying up the json a little bit, getting rid of some fields we don
 
 To configure **JoltTransformJSON** processor go to properties tab and click ADVANCED bottom. Use the [Jolt specification provided](/files/JoltTransformationJSON.json), insert a JSON input (take one of the json messages) and click on transform. This way you will be able to see the output. Once you get the correct one, click on validate. Every time a json enters this transformation, the jolt transformation is applied and a new JSON will come out.
 
+This is the expected Jolt transformation output:
+
+![Process Group](/images/380-nifi.png)	
+
+Check the queue and see 482 messages transformed:
+
+![Process Group](/images/390-nifi.png)
+
+Now it's time to enrich the flow with data from a csv document, which holds the sensors location (latitude and longitude). We will end up having the same original JSON but enriched with his latitude and longitude. To join these two datasets we will need a common field which will be "idSensor" in our json data, and "sensor" in the csv file.. In the end we will use this location to pin point the sensors in a kibana map. This [sensors.csv](https://raw.githubusercontent.com/IraitzM/Santander/master/location.csv) file is in an open repository in GitHub. We'll use **LookupRecord** processor.
+
+![Process Group](/images/400-nifi.png)
+
+Its configuration is a little bit tricky. You have to provide a RecordReader, RecordWriter and LookupService mainly. To creader a Controller Service:
+![Process Group](/images/420-nifi.png)
+
+- Record Reader. Create a Controller Service that reads from a JSON. The one provided by nifi is ok.
+
+![Process Group](/images/410-nifi.png)
+
+- Record Writer. Create a Controller Service that writes a JSON record. The one provided by nifi is ok. Take the same steps and choose JsonRecordSetWriter
+
+![Process Group](/images/440-nifi.png)
+
+- Looukup Service. Create a Controller Service that looks up in a CSV file. Choose CSVRecordLookupService. Then set the Properties of the controller.
+
+The CSV file to look up to will be at this path **/opt/nifi/nifi-current/sensores.csv**. Remember that this is a path that has to exist in docker nifi container.
+The lookup key column will be "sensor" as is the field to be joined to.
+
+
+
+
+
+![Process Group](/images/450-nifi.png)
+
 
 
 | Podcast Episode: #050 Data Engineer, Scientist or Analyst - Which One Is For You?
