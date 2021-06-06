@@ -155,6 +155,7 @@ Now it's time to enrich the flow with data from a csv document, which holds the 
 ![Process Group](/images/400-nifi.png)
 
 Its configuration is a little bit tricky. You have to provide a RecordReader, RecordWriter and LookupService mainly. To creader a Controller Service:
+
 ![Process Group](/images/420-nifi.png)
 
 - Record Reader. Create a Controller Service that reads from a JSON. The one provided by nifi is ok.
@@ -170,11 +171,7 @@ Its configuration is a little bit tricky. You have to provide a RecordReader, Re
 The CSV file to look up to will be at this path **/opt/nifi/nifi-current/sensores.csv**. Remember that this is a path that has to exist in docker nifi container.
 The lookup key column will be "sensor" as is the field to be joined to.
 
-
-
-
-
-![Process Group](/images/450-nifi.png)
+![Process Group](/images/460-nifi.png)
 
 
 
