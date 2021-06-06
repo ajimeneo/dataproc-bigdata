@@ -77,8 +77,32 @@ This is a extract from the whole call. ![measurements.json](/files/measurements.
 
 ![Process Group](/images/50-nifi.png)
 
-And schedule the call to be issued every 60 seconds. Then, every 60 seconds we will get fresh data of how the traffic is in the city of Santander.
-		
+So, in the end, we'll need 482 individual json, one json each measurement instead of the whole pack. This will transform our individual flowfile into 482 flowfiles.
+For that to happen we will use SplitJson processor.
+
+Let's schedule the call to be issued every 60 seconds. Then, every 60 seconds we will get fresh data of how the traffic is in the city of Santander.
+	
+![Process Group](/images/60-nifi.png)	
+
+
+Then to check we have received data lets drag a **SplitJson** processor and link it with **InvokeHTTP**. As nifi is concerned, the flow is a pipeline with a beginning and a ending. So, every time we add a processor to the flow it is mandatory to set every the destination and origin (called relationship) for every possible flow.
+That's why some warnings pops up if we haven't properly set the processor:
+
+![Process Group](/images/30-nifi.png)	
+	
+We're going to handle only "Response" flowfile because if everything's fine we'll get the json flowfile through this relationship. We terminate all the other relationships.	
+
+![Process Group](/images/250-nifi.png)
+	
+Set JsonPathExpression property from the tab properties of the **SplitJson** to $.resources. This way the original json will split into individual json using the field provided (**resources**)
+	
+![Process Group](/images/250-nifi.png)	
+	
+	
+	
+	
+	
+	
 | Podcast Episode: #050 Data Engineer, Scientist or Analyst - Which One Is For You?
 |-----------------------------------------------------------------------------------
 | In this podcast we talk about the diﬀerences between data scientists, analysts and engineers. Which are the three main data science jobs. All three are super important. This makes it easy to decide
