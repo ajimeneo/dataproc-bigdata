@@ -14,7 +14,9 @@ This is the architecture we have built up:
 
 ## Creating a flow with nifi
 
-Nifi web page is listening on port 8060 and we have to access it through a SSH tunnel. As we have explained on the dataproc section, let's 
+Nifi web page is listening on port 8060 and we have to access it through a SSH tunnel. As we have explained on the previous section (), let's dive into nifi.
+
+
 
 
 
