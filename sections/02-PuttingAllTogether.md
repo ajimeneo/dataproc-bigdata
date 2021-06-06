@@ -16,8 +16,17 @@ This is the architecture we have built up:
 
 Nifi web page is listening on port 8060 and we have to access it through a SSH tunnel. As we have explained on the previous section [Setting up the cluster](01-BuildingUp.md#Create-a-SSH-tunnel-to-the-VM-instance-(master-node)), let's dive into nifi.
 
+Nifi is very powerful ETL tool that allows as to ingest massive data from any endpoint in a visual fashion. Everything is designed from a process-flow perspective. Data ingested into the pipeline is convert into Flowfiles which are the piece of data we are manipulating. Processes define actions over these Flowfiles.
 
+So processes are the pieces we are going to define once we drag them into the canvas.
 
+Let's jump into it!
+
+### Create a Process Group
+
+Drag and drop a Process Group into the canvas.
+
+[Process Group](images/10_nifi.png)
 
 
 
