@@ -39,7 +39,7 @@ Drag and drop a process into the canvas.
 
 Search for **InvokeHTTP**
 
-![Process Group](/images/20-nifi.png)
+![Process Group](/images/20_nifi.png)
 
 Click right bottom and hit Configure
 
