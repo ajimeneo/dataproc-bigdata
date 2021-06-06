@@ -146,7 +146,8 @@ This is the expected Jolt transformation output:
 
 ![Process Group](/images/380-nifi.png)	
 
-Check the queue and see 482 messages transformed:
+So Start the **JoltTransformJSON** processor, stop it and refresh everything from the canvas. Go the the queue after JoltTransformJSON tranformation and 
+see 482 messages transformed:
 
 ![Process Group](/images/390-nifi.png)
 
