@@ -291,7 +291,7 @@ Once we choose the option of the interpreter
  ![Spark Interpreter](/images/20_interpreter.png)
  And save it.
  
- You may look it up in [Spark-kafka integration](https://spark.apache.org/docs/latest/structured-streaming-kafka-integration.html)
+ You may look it up on [Spark-kafka integration](https://spark.apache.org/docs/latest/structured-streaming-kafka-integration.html)
  
  ![Spark Interpreter](/images/30_interpreter.png)
 
