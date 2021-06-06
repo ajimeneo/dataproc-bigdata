@@ -138,7 +138,7 @@ And there we have our json splitted
 
 ![Process Group](/images/370-nifi.png)	
 
-Next step is tidying up the json a little bit, getting rid of some fields we don't need ( uri and dc:identifier ) and changing names from Spanish to English to make it more readable. In order to do that we'll use Jolt transformations. Everything you need about it is on this web page ![Jolt Transformation](https://jolt-demo.appspot.com)
+Next step is tidying up the json a little bit, getting rid of some fields we don't need ( uri and dc:identifier ) and changing names from Spanish to English to make it more readable. In order to do that we'll use Jolt transformations. Everything you need about it is on this web page <https://jolt-demo.appspot.com>
 
 
 
