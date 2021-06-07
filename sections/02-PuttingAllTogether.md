@@ -1,7 +1,7 @@
 
 # Putting all agents working together
 
-  - [Creating a flow with nifi](02-PuttingAllTogether.md#creating-a-flow-with-nifi)
+  - [Flow creation with nifi](02-PuttingAllTogether.md#flow-creation-with-nifi)
   - [Create a Map Visualization using Kibana](sections/02-PuttingAllTogether.md#kibana)
   - [Issue alerts and other useful queries with Zeppelin](sections/02-PuttingAllTogether.md#zeppelin)
 
@@ -12,21 +12,21 @@ This is the architecture we have built up:
 
 -- photo
 
-## Creating a flow with nifi
+## Flow creation with nifi
 
-Nifi web page is listening on port 8060 and we have to access it through a SSH tunnel. As we have explained on the previous section [Setting up the cluster](01-BuildingUp.md#Create-a-SSH-tunnel-to-the-VM-instance-(master-node)), let's dive into nifi.
+Nifi UI web page is listening on port 8060 and we have to access it through a SSH tunnel. As we have explained on the previous section [Setting up the cluster](01-BuildingUp.md#Create-a-SSH-tunnel-to-the-VM-instance-(master-node)), let's dive into nifi.
 
-Nifi is very powerful ETL tool that allows as to ingest massive data from any endpoint in a visual fashion. Everything is designed from a process-flow perspective. Data ingested into the pipeline is convert into Flowfiles which are the piece of data we are manipulating. Processors define actions over these Flowfiles.
+Nifi is very powerful ETL tool that allows us to ingest massive data from any endpoint in a visual fashion. Everything's designed from a process-flow perspective. Data ingested into the pipeline is convert into Flowfiles which are the pieces of data we are manipulating. Processors define actions over these Flowfiles.
 
-So processors are the pieces we are going to define once we drag them into the canvas.
+So processors are the pieces we are going to determine once we drag them into the canvas.
 
 Let's jump into it!
 
 One more thing before we go.
 
-All the data we're playing around is from a RestFul service http://datos.santander.es/api/rest/datasets/mediciones.json?items=482.
+All the data we're playing around is from a Restful service http://datos.santander.es/api/rest/datasets/mediciones.json?items=482.
 
-This URL is serving, every 60 seconds a traffic measure of every sensor. As items suggests, we will get 482 measurements each call.
+This URL serves, each sensor's traffic measurement, every 60 seconds. As items suggests, we will get 482 measurements each call.
 
 This is a extract from the whole call. ![measurements.json](/files/measurements.json)
 		
