@@ -177,9 +177,10 @@ So our goal is to end up having the same original JSON enriched with his latitud
  
 In the end we will use this location to pinpoint the exact location of sensors and their measurements on a kibana map. Find [sensors.csv](https://raw.githubusercontent.com/IraitzM/Santander/master/location.csv) file on an open repository in GitHub. 
 
-First of all we have to put the URL file into our own file system
+First of all we have to put the sensors.csv file into our own file system. 
+Second, we have to set LookupRecord processor configuration
 
-### Sensors.csv flow
+### Lookup file Sensors.csv flow
 
 Up to this point we need to set another flow that takes a file from GitHub and puts it on our own file system (nifi container file system).
 We'll use a **InvokeHTTP** processor to get the file from a URL as we've done before, a **UpdateAttribute** processor to change some of the flowfile attribute's names from and make them more readable. It's always good practice to have some meaningful name as "sensors.dsv" than a UUID file name. Lastly, we'll add **PutFile** processor to put the flowfile into our own file system.
@@ -207,10 +208,7 @@ The final destination of our file will be our own file system. Rebember that nif
 
 ![Process Group](/images/490-nifi.png)
 
-Second, we have to set LookupRecord processor configuration
-
-
-## LookupRecord processor configuration
+### LookupRecord processor configuration
 
 ![Process Group](/images/400-nifi.png)
 
