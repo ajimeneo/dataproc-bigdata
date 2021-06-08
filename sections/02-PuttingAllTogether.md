@@ -102,11 +102,12 @@ As nifi is concerned, the flow is a pipeline with a beginning and a ending. So, 
 That's why some warnings pops up if we haven't properly set the processor:
 
 ![Process Group](/images/30-nifi.png)	
-	
-We don't know the destination ( the next processor to use ) but it would be great to have a look at what's done to our messages. Use then **Wait** procesor. In nifi there is always an origin processor, a destination processor and a List queue in the middle. This is the place where transformed messages are pile up. In order to have a queue link
-**InvokeHTTP** to **Wait** by dragging the arrow that appears at the center of the processor and drop it to another processor. Then a Queue appers between the two processors. 
 
-### Checkin the queue
+**In nifi there is always an origin processor, a destination processor and a List queue in the middle**. The queue is the place where transformed messages are pile up.
+	
+In order to have a queue link **InvokeHTTP** to another processor. Which one will suit? Many times, we don't know the destination ( the next processor to use ) so to work it out, it's always good politics to have a look at some messages from the queue. Then it will come clear to us, the transformations that have been made and which ones will be needed. Use then **Wait** procesor. In order to have a queue link **InvokeHTTP** to **Wait** by dragging the arrow that appears at the center of the processor and drop it to another processor. Then a Queue appers between the two processors. 
+
+### Checking the queue
 
 But let's check that we have received data. Start the InvokeHTTP processor. Stop it. And from the canvas, right click and Refresh. Once a processor process the data, its transformed data will be added to the queue. Check that there's 1 message queued as expected. That's the flowfile with json format waiting for us.
 
