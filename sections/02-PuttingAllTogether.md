@@ -297,9 +297,27 @@ And checking for elasticsearch container IP
 
 ![Process Group](/images/600-nifi.png)
 
-Set the properties. As hadoop needs the configuration of these two files hdfs-site.xml and core-site.xml and hdfs is on client side, we had add a volume in the nifi container to access those two files. You can check that on docker-compose.yml file. The bit related to this:
+Set the properties. In our nifi container the hadoop config files have these paths:
+/hadoop-conf/hdfs-site.xml
+/hadoop-conf/core-site.xml
 
+As we need them on client site ( where it is where stands hadoop) we have add a volume. 
+
+You can check that on docker-compose.yml file. The bit related to this:
+
+    nifi:
+    image: apache/nifi
+    container_name: nifi
+    networks: 
+      - nifinet
+    ports:
+     - "8060:8080"
+    volumes:
+     - /etc/hadoop/conf:/hadoop-conf
+    depends_on:
+      - broker
 	
+This way everything on /hadoop-conf path (our two files) will be at /etc/hadoop/conf path, which is what we wanted. 
 
 ![Process Group](/images/640-nifi.png)
 
