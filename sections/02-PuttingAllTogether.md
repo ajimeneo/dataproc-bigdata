@@ -153,12 +153,11 @@ Then you can see all the available data waiting to be ingested into the pipeline
 
 - **JoltTransformJSON** (Modify a JSON document)
 
-So far we have succeed in ingesting some traffic data down the pipeline and learnt how to display the data ingested. Let's see how the json is splitted. The process is always the same. Start and stop the processor. Refresh from the canvas and check the messages that have been queued up. To do that keep in mind that you always have to be one step ahead ( you need a processor to sink the data in). As we want to rearrange the json a little bit ( modify names and dispose of some fields we won't be needing) then we'll add **JoltTransformJSON** processor. The data queued before entering JoltTransformationJSON is the split relationship. As you can see we have now 482 messages which is the expected output. We have split 1 json with an array of 482 resources in 482 json messages
+So far we have succeed in ingesting some traffic data down the pipeline and learnt about how to display the data ingested. It comes clear that we want get rid of some fields we won't be needing ( uri and dc:identifier ) and rename some fields from Spanish to English to make it more readable. In order to do that we'll use Jolt transformations. Everything you need about it is on this web page <https://jolt-demo.appspot.com>.
+
+Ee'll add then, **JoltTransformJSON** processor. The data queued before entering JoltTransformationJSON is the split relationship.
 
 ![Process Group](/images/350-nifi.png)	
-
-
-Next step is tidying up the json a little bit, getting rid of some fields we don't need ( uri and dc:identifier ) and changing names from Spanish to English to make it more readable. In order to do that we'll use Jolt transformations. Everything you need about it is on this web page <https://jolt-demo.appspot.com>
 
 To configure **JoltTransformJSON** processor go to properties tab and click ADVANCED bottom. Use the [Jolt specification provided](/files/JoltTransformationJSON.json), insert a JSON input (take one of the json messages) and click on transform. This way you will be able to see the output. Once you get the correct one, click on validate. Every time a json enters this transformation, the jolt transformation is applied and a new JSON will come out.
 
@@ -166,12 +165,15 @@ This is the expected Jolt transformation output:
 
 ![Process Group](/images/380-nifi.png)	
 
-So Start the **JoltTransformJSON** processor, stop it and refresh everything from the canvas. Go the the queue after JoltTransformJSON tranformation and 
-see 482 messages transformed:
+Let's see how the json is jolted. The process is always the same. Start and stop the processor. Refresh from the canvas and check 482 messages that have been queued up.
 
 ![Process Group](/images/390-nifi.png)
 
-Now it's time to enrich the flow with data from a csv document, which holds the sensors location (latitude and longitude). We will end up having the same original JSON but enriched with his latitude and longitude. To join these two datasets we will need a common field which will be "idSensor" in our json data, and "sensor" in the csv file.. In the end we will use this location to pin point the sensors in a kibana map. This [sensors.csv](https://raw.githubusercontent.com/IraitzM/Santander/master/location.csv) file is in an open repository in GitHub. We'll use **LookupRecord** processor.
+- **LookupRecord** (Look up record)
+
+Now it's time to enrich the flow with data from another source. In our case from a csv document, which holds the location (latitude and longitude) and identification of each sensor. This id is the same id that we have on the ingested data.
+
+So our goal is to end up having the same original JSON but enriched with his latitude and longitude. To join these two datasets we will need a common field which will be "idSensor" in our json data, and "sensor" in the csv file.. In the end we will use this location to pin point the sensors in a kibana map. This [sensors.csv](https://raw.githubusercontent.com/IraitzM/Santander/master/location.csv) file is in an open repository in GitHub. We'll use **LookupRecord** processor.
 
 ![Process Group](/images/400-nifi.png)
 
