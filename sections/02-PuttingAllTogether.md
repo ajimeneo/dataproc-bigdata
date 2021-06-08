@@ -73,7 +73,7 @@ Drag and drop a Process Group into the canvas and type a name for it. I've choos
 
 All the processors we're going to create will exist within this group processor. Double click it. Then, every processor we may add will fall into this group.
 
-### Create the flow using processors
+## Create the flow using processors
 
 - **InvokeHTTP** (Ingesting data into the pipeline from a URL)
 
