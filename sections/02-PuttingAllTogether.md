@@ -85,7 +85,7 @@ Search for **InvokeHTTP**
 
 ![Process Group](/images/20_nifi.png)
 
-Click on Add. After that a box with a label InvokeHTTP appears on it. Right click on mouse and hit Configure from the list.
+Click on Add. After that a box with a label InvokeHTTP appears on it. Right click on the mouse and hit Configure from the list.
 
 ![Process Group](/images/40-nifi.png)
 
