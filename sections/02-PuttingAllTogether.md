@@ -73,7 +73,7 @@ Drag and drop a Process Group into the canvas and type a name for it. I've choos
 
 All the processors we're going to create will exist within this group processor. Double click it. Then, every processor we may add will fall into this group.
 
-# **InvokeHTTP** (Ingesting data into the pipeline from a URL)
+## **InvokeHTTP** (Ingesting data into the pipeline from a URL)
 
 Drag and drop a processor into the canvas.
 
@@ -122,7 +122,7 @@ As you check the message clicking on the eye icon, you come to the conclusion th
 ![Process Group](/images/100-nifi.png)
 
 
-# **SplitJson** (Split a JSON document into several)
+## **SplitJson** (Split a JSON document into several)
 
 Get rid of Wait processor. We'll need **SplitJson** processor to do the task of transforming our individual flowfile into 482 flowfiles. Drag and drop a processor into the canvas. Search for **SplitJson** and click on Add. Link it with **InvokeHTTP**.
 
