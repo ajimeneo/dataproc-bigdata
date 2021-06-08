@@ -175,6 +175,12 @@ The lookup key column will be "sensor" as is the field to be joined to.
 ![Process Group](/images/460-nifi.png)
 
 
+To get to this point we need to set another flow that takes a file from GitHub and puts it on our file system.
+We'll user ** ** processor to get the file from a URL as we've done before and ** ** processor to change some attribute name from the flowfile and make it more readable.
+
+
+
+
 
 | Podcast Episode: #050 Data Engineer, Scientist or Analyst - Which One Is For You?
 |-----------------------------------------------------------------------------------
