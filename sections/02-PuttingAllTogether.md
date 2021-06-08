@@ -149,7 +149,7 @@ Then you can see all the available data waiting to be ingested into the pipeline
 ![Process Group](/images/370-nifi.png)	
 
 
-- **JoltTransformJSON** (Modify a JSON document)
+## **JoltTransformJSON** (Modify a JSON document)
 
 So far we have succeed in ingesting some traffic data down the pipeline and learnt about how to display the data ingested. It comes clear that we want get rid of some fields we won't be needing ( uri and dc:identifier ) and rename some fields from Spanish to English to make it more readable. In order to do that we'll use Jolt transformations. Everything you need about it is on this web page <https://jolt-demo.appspot.com>.
 
@@ -167,7 +167,7 @@ Let's see how the json is jolted. The process is always the same. Start and stop
 
 ![Process Group](/images/390-nifi.png)
 
-- **LookupRecord** (Look up record)
+## **LookupRecord** (Look up record)
 
 Now it's time to enrich the flow with data from another source. In our case from a csv document, which holds the location (latitude and longitude) and identification of each sensor. His id is the same idSensor that holds the ingested data.
 
@@ -179,7 +179,7 @@ In the end we will use this location to pinpoint the exact location of sensors a
 
 First of all we have to put the URL file into our own file system
 
-## 1. Sensors.csv flow
+### Sensors.csv flow
 
 Up to this point we need to set another flow that takes a file from GitHub and puts it on our own file system (nifi container file system).
 We'll use a **InvokeHTTP** processor to get the file from a URL as we've done before, a **UpdateAttribute** processor to change some of the flowfile attribute's names from and make them more readable. It's always good practice to have some meaningful name as "sensors.dsv" than a UUID file name. Lastly, we'll add **PutFile** processor to put the flowfile into our own file system.
@@ -208,7 +208,6 @@ The final destination of our file will be our own file system. Rebember that nif
 ![Process Group](/images/490-nifi.png)
 
 Second, we have to set LookupRecord processor configuration
-
 
 
 ## LookupRecord processor configuration
