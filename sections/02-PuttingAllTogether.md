@@ -58,7 +58,7 @@ So keep in mind that we have to transform this json into 482 individual json.
 
 ## Overview of the whole process
 
-Below is the image of a nifi flow. We're going to build it step by step. It consists of several processes, from ingesting traffic data from a exposed URL to transforming it, enriching it on its way to 3 sinks: a kafka sink, where a spark process will consume its data to produce some alerts using a Zeppelin notebook, a hdfs sink where we'll use hive to process this historic data and a elasticsearch sink, which will be used for presenting a dashboard with a real-time traffic status. 
+Below is the image of the whole process. We're going to build it step by step. It consists of several processes, from ingesting traffic data from a exposed URL to transforming it, enriching it on its way to 3 sinks: a kafka sink, where a spark process will consume its data to produce some alerts using a Zeppelin notebook, a hdfs sink where we'll use hive to process this historic data and a elasticsearch sink, which will be used for presenting a dashboard with a real-time traffic status. 
 
 ![Process Group](/images/530-nifi.png)
 
