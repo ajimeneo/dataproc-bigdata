@@ -56,11 +56,19 @@ This is a extract from the whole call. ![measurements.json](/files/measurements.
 
 So keep in mind that we have to transform this json into 482 individual json.
 
+##The whole process
+
+Below is the image of a nifi flow. We're going to build it step by step. It consists of several processes, from ingesting traffic data from a exposed URL to transforming it, enriching it on its way to 3 sinks: a kafka sink, where a spark process will consume its data to produce some alerts using a Zeppelin notebook, a hdfs sink where we'll use hive to process this historic data and a elasticsearch sink, which will be used for presenting a dashboard with a real-time traffic status. 
+
+![Process Group](/images/530-nifi.png)
+
 ### Create a Process Group
 
 Drag and drop a Process Group into the canvas and type a name for it. I've choosen Santander traffic. 
 
 ![Process Group](/images/10_nifi.png)
+
+### Create the flow using processors
 
 All the processors we're going to create will exist within this group processor. Double click it. Then, every processor we may add will fall into this group.
 
@@ -175,12 +183,31 @@ The lookup key column will be "sensor" as is the field to be joined to.
 ![Process Group](/images/460-nifi.png)
 
 
-To get to this point we need to set another flow that takes a file from GitHub and puts it on our file system.
-We'll user ** ** processor to get the file from a URL as we've done before and ** ** processor to change some attribute name from the flowfile and make it more readable.
+To get to this point we need to set another flow that takes a file from GitHub and puts it on our own file system (nifi container file system).
+We'll use a **InvokeHTTP** processor to get the file from a URL as we've done before, a **UpdateAttribute** processor to change some of the flowfile attribute's names from and make them more readable. It's always good practice to have some meaningful name as "sensors.dsv" than a UUID file name. Lastly, we'll add **PutFile** processor to put the flowfile into our own file system.
+
+![Process Group](/images/480-nifi.png)
+
+- **InvokeHTTP** properties
+
+Check the queue. Its output is similar to
+
+![Process Group](/images/500-nifi.png)
 
 
+![Process Group](/images/490-nifi.png)
 
+- **UpdateAttribute** properties
 
+Press + button and add **filename** property. It has to be "filename" and not another, because filename is the flowfile built-in name for "the name of this flowfile". This way, we'll be able to rename the attribute flowfile, which has uuid by default, to one of our choosing.
+
+![Process Group](/images/510-nifi.png)
+
+- **PutFile** properties
+
+The final destination of our file will be our own file system. Rebember that nifi is running inside a Docker container, and is image is based on Linux, so we have to choose a destination which nifi has rights access. That could be the entrypoint, which is "/opt/nifi/nifi-current". We're adding the bit /files which points out a file that is not existing, but it is created on the fly.
+
+![Process Group](/images/490-nifi.png)
 
 | Podcast Episode: #050 Data Engineer, Scientist or Analyst - Which One Is For You?
 |-----------------------------------------------------------------------------------
