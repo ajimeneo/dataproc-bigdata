@@ -71,11 +71,11 @@ Drag and drop a Process Group into the canvas and type a name for it. I've choos
 
 ![Process Group](/images/10_nifi.png)
 
+All the processors we're going to create will exist within this group processor. Double click it. Then, every processor we may add will fall into this group.
+
 ### Create the flow using processors
 
-- **InvokeHTTP** (It ingests from a URL)
-
-All the processors we're going to create will exist within this group processor. Double click it. Then, every processor we may add will fall into this group.
+- **InvokeHTTP** (Ingesting data into the pipeline from a URL)
 
 Drag and drop a processor into the canvas.
 
@@ -98,6 +98,7 @@ Let's schedule the call to be issued every 60 seconds. Then, every 60 seconds we
 ![Process Group](/images/60-nifi.png)	
 
 As nifi is concerned, the flow is a pipeline with a beginning and a ending. So, every time we add a processor to the flow it is mandatory to set every the destination and origin (called relationship) for every possible flow.
+
 That's why some warnings pops up if we haven't properly set the processor:
 
 ![Process Group](/images/30-nifi.png)	
@@ -106,9 +107,9 @@ We're going to handle only "Response" flowfile because if everything's fine we'l
 
 ![Process Group](/images/250-nifi.png)
 
-We'll need **SplitJson** processor to do the task of transforming our individual flowfile into 482 flowfiles.
+- **SplitJson** (Split a JSON document into several)
 
-Drag a **SplitJson** processor. 
+We'll need **SplitJson** processor to do the task of transforming our individual flowfile into 482 flowfiles. Drag and drop a processor into the canvas. Search for **SplitJson** and click on Add.
 
 ![Process Group](/images/280-nifi.png)	
 
