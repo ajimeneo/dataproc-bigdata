@@ -142,17 +142,9 @@ Terminate the relationships you won't be needing. We'll terminate failure relati
 
 ![Process Group](/images/270-nifi.png)	
 
-Right click and "List queue".
+Right click and "List queue". Then you can see all the available data waiting to be ingested into the pipeline. There has to be exactly 482 messages as we splitted one json into its 482 messages. 
 
 ![Process Group](/images/330-nifi.png)	
-
-Then you can see all the available data waiting to be ingested into the pipeline. There has to be exactly 482 messages as we splitted one json into its 482 messages. 
-
-![Process Group](/images/310-nifi.png)	
-
-Check that our json is there clicking view content. Press the eye icon.
-	
-
 
 - **JoltTransformJSON** (Modify a JSON document)
 
