@@ -155,7 +155,7 @@ Then you can see all the available data waiting to be ingested into the pipeline
 
 So far we have succeed in ingesting some traffic data down the pipeline and learnt about how to display the data ingested. It comes clear that we want get rid of some fields we won't be needing ( uri and dc:identifier ) and rename some fields from Spanish to English to make it more readable. In order to do that we'll use Jolt transformations. Everything you need about it is on this web page <https://jolt-demo.appspot.com>.
 
-Ee'll add then, **JoltTransformJSON** processor. The data queued before entering JoltTransformationJSON is the split relationship.
+We'll add then, **JoltTransformJSON** processor. The data queued before entering JoltTransformationJSON is the split relationship.
 
 ![Process Group](/images/350-nifi.png)	
 
