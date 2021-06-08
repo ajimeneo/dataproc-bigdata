@@ -171,33 +171,19 @@ Let's see how the json is jolted. The process is always the same. Start and stop
 
 - **LookupRecord** (Look up record)
 
-Now it's time to enrich the flow with data from another source. In our case from a csv document, which holds the location (latitude and longitude) and identification of each sensor. This id is the same id that we have on the ingested data.
+Now it's time to enrich the flow with data from another source. In our case from a csv document, which holds the location (latitude and longitude) and identification of each sensor. His id is the same idSensor that holds the ingested data.
 
-So our goal is to end up having the same original JSON but enriched with his latitude and longitude. To join these two datasets we will need a common field which will be "idSensor" in our json data, and "sensor" in the csv file.. In the end we will use this location to pin point the sensors in a kibana map. This [sensors.csv](https://raw.githubusercontent.com/IraitzM/Santander/master/location.csv) file is in an open repository in GitHub. We'll use **LookupRecord** processor.
+So our goal is to end up having the same original JSON enriched with his latitude and longitude. To join these two datasets we will need a common field between the two:
+- "idSensor" in our json data 
+- "sensor" in the csv file. 
+ 
+In the end we will use this location to pinpoint the exact location of sensors and their measurements on a kibana map. Find [sensors.csv](https://raw.githubusercontent.com/IraitzM/Santander/master/location.csv) file on an open repository in GitHub. 
 
-![Process Group](/images/400-nifi.png)
+First of all we have to put the URL file into our own file system
 
-Its configuration is a little bit tricky. You have to provide a RecordReader, RecordWriter and LookupService mainly. To creader a Controller Service:
+## 1. Sensors.csv flow
 
-![Process Group](/images/420-nifi.png)
-
-- Record Reader. Create a Controller Service that reads from a JSON. The one provided by nifi is ok.
-
-![Process Group](/images/410-nifi.png)
-
-- Record Writer. Create a Controller Service that writes a JSON record. The one provided by nifi is ok. Take the same steps and choose JsonRecordSetWriter
-
-![Process Group](/images/440-nifi.png)
-
-- Looukup Service. Create a Controller Service that looks up in a CSV file. Choose CSVRecordLookupService. Then set the Properties of the controller.
-
-The CSV file to look up to will be at this path **/opt/nifi/nifi-current/sensores.csv**. Remember that this is a path that has to exist in docker nifi container.
-The lookup key column will be "sensor" as is the field to be joined to.
-
-![Process Group](/images/460-nifi.png)
-
-
-To get to this point we need to set another flow that takes a file from GitHub and puts it on our own file system (nifi container file system).
+Up to this point we need to set another flow that takes a file from GitHub and puts it on our own file system (nifi container file system).
 We'll use a **InvokeHTTP** processor to get the file from a URL as we've done before, a **UpdateAttribute** processor to change some of the flowfile attribute's names from and make them more readable. It's always good practice to have some meaningful name as "sensors.dsv" than a UUID file name. Lastly, we'll add **PutFile** processor to put the flowfile into our own file system.
 
 ![Process Group](/images/480-nifi.png)
@@ -222,6 +208,44 @@ Press + button and add **filename** property. It has to be "filename" and not an
 The final destination of our file will be our own file system. Rebember that nifi is running inside a Docker container, and is image is based on Linux, so we have to choose a destination which nifi has rights access. That could be the entrypoint, which is "/opt/nifi/nifi-current". We're adding the bit /files which points out a file that is not existing, but it is created on the fly.
 
 ![Process Group](/images/490-nifi.png)
+
+Second, we have to set LookupRecord processor configuration
+
+
+
+## LookupRecord processor configuration
+
+![Process Group](/images/400-nifi.png)
+
+Its configuration is a little bit tricky. You have to provide a **RecordReader**, **RecordWriter** and **LookupService** mainly. 
+
+![Process Group](/images/540-nifi.png)
+
+To create a Controller Service:
+
+![Process Group](/images/420-nifi.png)
+
+- Record Reader. Create a Controller Service that reads from a JSON, our main flow. The one provided by nifi is ok.
+
+![Process Group](/images/410-nifi.png)
+
+- Record Writer. Create a Controller Service that writes a JSON record as we wamt to enrich our json main flow. The one provided by nifi is ok. Take the same steps and choose JsonRecordSetWriter
+
+![Process Group](/images/440-nifi.png)
+
+- Looukup Service. The file to enrich our flow is a csv file. Then, create a Controller Service that looks up in a CSV file. Select CSVRecordLookupService. Then set the Properties of the controller.
+
+	- The CSV file path to look up to, will be:  **/opt/nifi/nifi-current/sensores.csv**. Remember that this is a path that has to exist in our docker nifi container.
+	- The lookup key column will be "sensor" as is the csv field that will be joined and searched for.
+
+![Process Group](/images/460-nifi.png)
+
+The entire data found on the csv file, formatted in a JSON way, will be returned to the calling flowfile to a json field of our choosing: In our case "/location"
+We must create a property, "key" to point out the field to join to the csv field (sensor). That'll be "/idSensor"
+
+![Process Group](/images/540-nifi.png)
+
+
 
 | Podcast Episode: #050 Data Engineer, Scientist or Analyst - Which One Is For You?
 |-----------------------------------------------------------------------------------
