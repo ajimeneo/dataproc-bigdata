@@ -73,6 +73,8 @@ Drag and drop a Process Group into the canvas and type a name for it. I've choos
 
 ### Create the flow using processors
 
+- **InvokeHTTP** (It ingests from a URL)
+
 All the processors we're going to create will exist within this group processor. Double click it. Then, every processor we may add will fall into this group.
 
 Drag and drop a processor into the canvas.
