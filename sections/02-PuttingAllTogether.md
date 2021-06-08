@@ -56,7 +56,7 @@ This is a extract from the whole call. ![measurements.json](/files/measurements.
 
 So keep in mind that we have to transform this json into 482 individual json.
 
-## Overview of the whole process
+# Overview of the whole process
 
 Below is the image of the whole process. We're going to build it step by step. It consists of several processes, from ingesting traffic data from a exposed URL to splitting, jolt tranforming, enriching and delivering the JSON message obtained into 3 different sinks: 
 - A **kafka** sink, where some spark process, from a Zeppelin notebook,  will consume its data to produce some alerts
@@ -73,7 +73,7 @@ Drag and drop a Process Group into the canvas and type a name for it. I've choos
 
 All the processors we're going to create will exist within this group processor. Double click it. Then, every processor we may add will fall into this group.
 
-## Create the flow using processors
+# Create the flow using processors
 
 - **InvokeHTTP** (Ingesting data into the pipeline from a URL)
 
