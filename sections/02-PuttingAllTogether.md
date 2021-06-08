@@ -103,17 +103,35 @@ That's why some warnings pops up if we haven't properly set the processor:
 
 ![Process Group](/images/30-nifi.png)	
 	
-We're going to handle only "Response" flowfile because if everything's fine we'll get the json flowfile through this relationship. We terminate all the other relationships.	
+We don't know the destination ( the next processor to use ) but it would be great to have a look at what's done to our messages. Use then **Wait** procesor. In nifi there is always an origin processor, a destination processor and a List queue in the middle. This is the place where transformed messages are pile up. In order to have a queue link
+**InvokeHTTP** to **Wait** by dragging the arrow that appears at the center of the processor and drop it to another processor. Then a Queue appers between the two processors. 
 
-![Process Group](/images/250-nifi.png)
+### Checkin the queue
+
+But let's check that we have received data. Start the InvokeHTTP processor. Stop it. And from the canvas, right click and Refresh. Once a processor process the data, its transformed data will be added to the queue. Check that there's 1 message queued as expected. That's the flowfile with json format waiting for us.
+
+Right click and "List queue".
+
+![Process Group](/images/300-nifi.png)	
+
+Then you can see all the available data waiting to be ingested into the pipeline. 
+
+![Process Group](/images/310-nifi.png)
+
+As you check the message clicking on the eye icon, you come to the conclusion that you need 482 indivual json, each one representing 1 measurement, and not only 1 json with and array of 482 measures. There's when SplitJson processor comes in handy.
+
+![Process Group](/images/100-nifi.png)
+
 
 - **SplitJson** (Split a JSON document into several)
 
-We'll need **SplitJson** processor to do the task of transforming our individual flowfile into 482 flowfiles. Drag and drop a processor into the canvas. Search for **SplitJson** and click on Add.
+Get rid of Wait processor. We'll need **SplitJson** processor to do the task of transforming our individual flowfile into 482 flowfiles. Drag and drop a processor into the canvas. Search for **SplitJson** and click on Add. Link it with **InvokeHTTP**.
 
-![Process Group](/images/280-nifi.png)	
+![Process Group](/images/290-nifi.png)
 
-Link it with **InvokeHTTP**. In order to do that, drag the arrow that appears at the center of the processor and drop it to another processor. Then a Queue appers between the two processors. This is the queue where messages will pile up.
+We're going to handle only "Response" flowfile because if everything's fine we'll get the json flowfile through this relationship. We terminate all the other relationships.	
+
+![Process Group](/images/250-nifi.png)
 
 Set JsonPathExpression property from the tab properties of the **SplitJson** to $.resources. This way the original json will split into individual json using the field provided (**resources**)
 	
@@ -122,23 +140,20 @@ Set JsonPathExpression property from the tab properties of the **SplitJson** to 
 Terminate the relationships you won't be needing. We'll terminate failure relationship. We'll use original to redirect the original json to another flow, and the split relationship down the pipeline.
 
 ![Process Group](/images/270-nifi.png)	
-	
-But let's check that we have received data. Start the InvokeHTTP processor. Stop it. And from the canvas, right click and Refresh. Data will be added to the queue.
-Check that 1 message is queued as expected. So it has to be flowfile with json format waiting for us
-
-![Process Group](/images/290-nifi.png)	
 
 Right click and "List queue".
 
-![Process Group](/images/300-nifi.png)	
+![Process Group](/images/330-nifi.png)	
 
-Then you can see all the available data waiting to be ingested into the pipeline. 
+Then you can see all the available data waiting to be ingested into the pipeline. There has to be exactly 482 messages as we splitted one json into its 482 messages. 
 
 ![Process Group](/images/310-nifi.png)	
 
 Check that our json is there clicking view content. Press the eye icon.
 	
-![Process Group](/images/100-nifi.png)	
+
+
+- **JoltTransformJSON** (Modify a JSON document)
 
 So far we have succeed in ingesting some traffic data down the pipeline and learnt how to display the data ingested. Let's see how the json is splitted. The process is always the same. Start and stop the processor. Refresh from the canvas and check the messages that have been queued up. To do that keep in mind that you always have to be one step ahead ( you need a processor to sink the data in). As we want to rearrange the json a little bit ( modify names and dispose of some fields we won't be needing) then we'll add **JoltTransformJSON** processor. The data queued before entering JoltTransformationJSON is the split relationship. As you can see we have now 482 messages which is the expected output. We have split 1 json with an array of 482 resources in 482 json messages
 
