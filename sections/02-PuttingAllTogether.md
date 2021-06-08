@@ -263,7 +263,12 @@ As we have said before, we have 3 main destinations for our data: a kafka broker
 
 ![Process Group](/images/580-nifi.png)
 
-Let's set the properties. As we mentioned on setting the datproc cluster, the kafka broker is listening on port 9092 in case of a docker container point of view and the advertised listerner is then : broker:9092. The topic name will be "mediciones". It has to be created before producing some messages to this topic. You can do that spinning up a ephemeral container as this:
+Let's set the properties. As we mentioned on setting the datproc cluster, the kafka broker is listening on port 9092 in case of a docker container point of view and the advertised listerner is then : broker:9092. The topic name will be "mediciones". It has to be created before producing some messages to this topic. You can do that spinning up a ephemeral container like this:
+	
+	   docker run -it --rm --network nifinet \
+  		--name testKafkaTopicsList confluentinc/cp-kafka:5.5.0 \
+  		kafka-topics --create --topic mediciones --partitions 1 replication-factor 1 --bootstrap-server broker:9092
+
 
 
 
