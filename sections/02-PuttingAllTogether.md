@@ -263,14 +263,14 @@ As we have said before, we have 3 main destinations for our data: a kafka broker
 
 ![Process Group](/images/580-nifi.png)
 
-Let's set the properties. As we mentioned on setting the datproc cluster, the kafka broker is listening on port 9092 in case of a docker container point of view and the advertised listerner is then : broker:9092. The topic name will be "mediciones". It has to be created before producing some messages to this topic. You can do that spinning up a ephemeral container like this:
+ As we mentioned on setting the datproc cluster, the kafka broker is listening on port 9092 in case of a docker container point of view and the advertised listerner is then : broker:9092. The topic name will be "mediciones". It has to be created before producing some messages to this topic. You can do that spinning up a ephemeral container like this:
 	
 	   docker run -it --rm --network nifinet \
   		--name testKafkaTopicsList confluentinc/cp-kafka:5.5.0 \
   		kafka-topics --create --topic mediciones --partitions 1 replication-factor 1 --bootstrap-server broker:9092
 
 
-
+Let's set the properties. Set kafka brokers to broker:9092 and topic to "mediciones"
 
 ![Process Group](/images/610-nifi.png)
 
@@ -278,9 +278,31 @@ Let's set the properties. As we mentioned on setting the datproc cluster, the ka
 
 ![Process Group](/images/590-nifi.png)
 
+Let's set the properties. 
+
+![Process Group](/images/620-nifi.png)
+
+![Process Group](/images/630-nifi.png)
+
+Set elasticsearch url to http://172.19.0.5:9200 This IP is elasticsearch's IP you can find out issueing:
+
+		docker newtwork inspect nifinet
+
+And checking for elasticsearch container IP
+
+![Process Group](/images/20_nifinet.png)
+
+
 - **HDFS destination**
 
 ![Process Group](/images/600-nifi.png)
+
+Set the properties. As hadoop needs the configuration of these two files hdfs-site.xml and core-site.xml and hdfs is on client side, we had add a volume in the nifi container to access those two files. You can check that on docker-compose.yml file. The bit related to this:
+
+	
+
+![Process Group](/images/640-nifi.png)
+
 
 | Podcast Episode: #050 Data Engineer, Scientist or Analyst - Which One Is For You?
 |-----------------------------------------------------------------------------------
