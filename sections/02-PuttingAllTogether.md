@@ -142,9 +142,14 @@ Terminate the relationships you won't be needing. We'll terminate failure relati
 
 ![Process Group](/images/270-nifi.png)	
 
-Right click and "List queue". Then you can see all the available data waiting to be ingested into the pipeline. There has to be exactly 482 messages as we splitted one json into its 482 messages. 
+Right click and "List queue". 
 
-![Process Group](/images/330-nifi.png)	
+![Process Group](/images/360-nifi.png)
+
+Then you can see all the available data waiting to be ingested into the pipeline. There has to be exactly 482 messages as we splitted one json into its 482 messages. 
+
+![Process Group](/images/370-nifi.png)	
+
 
 - **JoltTransformJSON** (Modify a JSON document)
 
@@ -152,13 +157,6 @@ So far we have succeed in ingesting some traffic data down the pipeline and lear
 
 ![Process Group](/images/350-nifi.png)	
 
-Right click and "List queue".
-
-![Process Group](/images/360-nifi.png)	
-
-And there we have our json splitted
-
-![Process Group](/images/370-nifi.png)	
 
 Next step is tidying up the json a little bit, getting rid of some fields we don't need ( uri and dc:identifier ) and changing names from Spanish to English to make it more readable. In order to do that we'll use Jolt transformations. Everything you need about it is on this web page <https://jolt-demo.appspot.com>
 
