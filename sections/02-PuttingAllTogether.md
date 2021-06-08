@@ -242,6 +242,40 @@ We must create a property, "key" to point out the field to join to the csv field
 ![Process Group](/images/540-nifi.png)
 
 
+Add a wait processor and check that everything run smoothly.
+
+![Process Group](/images/550-nifi.png)
+
+Checking the queue. There's our json enriched with location.
+
+![Process Group](/images/570-nifi.png)
+
+
+It's time to set the final destination of our messages.
+
+## Flow destinations
+
+As we have said before, we have 3 main destinations for our data: a kafka broker, hdfs and elasticsearch engine
+
+![Process Group](/images/560-nifi.png)
+
+- **Kakfa destination**
+
+![Process Group](/images/580-nifi.png)
+
+Let's set the properties. As we mentioned on setting the datproc cluster, the kafka broker is listening on port 9092 in case of a docker container point of view and the advertised listerner is then : broker:9092. The topic name will be "mediciones". It has to be created before producing some messages to this topic. You can do that spinning up a ephemeral container as this:
+
+
+
+![Process Group](/images/610-nifi.png)
+
+- **Elasticsearch destination**
+
+![Process Group](/images/590-nifi.png)
+
+- **HDFS destination**
+
+![Process Group](/images/600-nifi.png)
 
 | Podcast Episode: #050 Data Engineer, Scientist or Analyst - Which One Is For You?
 |-----------------------------------------------------------------------------------
