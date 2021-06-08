@@ -189,12 +189,13 @@ We'll use a **InvokeHTTP** processor to get the file from a URL as we've done be
 
 - **InvokeHTTP** properties
 
+Set its properties
+
+![Process Group](/images/490-nifi.png)
+
 Check the queue. Its output is similar to
 
 ![Process Group](/images/500-nifi.png)
-
-
-![Process Group](/images/490-nifi.png)
 
 - **UpdateAttribute** properties
 
@@ -228,7 +229,7 @@ To create a Controller Service:
 
 ![Process Group](/images/440-nifi.png)
 
-- Looukup Service. The file to enrich our flow is a csv file. Then, create a Controller Service that looks up in a CSV file. Select CSVRecordLookupService. Then set the Properties of the controller.
+- Lookup Service. The file to enrich our flow is a csv file. Then, create a Controller Service that looks up in a CSV file. Select CSVRecordLookupService. Then set the Properties of the controller.
 
 	- The CSV file path to look up to, will be:  **/opt/nifi/nifi-current/sensores.csv**. Remember that this is a path that has to exist in our docker nifi container.
 	- The lookup key column will be "sensor" as is the csv field that will be joined and searched for.
