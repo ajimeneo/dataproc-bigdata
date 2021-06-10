@@ -263,14 +263,16 @@ As we have said before, we have 3 main destinations for our data: a kafka broker
 
 ![Process Group](/images/580-nifi.png)
 
- As we mentioned on setting the datproc cluster, the kafka broker is listening on port 9092 in case of a docker container point of view and the advertised listerner is then : broker:9092. The topic name will be "mediciones". It has to be created before producing some messages to this topic. You can do that spinning up a ephemeral container like this:
+ As we've mentioned on setting the datproc cluster, kafka broker is listening on port 9092 as a docker container point of view. Then the advertised listerner should be broker:9092. Fill in the topic name with "mediciones". Create it before producing some messages to it. 
+ 
+ You can do that, spinning up a ephemeral container like this:
 	
 	   docker run -it --rm --network nifinet \
   		--name testKafkaTopicsList confluentinc/cp-kafka:5.5.0 \
   		kafka-topics --create --topic mediciones --partitions 1 replication-factor 1 --bootstrap-server broker:9092
 
 
-Let's set the properties. Set kafka brokers to broker:9092 and topic to "mediciones"
+Properties should be set like the image below.
 
 ![Process Group](/images/610-nifi.png)
 
@@ -278,17 +280,17 @@ Let's set the properties. Set kafka brokers to broker:9092 and topic to "medicio
 
 ![Process Group](/images/590-nifi.png)
 
-Let's set the properties. 
-
-![Process Group](/images/620-nifi.png)
-
-![Process Group](/images/630-nifi.png)
-
-Set elasticsearch url to http://172.19.0.5:9200 This IP is elasticsearch's IP you can find out issueing:
+Let's set the properties. Keep in mind that elasticsearch's IP is the container's IP that you can find out issuing
 
 		docker newtwork inspect nifinet
 
-And checking for elasticsearch container IP
+![Process Group](/images/630-nifi.png)
+
+Check the container named elasticsearch and look up its IP. In our example is 172.19.0.5.
+Then set elasticsearch's url to http://172.19.0.5:9200
+
+![Process Group](/images/620-nifi.png)
+
 
 ![Process Group](/images/20_nifinet.png)
 
@@ -327,7 +329,6 @@ This way everything on /hadoop-conf path (our two files) will be at /etc/hadoop/
 | In this podcast we talk about the diﬀerences between data scientists, analysts and engineers. Which are the three main data science jobs. All three are super important. This makes it easy to decide
 | [Watch on YouTube](https://youtu.be/64TYZETOEdQ) \ [Listen on Anchor](https://anchor.fm/andreaskayy/episodes/050-Data-Engineer-Scientist-or-Analyst-Which-One-Is-For-You-e45ibl)
 
-My YouTube video how to write to Kafka: <https://youtu.be/RboQBZvZCh0>
 
 Acknowledments
 https://linuxize.com/post/how-to-install-and-use-docker-compose-on-debian-10/
