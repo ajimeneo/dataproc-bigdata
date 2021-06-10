@@ -340,7 +340,7 @@ So down the pipeline, we can find all ingested messages on our hdfs file system,
 
 [Kibana](https://www.elastic.co/what-is/kibana) is an free and open frontend application that sits on top of the Elastic Stack, providing search and data visualization capabilities for data indexed in Elasticsearch. Kibana also acts as the user interface for monitoring, managing, and securing an Elastic Stack cluster.  
 
-That lead us to the point of what the devil is Elasticsearch? To put it shortly, is a query engine and as its welcome page says Elasticserach is part of the ELK Stack and is built on Lucene, the search library from Apache, and exposes Lucene’s query syntax. It’s such an integral part of Elasticsearch that when you query the root of an Elasticsearch cluster, it will tell you the Lucene version. We have elasticsearch container exposed on 9200. If we open elasticsearch on a web browser typing what's next on a cmd console:
+That lead us to the point of what the devil is Elasticsearch? To put it shortly, is a query engine and as its welcome page says, Elasticserach is part of the ELK Stack and is built on Lucene, the search library from Apache, and exposes Lucene’s query syntax. It’s such an integral part of Elasticsearch that when you query the root of an Elasticsearch cluster, it will tell you the Lucene version. We have elasticsearch container exposed on 9200. If we open elasticsearch on a web browser typing what's next on a cmd console:
 
 	C:\>%ProgramFiles(x86)%\Google\Chrome\Application\chrome.exe ^
 		  --proxy-server="socks5://localhost:1080" ^
@@ -349,7 +349,7 @@ That lead us to the point of what the devil is Elasticsearch? To put it shortly,
 		
 ![Kibana](/images/10-elasticsearch.png)
 
-There is the Lucene version!
+There it is the Lucene version!
 
 ## Mapping the ingested data into Elasticsearch
 
@@ -370,12 +370,31 @@ Then kibana welcome page opens:
 We'll use elasticsearch query language (https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html) to find out what's happening to our ingested data. There are many useful sites where [queries syntax] (!https://logz.io/blog/elasticsearch-queries) are explained in detail, so help yourself and found one to your liking.
 
 
+Go to console and let's make out first query
+
+	GET /_cat/indices
+	
+As you can see, the index mediciones is there. 
+
+You can find this index other than programatically going through Management option
+
+![Kibana](/images/30-elasticsearch.png)
+
+![Kibana](/images/60-elasticsearch.png)
 
 
+But what data does it hold?
+
+Go to Discover and select the appropiate interval. it's default it's last 15 minutes to it is very likely that you won't find any data even though it is there. So broad the interval to make sure it is wide enough to discover your data.
+
+![Kibana](/images/30-elasticsearch.png)
+
+Now there is some data, and if you expand a document you can see all of our ingested json's:
+
+![Kibana](/images/30-elasticsearch.png)
 
 
-
-
+There's one important thing to keep in mind. Elasticsearch, by default, infers the schema of the data that is ingesting and creates an automate mapping to do that. As we are ingesting a json, all of the fields will be treated as strings. You can see that on the Mapping tab
 
 
 
