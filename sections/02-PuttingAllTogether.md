@@ -2,7 +2,7 @@
 # Putting all agents working together
 
   - [Flow creation with nifi](02-PuttingAllTogether.md#flow-creation-with-nifi)
-  - [Create a Map Visualization using Kibana](sections/02-PuttingAllTogether.md#kibana)
+  - [Create a Map Visualization using Kibana](sections/02-PuttingAllTogether.md#create-a-map-visualization-using-kibana)
   - [Issue alerts and other useful queries with Zeppelin](sections/02-PuttingAllTogether.md#zeppelin)
 
 
@@ -333,6 +333,8 @@ So down the pipeline, we can find all ingested messages on our hdfs file system,
 	hdfs dfs -ls /tmp
 	
 
+
+## Create a Map Visualization using Kibana
 
 
 | Podcast Episode: #050 Data Engineer, Scientist or Analyst - Which One Is For You?
