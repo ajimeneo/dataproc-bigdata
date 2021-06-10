@@ -324,9 +324,15 @@ As we need them on client side ( it's where it stands hadoop) add the path as a 
     depends_on:
       - broker
 	
-This way everything on /hadoop-conf path (our two files) will be at /etc/hadoop/conf path, which is what we wanted. The destination path is set to /tmp, which we know it exists on client side and to we have access rights.
+This way everything on /hadoop-conf path (our two files) will be at /etc/hadoop/conf path, which is what we wanted. The destination path is set to /tmp, which we know it exists on client side and to which we have access rights.
 
 ![Process Group](/images/640-nifi.png)
+
+So down the pipeline, we can find all ingested messages at /tmp on the VM instance:
+
+	hdfs dfs -ls /tmp
+	
+
 
 
 | Podcast Episode: #050 Data Engineer, Scientist or Analyst - Which One Is For You?
