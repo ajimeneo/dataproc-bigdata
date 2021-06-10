@@ -299,16 +299,18 @@ Set the other properties this way. One particular thing to point out is index pr
 
 ![Process Group](/images/600-nifi.png)
 
-Set the properties. We are in need of these hadoop config files **hdfs-site.xml** and **core-site.xml** which can be found in our nifi container at:
+Set the properties. We are in need of these hadoop config files **hdfs-site.xml** and **core-site.xml**.
 
-/hadoop-conf/hdfs-site.xml
-/hadoop-conf/core-site.xml
+They can be found in our nifi container at:
+
+	/hadoop-conf/hdfs-site.xml
+	/hadoop-conf/core-site.xml
+
+To check that spin up a docker container.
 
     docker exec -it --rm nifi /bin/bash && cd /hadoop-conf
 
-As we need them on client side ( it's where it stands hadoop) add the path as a volume. 
-
-You can check that on docker-compose.yml file. The bit related to this:
+As we need them on client side ( it's where it stands hadoop) add the path as a volume as we've done on our docker-compose.yml file. The bit related to this:
 
     nifi:
     image: apache/nifi
