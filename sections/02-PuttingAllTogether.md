@@ -336,6 +336,40 @@ So down the pipeline, we can find all ingested messages on our hdfs file system,
 
 ## Create a Map Visualization using Kibana
 
+### What is kibana?
+
+[Kibana](https://www.elastic.co/what-is/kibana) is an free and open frontend application that sits on top of the Elastic Stack, providing search and data visualization capabilities for data indexed in Elasticsearch. Kibana also acts as the user interface for monitoring, managing, and securing an Elastic Stack cluster.  
+
+That lead us to the point of what the devil is Elasticsearch? To put it shortly, is a query engine and as its welcome page says Elasticserach is part of the ELK Stack and is built on Lucene, the search library from Apache, and exposes Lucene’s query syntax. It’s such an integral part of Elasticsearch that when you query the root of an Elasticsearch cluster, it will tell you the Lucene version. We have elasticsearch container exposed on 9200. If we open elasticsearch on a web browser typing what's next on a cmd console:
+
+	C:\>%ProgramFiles(x86)%\Google\Chrome\Application\chrome.exe ^
+		  --proxy-server="socks5://localhost:1080" ^
+		  --user-data-dir="%Temp%\cluster-uoc-m" http://cluster-uoc-m:9200
+
+		
+![Kibana](/images/10-elasticsearch.png)
+
+There is the Lucene version!
+
+## Mapping the ingested data into Elasticsearch
+
+So, first things first. In order to create a visualization in kibana we must insert some data into elasticsearch. Rebember we'ver already done that in nifi, through Elastic.. processor. And all that data is delivered to index "mediciones"
+
+Kibana UI rests on its own Docker container exposed on port 5601
+
+	C:\>%ProgramFiles(x86)%\Google\Chrome\Application\chrome.exe ^
+		  --proxy-server="socks5://localhost:1080" ^
+		  --user-data-dir="%Temp%\cluster-uoc-m" http://cluster-uoc-m:5601
+
+![Kibana](/images/10-kibana.png)
+
+Then kibana welcome page opens:
+
+![Kibana](/images/00-kibana.png)
+
+We'll use elasticsearch query language (https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html) to find out what's happening to our ingested data. There are many useful sites where [queries syntax] (!https://logz.io/blog/elasticsearch-queries) are explained in detail, so help yourself and found one to your liking.
+
+
 
 
 
