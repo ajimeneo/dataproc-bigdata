@@ -394,7 +394,7 @@ Go to Discover and select the appropiate interval. it's default it's last 15 min
 
 ![Kibana](/images/30-elasticsearch.png)
 
-There's our data.
+There it is our data.
 
 ![Kibana](/images/40-elasticsearch.png)
 
