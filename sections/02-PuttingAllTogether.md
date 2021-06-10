@@ -353,7 +353,7 @@ There it is the Lucene version!
 
 ## Mapping the ingested data into Elasticsearch
 
-So, first things first. In order to create a visualization in kibana we must insert some data into elasticsearch. Rebember we'ver already done that in nifi, through Elastic.. processor. And all that data is delivered to index "mediciones"
+So, first things first. In order to create a visualization in kibana we must insert some data into elasticsearch. Rebember we'ver already done that in nifi, through **PutElasticsearchHttpRecord** processor. And all that data is delivered to index "mediciones"
 
 Kibana UI rests on its own Docker container exposed on port 5601
 
@@ -396,20 +396,26 @@ Now there is some data, and if you expand a document you can see all of our inge
 ![Kibana](/images/30-elasticsearch.png)
 
 
-There's one important thing to keep in mind. Elasticsearch, by default, infers the schema of the data that is ingesting and creates an automate mapping to do that. As we are ingesting a json, all of the fields will be treated as strings. You can see that on the Mapping tab
+There's one important thing to keep in mind. Elasticsearch, by default, infers the schema of the data that is ingesting and creates an automate mapping to do that. As we are ingesting a json, all of the fields will be treated as strings. Go to Management > Elastisearch > Index Management
 
 
+![Kibana](/images/50-elasticsearch.png)
 
+There's mediciones index. Click on it. 
 
+![Kibana](/images/60-elasticsearch.png)
 
+Go to Mapping tab. There's the mapping that has been applied to our data in JSON format.
 
+![Kibana](/images/80-elasticsearch.png)
 
+And check that all fields have been retrieved as "text" type. 
 
+![Kibana](/images/90-elasticsearch.png)
 
+That's not really what we wanted because in order to make a map visualization, that is, to allow kibana to evaluate lat and long fields and treat them as geolocaltion points drawable on a map, it is mandatory those fields to be of type geo_point ( this is a "proprietary" type in kibana ).
 
-
-
-
+So, how can we force, elasticsearch to translate them into such geo_points ? Templates come to our rescue.
 
 
 
