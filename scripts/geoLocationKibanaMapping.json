@@ -6,6 +6,24 @@ PUT _template/geotemplate
     "settings": {},
     "mappings": {
       "properties": {
+        "idSensor":{
+          "type": "long"
+        },
+        "medida": {
+          "type": "long"
+        },
+        "ocupacion" :{
+          "type": "long"
+        },
+        "intensidad" :{
+          "type": "long"
+        },
+        "carga" :{
+          "type": "long"
+        },
+        "ts" :{
+          "type": "date"
+        },
         "location" :{
           "type": "geo_point"
         }
