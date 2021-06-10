@@ -290,7 +290,7 @@ Let's set the properties. Keep in mind that elasticsearch's IP is the elasticsea
 Check the container named elasticsearch and look up its IP. In our example is 172.19.0.5.
 Then set elasticsearch's url to http://172.19.0.5:9200
 
-Set the other properties this way
+Set the other properties this way. One particular thing to point out is index propery. As we're inserting data into elasticsearch engine, we'll do it as an index.
 
 ![Process Group](/images/620-nifi.png)
 ![Process Group](/images/630-nifi.png)
@@ -299,11 +299,14 @@ Set the other properties this way
 
 ![Process Group](/images/600-nifi.png)
 
-Set the properties. In our nifi container the hadoop config files have these paths:
+Set the properties. We are in need of these hadoop config files **hdfs-site.xml** and **core-site.xml** which can be found in our nifi container at:
+
 /hadoop-conf/hdfs-site.xml
 /hadoop-conf/core-site.xml
 
-As we need them on client site ( where it is where stands hadoop) we have add a volume. 
+    docker exec -it --rm nifi /bin/bash && cd /hadoop-conf
+
+As we need them on client side ( it's where it stands hadoop) add the path as a volume. 
 
 You can check that on docker-compose.yml file. The bit related to this:
 
@@ -319,7 +322,7 @@ You can check that on docker-compose.yml file. The bit related to this:
     depends_on:
       - broker
 	
-This way everything on /hadoop-conf path (our two files) will be at /etc/hadoop/conf path, which is what we wanted. The destination path is set to /tmp, which we know it exists on client side and we have access rights.
+This way everything on /hadoop-conf path (our two files) will be at /etc/hadoop/conf path, which is what we wanted. The destination path is set to /tmp, which we know it exists on client side and to we have access rights.
 
 ![Process Group](/images/640-nifi.png)
 
