@@ -390,7 +390,7 @@ You can find this index other than programatically going through Management opti
 
 But what data does it hold?
 
-Go to Discover and select the appropiate interval. it's default it's last 15 minutes to it is very likely that you won't find any data even though it is there. So broad the interval to make sure it is wide enough to discover your data.
+Go to Discover and select the appropiate interval. it's default it's last 15 minutes to it is very likely that you won't find any data even though it is there. So widen the interval to make sure it is wide enough to find your data.
 
 ![Kibana](/images/30-elasticsearch.png)
 
