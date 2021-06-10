@@ -394,9 +394,14 @@ Go to Discover and select the appropiate interval. it's default it's last 15 min
 
 ![Kibana](/images/30-elasticsearch.png)
 
+There's our data.
+
+![Kibana](/images/40-elasticsearch.png)
+
+
 Now there is some data, and if you expand a document you can see all of our ingested json's:
 
-![Kibana](/images/30-elasticsearch.png)
+
 
 
 There's one important thing to keep in mind. Elasticsearch, by default, infers the schema of the data that is ingesting and creates an automate mapping to do that. As we are ingesting a json, all of the fields will be treated as strings. Go to Management > Elastisearch > Index Management
