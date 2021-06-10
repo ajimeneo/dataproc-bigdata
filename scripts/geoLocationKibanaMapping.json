@@ -1,7 +1,7 @@
 PUT _template/geotemplate
 {
   "index_patterns": [
-    "mediciones"
+    "measurements"
     ],
     "settings": {},
     "mappings": {
