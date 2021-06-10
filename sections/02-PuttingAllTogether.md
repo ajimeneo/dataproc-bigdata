@@ -376,6 +376,8 @@ Go to console and let's make out first query
 	
 As you can see, the index mediciones is there. 
 
+![Kibana](/images/20-elasticsearch.png)
+
 You can find this index other than programatically going through Management option
 
 ![Kibana](/images/30-elasticsearch.png)
