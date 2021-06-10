@@ -369,8 +369,11 @@ Then kibana welcome page opens:
 
 We'll use elasticsearch query language (https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html) to find out what's happening to our ingested data. There are many useful sites where [queries syntax] (!https://logz.io/blog/elasticsearch-queries) are explained in detail, so help yourself and found one to your liking.
 
+Go to console.
 
-Go to console and let's make out first query
+![Kibana](/images/20-kibana.png)
+
+and make out first query using Elasticsearch query language. The query is very selfexplanatory. Get all indices ( which path is within /_cat )
 
 	GET /_cat/indices
 	
