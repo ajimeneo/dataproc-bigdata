@@ -337,6 +337,31 @@ So down the pipeline, we can find all ingested messages on our hdfs file system,
 ## Create a Map Visualization using Kibana
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 | Podcast Episode: #050 Data Engineer, Scientist or Analyst - Which One Is For You?
 |-----------------------------------------------------------------------------------
 | In this podcast we talk about the diﬀerences between data scientists, analysts and engineers. Which are the three main data science jobs. All three are super important. This makes it easy to decide
