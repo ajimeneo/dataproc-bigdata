@@ -284,15 +284,17 @@ Let's set the properties. Keep in mind that elasticsearch's IP is the container'
 
 		docker newtwork inspect nifinet
 
-![Process Group](/images/630-nifi.png)
+![Process Group](/images/20_nifinet.png)
+
 
 Check the container named elasticsearch and look up its IP. In our example is 172.19.0.5.
 Then set elasticsearch's url to http://172.19.0.5:9200
 
+Set the other properties this way
+
+![Process Group](/images/630-nifi.png)
+
 ![Process Group](/images/620-nifi.png)
-
-
-![Process Group](/images/20_nifinet.png)
 
 
 - **HDFS destination**
