@@ -2,8 +2,8 @@
 # Putting all agents working together
 
   - [Flow creation with nifi](02-PuttingAllTogether.md#flow-creation-with-nifi)
-  - [Create a Map Visualization using Kibana](sections/02-PuttingAllTogether.md#create-a-map-visualization-using-kibana)
-  - [Issue alerts and other useful queries with Zeppelin](sections/02-PuttingAllTogether.md#zeppelin)
+  - [Create a Map Visualization using Kibana](02-PuttingAllTogether.md#create-a-map-visualization-using-kibana)
+  - [Issue alerts and other useful queries with Zeppelin](02-PuttingAllTogether.md#zeppelin)
 
 
 Once we have set up the datproc cluster and all containers are up and running ( nifi, zookeeper, kafka, elasticsearch and kibana) it's time to have a hands-on approach.
