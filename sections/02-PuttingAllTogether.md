@@ -225,7 +225,7 @@ To create a Controller Service:
 
 ![Process Group](/images/410-nifi.png)
 
-- Record Writer. Create a Controller Service that writes a JSON record as we wamt to enrich our json main flow. The one provided by nifi is ok. Take the same steps and choose JsonRecordSetWriter
+- Record Writer. Create a Controller Service that writes a JSON record as we want to enrich our json main flow. The one provided by nifi is ok. Take the same steps and choose JsonRecordSetWriter
 
 ![Process Group](/images/440-nifi.png)
 
@@ -280,7 +280,7 @@ Properties should be set like the image below.
 
 ![Process Group](/images/590-nifi.png)
 
-Let's set the properties. Keep in mind that elasticsearch's IP is the container's IP that you can find out issuing
+Let's set the properties. Keep in mind that elasticsearch's IP is the elasticsearch container's IP that you can find out issuing
 
 		docker newtwork inspect nifinet
 
