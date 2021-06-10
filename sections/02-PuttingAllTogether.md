@@ -263,7 +263,7 @@ As we have said before, we have 3 main destinations for our data: a kafka broker
 
 ![Process Group](/images/580-nifi.png)
 
- As we've mentioned on setting the datproc cluster, kafka broker is listening on port 9092 as a docker container point of view. Then the advertised listerner should be broker:9092. Fill in the topic name with "mediciones". Create it before producing some messages to it. 
+ As we've mentioned on setting the datproc cluster, kafka broker is listening on port 9092 as a docker container point of view. Then the advertised listerner should be broker:9092. Fill in the topic name with one of your choosing, for example, "mediciones". Create it before producing some messages to this topic. 
  
  You can do that, spinning up a ephemeral container like this:
 	
