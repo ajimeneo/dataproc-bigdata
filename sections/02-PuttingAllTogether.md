@@ -292,10 +292,8 @@ Then set elasticsearch's url to http://172.19.0.5:9200
 
 Set the other properties this way
 
-![Process Group](/images/630-nifi.png)
-
 ![Process Group](/images/620-nifi.png)
-
+![Process Group](/images/630-nifi.png)
 
 - **HDFS destination**
 
