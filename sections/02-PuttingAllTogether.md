@@ -328,7 +328,7 @@ This way everything on /hadoop-conf path (our two files) will be at /etc/hadoop/
 
 ![Process Group](/images/640-nifi.png)
 
-So down the pipeline, we can find all ingested messages at /tmp on the VM instance:
+So down the pipeline, we can find all ingested messages on our hdfs file system, particularly on /tmp:
 
 	hdfs dfs -ls /tmp
 	
