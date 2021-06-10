@@ -290,7 +290,7 @@ Let's set the properties. Keep in mind that elasticsearch's IP is the elasticsea
 Check the container named elasticsearch and look up its IP. In our example is 172.19.0.5.
 Then set elasticsearch's url to http://172.19.0.5:9200
 
-Set the other properties this way. One particular thing to point out is index propery. As we're inserting data into elasticsearch engine, we'll do it as an index.
+Set the other properties this way. One particular thing to point out is index propery. As we're inserting data into elasticsearch engine, we'll do it as an index. Just name the index. It'll be mediciones as well ( like the topic, buy you could've chosen whatever name you feel like ).
 
 ![Process Group](/images/620-nifi.png)
 ![Process Group](/images/630-nifi.png)
