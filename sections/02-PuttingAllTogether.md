@@ -8,10 +8,6 @@
 
 Once we have set up the datproc cluster and all containers are up and running ( nifi, zookeeper, kafka, elasticsearch and kibana) it's time to have a hands-on approach.
 
-This is the architecture we have built up:
-
--- photo
-
 ## Flow creation with nifi
 
 Nifi UI web page is listening on port 8060 and we have to access it through a SSH tunnel. As we have explained on the previous section [Setting up the cluster](01-BuildingUp.md#Create-a-SSH-tunnel-to-the-VM-instance-(master-node)), let's dive into nifi.
