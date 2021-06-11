@@ -31,18 +31,16 @@ At the same time we will be able to interact with the system in real time with z
 
 In this cookbook we will cover all Data Engeneering platform key areas (Connect, Buffer, Processing Framework, Store, Visualize)
 
-We will split the cookbook into two main parts:
-
-**First**: Building up the architecture
-
-**Second**: Putting all main agents ( nifi, elasticsearch, kibana, zeppelin) working together to ingest and extract meaning from the traffic data of the city of Santander
-
 The proposed architecture flow will be as follows
 
 ![Arquitecura](/images/00-santander.png)
 
 
+We will split the cookbook into two main parts:
 
+**First**: Building up the architecture
+
+**Second**: Putting all main agents ( nifi, elasticsearch, kibana, zeppelin) working together to ingest and extract meaning from the traffic data of the city of Santander
 
 ## What is Google Cloud Dataproc 
 
