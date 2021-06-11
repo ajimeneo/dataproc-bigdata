@@ -2,7 +2,7 @@
 
 How to build up from scratch a Bigdata Ecosystem using Dataproc Clusters supplied by Google Cloud Platform (GCP). Through Docker and Zeppelin we will build up a system with nifi, kafka, elasticsearch,kibana and zeppelin notebooks.
 
-We will use [Santander Smart City](http://datos.santander.es/dataset/?id=datos-trafico) data to ingest into our system and play around. We'll choose to retrieve data under [JSON](http://datos.santander.es/api/rest/datasets/mediciones.json?items=482). Each minute, a JSON document with 482 individual traffic measures will be available to be consumed by an http GET/POST call through its API REST.
+We will use [Santander Smart City](http://datos.santander.es/dataset/?id=datos-trafico) data to ingest into our system and play around. We'll choose to retrieve data under [JSON](http://datos.santander.es/api/rest/datasets/mediciones.json?items=482). Every minute, a JSON document with 482 individual traffic measures will be available to be consumed by an http GET/POST call through its API REST.
 
 Some of the contents related to kafka ( specially connectivity with conteinerized-kafka are taken from this web page [Why Can´t I Connect to Kafka](https://www.confluent.io/blog/kafka-client-cannot-connect-to-broker-on-aws-on-docker-etc/) written by Robin Moffat). I believe his article is a remarkable explanation about how to connect to kafka and cannot be further improved so I borrowed his own code and diagrams in order to explain how to make a connection to kafka and what could possibly go wrong.
 
