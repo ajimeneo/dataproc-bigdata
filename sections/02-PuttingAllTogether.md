@@ -383,10 +383,7 @@ As you can see, the index mediciones is there.
 
 You can find this index other than programatically going through Management option
 
-![Kibana](/images/30-elasticsearch.png)
-
 ![Kibana](/images/60-elasticsearch.png)
-
 
 But what data does it hold?
 
@@ -417,12 +414,13 @@ And check that all fields have been retrieved as "text" type.
 
 That's not really what we wanted because in order to make a map visualization, that is, to allow kibana to evaluate lat and long fields and treat them as geolocaltion points drawable on a map, it is mandatory those fields to be of type geo_point ( this is a "proprietary" type in kibana ).
 
-So, how can we force, elasticsearch to translate them into such geo_points ? Templates come to our rescue.
+So, how can we force, elasticsearch to translate them into such geo_points ? Templates come to our rescue. Templates is the way to give format to the ingested data. So, execute this code template on kibana Dev Tools > Console and check that the template is there
 
+![Kibana](/images/190-elasticsearch.png)
 
+The important bit is that location is of geo_point type and some of the fields remaining are long types, so in a kibana map we will be allowed to do some aggregation operations. It won't allow us to do that aggregations if they were of type text.
 
-
-
+![Kibana](/images/200-elasticsearch.png)
 
 
 | Podcast Episode: #050 Data Engineer, Scientist or Analyst - Which One Is For You?
