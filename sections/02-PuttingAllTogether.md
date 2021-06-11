@@ -422,9 +422,27 @@ and check that the template is there
 
 ![Kibana](/images/190-elasticsearch.png)
 
-The important bit is that location is of geo_point type and some of the fields remaining are long types, so in a kibana map we will be allowed to do some aggregation operations. It won't allow us to do that aggregations if they were of type text.
+The important bit is that location is of geo_point type and some of the fields remaining are long types, so in a kibana map we will be allowed to do some aggregation operations. It won't allow us to do that aggregations if they were of type text. Check that our template "geotemplate" is ther form index_patterns mediciones and we have set the desired mappings.
 
 ![Kibana](/images/200-elasticsearch.png)
+
+It's time to create a Index pattern in kibana to use it on a map visualization.
+
+Go to Kibana index patterns:
+
+![Kibana](/images/100-elasticsearch.png)
+
+Create an index pattern named mediciones*. This means that every index on elastichsearch who begins with mediciones falls under this index pattern.
+
+![Kibana](/images/110-elasticsearch.png)
+
+And select field timestamp "ts" to use it to filter out data 
+
+![Kibana](/images/120-elasticsearch.png)
+
+Then check out that index pattern mediciones has location field of type geo_point
+
+![Kibana](/images/240-elasticsearch.png)
 
 
 | Podcast Episode: #050 Data Engineer, Scientist or Analyst - Which One Is For You?
