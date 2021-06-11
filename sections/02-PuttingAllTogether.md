@@ -401,7 +401,7 @@ Then go to Discover and select the appropiate interval. it's default it's last 1
 
 There it is our data. Expand a document you can see all of our ingested json's:
 
-![Kibana](/images/40-elasticsearch.png)
+![Kibana](/images/140-elasticsearch.png)
 
 There's one important thing to keep in mind. Elasticsearch, by default, infers the schema of the data that is ingesting and creates an automate mapping to do that. As we are ingesting a json, all of the fields will be treated as strings. Go to Management > Elastisearch > Index Management
 
