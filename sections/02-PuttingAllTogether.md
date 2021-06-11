@@ -444,6 +444,10 @@ Then check out that index pattern mediciones has location field of type geo_poin
 
 ![Kibana](/images/240-elasticsearch.png)
 
+Everything's set so let's create our map visualization!!
+
+
+
 
 | Podcast Episode: #050 Data Engineer, Scientist or Analyst - Which One Is For You?
 |-----------------------------------------------------------------------------------
