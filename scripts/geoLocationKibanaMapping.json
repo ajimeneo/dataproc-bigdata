@@ -9,16 +9,16 @@ PUT _template/geotemplate
         "idSensor":{
           "type": "long"
         },
-        "medida": {
+        "measurement": {
           "type": "long"
         },
-        "ocupacion" :{
+        "activity" :{
           "type": "long"
         },
-        "intensidad" :{
+        "intensity" :{
           "type": "long"
         },
-        "carga" :{
+        "load" :{
           "type": "long"
         },
         "ts" :{
