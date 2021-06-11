@@ -414,7 +414,7 @@ And check that all fields have been retrieved as "text" type.
 
 That's not really what we wanted because in order to make a map visualization, that is, to allow kibana to evaluate lat and long fields and treat them as geolocaltion points drawable on a map, it is mandatory those fields to be of type geo_point ( this is a "proprietary" type in kibana ).
 
-So, how can we force, elasticsearch to translate them into such geo_points ? Templates come to our rescue. Templates is the way to give format to the ingested data. So, execute this [code template](scripts/geoLocationKibanaMapping.json) on kibana Dev Tools > Console and check that the template is there
+So, how can we force, elasticsearch to translate them into such geo_points ? Templates come to our rescue. Templates is the way to give format to the ingested data. So, execute this [code template](/scripts/geoLocationKibanaMapping.json) on kibana Dev Tools > Console and check that the template is there
 
 ![Kibana](/images/190-elasticsearch.png)
 
