@@ -381,9 +381,21 @@ You can find this index other than programatically going through Management opti
 
 ![Kibana](/images/60-elasticsearch.png)
 
-But what data does it hold?
+But what data does it hold? In order to do that, you need to create a kibana index pattern.
 
-Go to Discover and select the appropiate interval. it's default it's last 15 minutes to it is very likely that you won't find any data even though it is there. So widen the interval to make sure it is wide enough to find your data.
+Go to Kibana index patterns:
+
+![Kibana](/images/100-elasticsearch.png)
+
+Create an index pattern named mediciones*. This means that every index on elastichsearch who begins with mediciones falls under this index pattern.
+
+![Kibana](/images/110-elasticsearch.png)
+
+And select field timestamp "ts" to use it to filter out data 
+
+![Kibana](/images/120-elasticsearch.png)
+
+Then go to Discover and select the appropiate interval. it's default it's last 15 minutes to it is very likely that you won't find any data even though it is there. So widen the interval to make sure it is wide enough to find your data.
 
 ![Kibana](/images/30-elasticsearch.png)
 
@@ -410,7 +422,9 @@ And check that all fields have been retrieved as "text" type.
 
 That's not really what we wanted because in order to make a map visualization, that is, to allow kibana to evaluate lat and long fields and treat them as geolocaltion points drawable on a map, it is mandatory those fields to be of type geo_point  ( this is a "proprietary" type in kibana ) instead of type "text".
 
-So, how can we force, elasticsearch to translate them into such geo_points ? Templates come to our rescue. Templates is the way to give format to the ingested data. So, execute this [code template](/scripts/geoLocationKibanaMapping.json) on kibana Dev Tools > Console 
+So, how can we force, elasticsearch to translate them into such geo_points ? Templates come to our rescue. Templates is the way to give format to the ingested data. So, delete mediciones index, where the default format is not suitable for us and go to kibana Dev Tools > Console.
+
+Then execute this [code template](/scripts/geoLocationKibanaMapping.json). 
 
 ![Kibana](/images/180-elasticsearch.png)
 
@@ -422,19 +436,9 @@ The important bit is that location is of geo_point type and some of the fields r
 
 ![Kibana](/images/200-elasticsearch.png)
 
-It's time to create a Index pattern in kibana to use it on a map visualization.
 
-Go to Kibana index patterns:
 
-![Kibana](/images/100-elasticsearch.png)
 
-Create an index pattern named mediciones*. This means that every index on elastichsearch who begins with mediciones falls under this index pattern.
-
-![Kibana](/images/110-elasticsearch.png)
-
-And select field timestamp "ts" to use it to filter out data 
-
-![Kibana](/images/120-elasticsearch.png)
 
 Then check out that index pattern mediciones has location field of type geo_point
 
