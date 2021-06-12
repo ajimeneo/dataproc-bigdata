@@ -436,16 +436,65 @@ The important bit is that location is of geo_point type and some of the fields r
 
 ![Kibana](/images/200-elasticsearch.png)
 
+Ingest some data from nifi and check from Elasticsearch management that our index mapping is correct
 
-Then check out that index pattern mediciones has location field of type geo_point
+![Kibana](/images/20-maps.png)
 
-![Kibana](/images/240-elasticsearch.png)
+Create an index pattern in kibana named "mediciones" again.
 
-Everything's set so let's create our map visualization!!
+Then check out that index pattern mediciones has location field of type geo_point and the remaining are of type number
 
+![Kibana](/images/30-maps.png)
 
+Go to Discover and click on JSON tab. There's our json conviniently formatted.
 
+![Kibana](/images/40-maps.png)
 
+We're good to go and create our map visualization!!
+
+Go to Maps.
+
+![Kibana](/images/50-maps.png)
+
+Create a map.
+
+![Kibana](/images/60-maps.png)
+
+Then a map of the world appears. This is a proprietary map given by Elastic Maps Service as an Open Source map.
+
+![Kibana](/images/70-maps.png)
+
+On top there's a search for the data. You have to code on [KQL](https://www.elastic.co/guide/en/kibana/master/kuery-query.html) (Kibana Query Language) to retrieve some data.
+Click Add layer and choose Grid aggregation
+
+![Kibana](/images/80-maps.png)
+
+Then select "mediciones" as our index pattern. As we only have one field with geo_point type, the Geospatial field has been automatically filled. Then we have the option of showing our data among three different displays:
+- grid rectangles
+- heat map
+- points
+
+As we are going to display traffic in real time lets show the are of interes using heat maps. Click on the bottom right Add layer.
+
+![Kibana](/images/90-maps.png)
+
+First box is for layer settings. There are 24 zoom levels in kibana. As you zoom in you can see at the image bottom righ the latitute, longitude and zoom level. The maximum you can get is 24 that will be equivalent to pinpoint a particular house, for example. The reason of having this choice is that you can arrange more than one layer that is visible only to a specific range of zooming. There's a fantastic explanation about [kibana maps on You Tube](https://www.youtube.com/watch?v=Op53zHlH3TI&list=PLkfKw3jCX1nDhJTUxpTJk_W4JWJLGm0ii).
+
+So we leave layer settings as is and select a Metric that we're going to aggregate. As intensity, load an activity are related to each other we'll pick up intensity to be the field to be aggregated. Instead of Count aggregation we'll choose Sum. We leave Grid resolution as coarse and the color range as is. 
+
+![Kibana](/images/100-maps.png)
+
+Save and close. And to our dismay, there's no data displayed! Don't worry! It is likely that you have choosen the wrong range time for the data. Quick selection is Last 15 minutes by default. Widen up a bit and change quick select to suit your needs.
+
+There it goes! There's some data on the map.
+
+![Kibana](/images/110-maps.png)
+
+As we have ingested today's 8,30 AM data you can see for yourself the areas to avoid ( blue- light traffic to red- heavy traffic)
+
+![Kibana](/images/120-maps.png)
+
+There are many other ways to expose this data through kibana, buy this wanted to be a quick example of what you can accomplish in kibana through ingested data.
 
 
 
