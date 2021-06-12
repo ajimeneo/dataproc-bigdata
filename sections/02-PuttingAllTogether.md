@@ -498,6 +498,19 @@ There are many other ways to expose this data through kibana, buy I wanted it to
 
 ## Issue alerts with Zeppelin
 
+Let's open a Zeppelin notebook. From WEB INTERFACES tab in GCP click on Zeppelin.
+
+![Kibana](/images/650-nifi.png)
+
+We're going to consume data from our kafka topic. Rebember that through nifi we have ingested data into a kafka broker as well. 
+
+![Kibana](/images/660-nifi.png)
+
+We're using Spark Structured Stream with Scala language to window data from the incoming stream and print out json's raw data. Once you accomplish that, you can use the full capabilities of Spark to play around with this data and extract meaning from it. Everything in real time.
+
+![Kibana](/images/670-nifi.png)
+
+![Kibana](/images/690-nifi.png)
 
 
 
