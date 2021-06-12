@@ -494,7 +494,7 @@ As we have ingested today's 8,30 AM data you can see for yourself the areas to a
 
 ![Kibana](/images/120-maps.png)
 
-There are many other ways to expose this data through kibana, buy this wanted to be a quick example of what you can accomplish in kibana through ingested data.
+There are many other ways to expose this data through kibana, buy I wanted it to be a quick example of what you can accomplish in kibana through ingested data.
 
 
 
