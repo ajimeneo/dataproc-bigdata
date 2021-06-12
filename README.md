@@ -54,7 +54,7 @@ Thorugh Google Cloud Dataproc enhanced with Docker and Zeppelin notebooks we wil
 
 ### Acknowledments
 
-I want to express my deepest gratitude to my Data Lakes professor Iraitz Montalbán who has suffered me through this journey and has promptly and patiently answered my endless questions about architecture, configuration and all kings of different issues. It wouldn't be possible without his help and support.
+I want to express my deepest gratitude to my Data Lakes professor Iraitz Montalbán who has suffered me through this journey and has promptly and patiently answered my endless questions about architecture, configuration and all kinds of different issues. This cookbook wouldn't have been possible without his help and support.
 
 
 
