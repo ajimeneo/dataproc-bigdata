@@ -19,7 +19,7 @@ Contents
 - [Putting all agents working together](sections/02-PuttingAllTogether.md#putting-all-agents-working-together)
   - [Creating a flow with nifi](sections/02-PuttingAllTogether.md#nifi)
   - [Create a Map Visualization using Kibana](sections/02-PuttingAllTogether.md#create-a-map-visualization-using-kibana)
-  - [Issue alerts and other useful queries with Zeppelin](sections/02-PuttingAllTogether.md#zeppelin)
+  - [Issue alerts with Zeppelin](sections/02-PuttingAllTogether.md#Issue-alerts-with-zeppelin)
  
 ## What is this Cookbook
 
