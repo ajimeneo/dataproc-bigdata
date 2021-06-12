@@ -506,7 +506,7 @@ We're going to consume data from our kafka topic. Rebember that through nifi we 
 
 ![Kibana](/images/660-nifi.png)
 
-We're using Spark Structured Stream with Scala language to window data from the incoming stream and print out json's raw data. Once you accomplish that, you can use the full capabilities of Spark to play around with this data and extract meaning from it. Everything in real time.
+We're using Spark Structured Stream with Scala language to window data from the incoming stream and print out json's raw data. Once you accomplish that, you can use the full capabilities of Spark to play around with this data and extract meaning from it. Everything in real time. Use this [code](/scripts/660-nifi.png)
 
 ![Kibana](/images/670-nifi.png)
 
