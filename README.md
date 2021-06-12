@@ -52,5 +52,3 @@ Why using GPC? Because you can build a BigData cluster right now without paying 
 
 Thorugh Google Cloud Dataproc enhanced with Docker and Zeppelin notebooks we will be able to spin up a fully functional cluster in no time.
 
-Acknowledments
-https://linuxize.com/post/how-to-install-and-use-docker-compose-on-debian-10/
