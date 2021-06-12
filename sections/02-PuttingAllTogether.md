@@ -437,14 +437,15 @@ The important bit is that location is of geo_point type and some of the fields r
 ![Kibana](/images/200-elasticsearch.png)
 
 
-
-
-
 Then check out that index pattern mediciones has location field of type geo_point
 
 ![Kibana](/images/240-elasticsearch.png)
 
 Everything's set so let's create our map visualization!!
+
+
+
+
 
 
 
