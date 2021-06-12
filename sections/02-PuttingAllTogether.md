@@ -3,7 +3,7 @@
 
   - [Flow creation with nifi](02-PuttingAllTogether.md#flow-creation-with-nifi)
   - [Create a Map Visualization using Kibana](02-PuttingAllTogether.md#create-a-map-visualization-using-kibana)
-  - [Issue alerts and other useful queries with Zeppelin](02-PuttingAllTogether.md#zeppelin)
+  - [Issue alerts with Zeppelin](02-PuttingAllTogether.md#Issue-alerts-with-zeppelin)
 
 
 Once we have set up the datproc cluster and all containers are up and running ( nifi, zookeeper, kafka, elasticsearch and kibana) it's time to have a hands-on approach.
@@ -496,14 +496,8 @@ As we have ingested today's 8,30 AM data you can see for yourself the areas to a
 
 There are many other ways to expose this data through kibana, buy I wanted it to be a quick example of what you can accomplish in kibana through ingested data.
 
+## Issue alerts with Zeppelin
 
 
 
-| Podcast Episode: #050 Data Engineer, Scientist or Analyst - Which One Is For You?
-|-----------------------------------------------------------------------------------
-| In this podcast we talk about the diﬀerences between data scientists, analysts and engineers. Which are the three main data science jobs. All three are super important. This makes it easy to decide
-| [Watch on YouTube](https://youtu.be/64TYZETOEdQ) \ [Listen on Anchor](https://anchor.fm/andreaskayy/episodes/050-Data-Engineer-Scientist-or-Analyst-Which-One-Is-For-You-e45ibl)
 
-
-Acknowledments
-https://linuxize.com/post/how-to-install-and-use-docker-compose-on-debian-10/
