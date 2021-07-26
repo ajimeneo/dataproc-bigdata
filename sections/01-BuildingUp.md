@@ -113,6 +113,10 @@ In Google Cloud there is a cheat sheet for Windows, Mac and Linux Systems.
 
 ![SSH tunnel](/images/00_gcloud.png)
 
+- Install gcloud client on Windows ( in order to gain acces to Google from Windows cmd )
+
+https://cloud.google.com/sdk/docs/install
+
 
 - Open a Windows cmd console (choose your own case situation) and open a ssh tunnel through port 1080
 
