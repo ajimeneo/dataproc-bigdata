@@ -65,9 +65,11 @@ Click on SSH and then an interactive shell will pop up on your browser.
 
 ### Create docker-compose.yml file
 
-This is a crucial step with all the settings. Check out that all needed iamges are present there: nifi,kafka,zookeeper,elastichsearch and kibana, environment variables, spinning up ordering, volumes, exposed ports,...
+This is a crucial step with all the settings. Check out that all needed images are present in this yml file: nifi,kafka,zookeeper,elastichsearch and kibana, environment variables, spinning up ordering, volumes, exposed ports,...
 
 [docker-compose.yml](/scripts/docker-compose.yml) 
+
+In order to create it, use an editor like nano and paste the contents of docker-compose.yml. The default path that you will create is /home/username, for example /home/alvarojimenezortiz/docker-compose.yml
 
 
 ### Create a Docker network
