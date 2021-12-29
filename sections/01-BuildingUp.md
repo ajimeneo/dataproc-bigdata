@@ -71,6 +71,10 @@ This is a crucial step with all the settings. Check out that all needed images a
 
 In order to create it, use an editor like nano and paste the contents of docker-compose.yml. The default path that you will create is /home/username, for example /home/alvarojimenezortiz/docker-compose.yml
 
+One change from previous releases is that nifi appears to be not listening anymore on port 8080 as it will reset de connectetion and it has to be manually set to the desired port through an environment variable NIFI_WEB_HTTP_PORT, for example
+
+	docker run --name nifi -p 8181:8181 -e NIFI_WEB_HTTP_PORT='8181' -d apache/nifi:latest
+
 
 ### Create a Docker network
 
