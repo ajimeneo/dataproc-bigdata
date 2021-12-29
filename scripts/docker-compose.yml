@@ -36,7 +36,9 @@ services:
     networks: 
       - nifinet
     ports:
-     - "8060:8080"
+     - "8181:8181"
+    environment:
+     - NIFI_WEB_HTTP_PORT=8181
     volumes:
      - /etc/hadoop/conf:/hadoop-conf
     depends_on:
